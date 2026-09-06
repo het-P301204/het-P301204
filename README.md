@@ -13,12 +13,12 @@
   <img src="assets/record.svg" width="100%" alt="Record of work — repositories plotted by security domain across successive entries">
 </picture>
 
-<a href="#d-assurance"><kbd> ASSURANCE </kbd></a>
-<a href="#d-engineering"><kbd> ENGINEERING </kbd></a>
-<a href="#d-detection"><kbd> DETECTION </kbd></a>
-<a href="#d-appsec"><kbd> APPSEC </kbd></a>
-<a href="#d-cloud"><kbd> CLOUD </kbd></a>
-<a href="#d-offensive"><kbd> OFFENSIVE </kbd></a>
+<a href="#user-content-d-assurance"><kbd> ASSURANCE </kbd></a>
+<a href="#user-content-d-engineering"><kbd> ENGINEERING </kbd></a>
+<a href="#user-content-d-detection"><kbd> DETECTION </kbd></a>
+<a href="#user-content-d-appsec"><kbd> APPSEC </kbd></a>
+<a href="#user-content-d-cloud"><kbd> CLOUD </kbd></a>
+<a href="#user-content-d-offensive"><kbd> OFFENSIVE </kbd></a>
 
 <img src="assets/divider.svg" width="100%" alt="">
 

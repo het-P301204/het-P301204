@@ -1,0 +1,17 @@
+{
+  "domains": [
+    { "id": "assurance",   "name": "ASSURANCE",   "note": "iso 27001 / isms / controls / evidence" },
+    { "id": "engineering", "name": "ENGINEERING", "note": "tooling / automation / risk scoring" },
+    { "id": "detection",   "name": "DETECTION",   "note": "telemetry / signals / triage" },
+    { "id": "appsec",      "name": "APPSEC",      "note": "secure sdlc / code review / api surface" },
+    { "id": "cloud",       "name": "CLOUD",       "note": "identity / posture / logging / iac" },
+    { "id": "offensive",   "name": "OFFENSIVE",   "note": "attack paths / control validation" }
+  ],
+  "entries": [
+    { "n": "00", "date": "19.10.2025", "short": "PingMaster",   "domains": ["detection"] },
+    { "n": "01", "date": "05.09.2026", "short": "SecureBridge", "domains": ["assurance"] },
+    { "n": "02", "date": "06.09.2026", "short": "AegisLens",    "domains": ["assurance", "engineering"] },
+    { "n": "03", "date": "07.09.2026", "short": "",             "domains": [], "open": true }
+  ],
+  "slots": 5
+}

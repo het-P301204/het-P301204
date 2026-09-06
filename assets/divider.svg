@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-18 0 1236 14" width="1236" height="14" role="presentation" aria-hidden="true"><style>
+svg{
+  --paper:#0b0b0b; --ink:#f2f0ec; --grey:#9c988f; --soft:#837f76;
+  --rule:rgba(242,240,236,.24); --faint:rgba(242,240,236,.11);
+  --sig:#3157ff; --live:#ff6a1a;
+}
+@media (prefers-color-scheme: light){
+  svg{
+    --paper:#f7f6f3; --ink:#0b0b0b; --grey:#5c5a54; --soft:#6f6d66;
+    --rule:rgba(11,11,11,.22); --faint:rgba(11,11,11,.11);
+    --sig:#2447e0; --live:#cc4d0a;
+  }
+}
+.paper{fill:var(--paper)}
+.d{font-family:"AR","Helvetica Neue",Helvetica,"Segoe UI",Roboto,Arial,sans-serif;font-weight:800}
+.m{font-family:"PX",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;font-weight:400}
+.ink{fill:var(--ink)} .grey{fill:var(--grey)} .soft{fill:var(--soft)}
+.sig{fill:var(--sig)} .live{fill:var(--live)}
+.r{stroke:var(--rule);stroke-width:1.7;fill:none}
+.axis{stroke:var(--rule);stroke-width:1.4;fill:none}
+.grid{stroke:var(--faint);stroke-width:1.4;fill:none;stroke-dasharray:2 7}
+.ghost{stroke:var(--faint);stroke-width:1.4;fill:none;stroke-dasharray:3 8}
+.trace{stroke:var(--sig);stroke-width:2.2;fill:none;stroke-linejoin:round}
+.pen{stroke:var(--live);stroke-width:1.8;fill:none}
+@keyframes bl{0%,55%{opacity:1}56%,100%{opacity:0}}
+.blink{animation:bl 1.2s steps(1) infinite}
+@keyframes breathe{0%,100%{opacity:1}50%{opacity:.32}}
+.breathe{animation:breathe 2.4s ease-in-out infinite}
+@keyframes rise{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+.u{opacity:0;animation:rise .7s cubic-bezier(.16,1,.3,1) forwards}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}.u{opacity:1}}
+</style>
+<line class="r" x1="-18" y1="7" x2="1218" y2="7"/>
+<rect class="sig" x="0" y="3.5" width="7" height="7"/>
+<rect class="sig" x="-18" y="5.5" width="30" height="3" opacity=".5">
+  <animate attributeName="x" values="-18;1188;-18" keyTimes="0;0.5;1" dur="18s" repeatCount="indefinite"/>
+</rect>
+</svg>

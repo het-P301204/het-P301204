@@ -1,8 +1,13 @@
 <!--
   het-P301204 — profile README
-  This is an index to the repositories, not a homepage. The chart plots what
-  has actually been built. Repositories are the only bright marks on it.
-  Repo must be named exactly: het-P301204 (public, README.md at root)
+  An index to the repositories, not a homepage. The chart plots what has
+  actually been built; repositories are the only bright marks on it.
+
+  INTERACTION NOTE: chip hrefs must target #user-content-* because GitHub
+  prefixes id attributes but leaves hrefs alone. Fragment navigation into a
+  closed <details> opens it — and opens every ancestor, so a repo link opens
+  its domain too. Do not remove the bare <a id="..."> tags; they are the targets.
+
   Regenerate assets: node build.mjs      Daily edit: record.json
 -->
 
@@ -10,7 +15,7 @@
 
 <picture>
   <source media="(max-width: 620px)" srcset="assets/record-mobile.svg">
-  <img src="assets/record.svg" width="100%" alt="Record of work — repositories plotted by security domain across successive entries">
+  <img src="assets/record.svg" width="100%" alt="Record of work — repositories plotted by security domain over time">
 </picture>
 
 <a href="#user-content-d-assurance"><kbd> ASSURANCE </kbd></a>
@@ -20,25 +25,56 @@
 <a href="#user-content-d-cloud"><kbd> CLOUD </kbd></a>
 <a href="#user-content-d-offensive"><kbd> OFFENSIVE </kbd></a>
 
+<br>
+
+<a href="#user-content-r-aegislens"><kbd> ↳ &nbsp;NEW HERE? START WITH AEGISLENS &nbsp;</kbd></a>
+
 <img src="assets/divider.svg" width="100%" alt="">
 
 </div>
 
 ## Index
 
-Six domains, three repositories, one entry still open. Every mark on the chart
-above is a repository below — open a domain and go read the code.
+Six domains, three repositories. Open a domain, then open a repository —
+the second level is where the evidence is. Repository names link straight
+to the code.
 
 <details id="domain-assurance">
 <summary><b>ASSURANCE</b> &nbsp;<sub>iso 27001 / isms / controls / evidence &nbsp;—&nbsp; 2 repositories</sub></summary>
 <a id="d-assurance"></a>
 
+<details id="repo-securebridge">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/SecureBridge-ISMS-360">SecureBridge-ISMS-360</a></b> &nbsp;<sub>a whole ISMS, end to end</sub></summary>
+<a id="r-securebridge"></a>
+
+Ten interconnected GRC projects wired into a single management system —
+governance, risk, controls, policy, audit, evidence, management review and
+certification readiness for one fictional company.
+
 | | |
 | :-- | :-- |
-| **[SecureBridge-ISMS-360](https://github.com/het-P301204/SecureBridge-ISMS-360)** | Ten interconnected GRC projects wired into a single ISMS — governance, risk, controls, policy, audit, evidence, management review, certification readiness.<br><sub>The whole management system, end to end, for one fictional company.</sub> |
-| **[AegisLens](https://github.com/het-P301204/AegisLens-security-workbench)** | The tooling half of the same problem: evidence in, risk scored, findings tracked, report out.<br><sub>`Python` `FastAPI` `React` `Docker` — 108 tests, CI, a worked example in `docs/`</sub> |
+| **Shape** | Documentation-led. The artefacts *are* the deliverable. |
+| **Read first** | The risk register and the control-to-evidence mapping. |
+| **Why it exists** | Most GRC examples show one control. This shows the system they live in. |
 
-<sub>What I am actually chasing here: the smallest honest evidence set that proves a control operates.</sub>
+</details>
+
+<details id="repo-aegislens">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/AegisLens-security-workbench">AegisLens</a></b> &nbsp;<sub>the tooling half of the same problem</sub></summary>
+<a id="r-aegislens"></a>
+
+Evidence in, risk scored, findings tracked, report out.
+
+| | |
+| :-- | :-- |
+| **Stack** | `Python` `FastAPI` `React` `TypeScript` `Docker` |
+| **Evidence** | 108 tests, CI, a worked example in `docs/` |
+| **Read first** | `backend/tests` — if you want to know whether I can actually build. |
+| **Also in** | [ENGINEERING](#user-content-d-engineering) — it genuinely spans both |
+
+</details>
+
+<sub>What I am chasing here: the smallest honest evidence set that proves a control operates.</sub>
 
 </details>
 
@@ -46,11 +82,22 @@ above is a repository below — open a domain and go read the code.
 <summary><b>ENGINEERING</b> &nbsp;<sub>tooling / automation / risk scoring &nbsp;—&nbsp; 1 repository</sub></summary>
 <a id="d-engineering"></a>
 
+<details id="repo-aegislens-eng">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/AegisLens-security-workbench">AegisLens</a></b> &nbsp;<sub>read as software, not as GRC</sub></summary>
+<a id="r-aegislens-eng"></a>
+
+A FastAPI service, a React client, a scoring model, a test suite and a
+container. The GRC framing is the domain; this is the build.
+
 | | |
 | :-- | :-- |
-| **[AegisLens](https://github.com/het-P301204/AegisLens-security-workbench)** | Read as software rather than as GRC: a FastAPI service, a React client, a scoring model, a test suite and a container.<br><sub>Start at `backend/tests` if you want to know whether I can actually build.</sub> |
+| **Read first** | `backend/` for the API, then `backend/tests` |
+| **Runs with** | `docker compose up` |
+| **Also in** | [ASSURANCE](#user-content-r-aegislens) — the same repo, other lens |
 
-<sub>AegisLens sits in two rows on the chart because it genuinely spans both. That crossover is the work I find most interesting.</sub>
+</details>
+
+<sub>AegisLens sits in two rows on the chart because it really does span both. That crossover is the work I find most interesting.</sub>
 
 </details>
 
@@ -58,9 +105,18 @@ above is a repository below — open a domain and go read the code.
 <summary><b>DETECTION</b> &nbsp;<sub>telemetry / signals / triage &nbsp;—&nbsp; 1 repository</sub></summary>
 <a id="d-detection"></a>
 
+<details id="repo-pingmaster">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/PingMaster">PingMaster</a></b> &nbsp;<sub>ping, with a graph</sub></summary>
+<a id="r-pingmaster"></a>
+
+Cross-platform network latency you can actually read.
+
 | | |
 | :-- | :-- |
-| **[PingMaster](https://github.com/het-P301204/PingMaster)** | Ping with a graph. Cross-platform network latency you can actually read.<br><sub>`Rust` — the first half of every detection story is seeing the traffic at all.</sub> |
+| **Stack** | `Rust` |
+| **Why it is here** | The first half of every detection story is seeing the traffic at all. |
+
+</details>
 
 </details>
 
@@ -97,20 +153,6 @@ detection work above — not as a separate hobby, and not something I will claim
 before there is code behind it.
 
 </details>
-
-<div align="center"><img src="assets/divider.svg" width="100%" alt=""></div>
-
-## Entries
-
-One security project at a time, dated and left in public — including the ones
-that did not work.
-
-| Entry | Date | Repository | Domain |
-| :-- | :-- | :-- | :-- |
-| `00` | 19.10.2025 | **[PingMaster](https://github.com/het-P301204/PingMaster)** | Detection |
-| `01` | 05.09.2026 | **[SecureBridge-ISMS-360](https://github.com/het-P301204/SecureBridge-ISMS-360)** | Assurance |
-| `02` | 06.09.2026 | **[AegisLens](https://github.com/het-P301204/AegisLens-security-workbench)** | Assurance · Engineering |
-| `03` | 07.09.2026 | *open* | — |
 
 <div align="center"><img src="assets/divider.svg" width="100%" alt=""></div>
 

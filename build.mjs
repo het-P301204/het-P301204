@@ -73,8 +73,7 @@ const W = (f, s) => {
   for (let i = 0; i < R.slots; i++) {
     const e = R.entries[i];
     if (!e || e.open) ghosts += `<line class="ghost" x1="${colX(i)}" y1="${TOP}" x2="${colX(i)}" y2="${BOT}"/>`;
-    ticks += `<text class="m ${e ? (e.open ? 'live' : 'sig') : 'soft'}" x="${colX(i)}" y="${BOT + 24}" font-size="11" letter-spacing="1.6" text-anchor="middle">${e ? e.n : String(i).padStart(2, '0')}</text>`;
-    if (e && !e.open) ticks += `<text class="m soft" x="${colX(i)}" y="${BOT + 42}" font-size="10.5" text-anchor="middle">${e.date}</text>`;
+    if (e) ticks += `<text class="m ${e.open ? 'live' : 'soft'}" x="${colX(i)}" y="${BOT + 28}" font-size="11" letter-spacing="1.1" text-anchor="middle">${e.open ? 'building now' : e.date}</text>`;
   }
 
   let marks = '', pts = [];
@@ -104,7 +103,7 @@ const W = (f, s) => {
 <text class="m grey" x="2" y="178" font-size="13.5">security engineering</text>
 <text class="m soft" x="2" y="200" font-size="13.5">cloud security / security architecture</text>
 <text class="m soft" x="1200" y="178" font-size="12" letter-spacing="1.6" text-anchor="end">${shipped.length} REPOSITORIES / ${filled.size} OF ${DOM.length} DOMAINS</text>
-<text class="m live" x="1200" y="200" font-size="12" letter-spacing="1.6" text-anchor="end">ENTRY ${openEntry.n} / IN PROGRESS</text>
+<text class="m live" x="1200" y="200" font-size="12" letter-spacing="1.6" text-anchor="end">BUILDING NOW</text>
 <line class="r" x1="-18" y1="224" x2="1218" y2="224"/>
 
 <text class="m soft" x="0" y="258" font-size="10.5" letter-spacing="2.2">DOMAIN</text>
@@ -116,7 +115,7 @@ ${yAxis}
 <line class="axis" x1="${X0}" y1="${TOP}" x2="${X0}" y2="${BOT}"/>
 <line class="axis" x1="${X0}" y1="${BOT}" x2="${X1}" y2="${BOT}"/>
 ${ticks}
-<text class="m soft" x="190" y="${BOT + 24}" font-size="10.5" letter-spacing="1.9" text-anchor="end">ENTRY</text>
+<text class="m soft" x="190" y="${BOT + 28}" font-size="10.5" letter-spacing="1.9" text-anchor="end">TIMELINE</text>
 
 <path class="trace" d="${trace}" stroke-dasharray="1400">
   <animate attributeName="stroke-dashoffset" from="1400" to="0" dur="1.15s" begin=".25s" fill="freeze"/>
@@ -161,7 +160,7 @@ ${marks}
 ${rows}
 <line class="r" x1="-16" y1="${y + 6}" x2="396" y2="${y + 6}"/>
 <rect class="live blink" x="0" y="${y + 24}" width="8" height="8"/>
-<text class="m live" x="16" y="${y + 32}" font-size="11" letter-spacing="1.6">ENTRY ${openEntry.n} / IN PROGRESS</text>
+<text class="m live" x="16" y="${y + 32}" font-size="11" letter-spacing="1.6">BUILDING NOW</text>
 <text class="m soft" x="0" y="${y + 58}" font-size="10" letter-spacing="1.6">EMPTY ROWS ARE HONEST</text>
 </svg>`);
 }
@@ -200,7 +199,7 @@ W('social-preview.svg', `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12
   <text class="m grey" x="0" y="366" font-size="17" letter-spacing="1.4">PYTHON / FASTAPI / REACT / DOCKER / 108 TESTS</text>
 
   <line class="r" x1="0" y1="452" x2="1136" y2="452"/>
-  <text class="m soft" x="0" y="480" font-size="14" letter-spacing="2.6">ENTRY 02</text>
+  <text class="m soft" x="0" y="480" font-size="14" letter-spacing="2.6">06.09.2026</text>
   <text class="m soft" x="1136" y="480" font-size="14" letter-spacing="2.6" text-anchor="end">SYNTHETIC DATA ONLY</text>
 </g>
 </svg>`);

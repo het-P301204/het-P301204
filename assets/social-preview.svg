@@ -55,7 +55,7 @@ svg{
   <text class="m grey" x="0" y="366" font-size="17" letter-spacing="1.4">PYTHON / FASTAPI / REACT / DOCKER / 108 TESTS</text>
 
   <line class="r" x1="0" y1="452" x2="1136" y2="452"/>
-  <text class="m soft" x="0" y="480" font-size="14" letter-spacing="2.6">ENTRY 02</text>
+  <text class="m soft" x="0" y="480" font-size="14" letter-spacing="2.6">06.09.2026</text>
   <text class="m soft" x="1136" y="480" font-size="14" letter-spacing="2.6" text-anchor="end">SYNTHETIC DATA ONLY</text>
 </g>
 </svg>

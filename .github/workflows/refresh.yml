@@ -1,0 +1,52 @@
+name: refresh record
+
+# Keeps the chart honest without me touching it. Pulls the live repository
+# list, dates and language mix from the GitHub API, rebuilds the SVGs, and
+# commits only if something actually changed.
+
+on:
+  schedule:
+    - cron: "17 5 * * *"     # 05:17 UTC daily
+  workflow_dispatch:          # and on demand from the Actions tab
+  push:
+    paths:
+      - "record.json"
+      - "build.mjs"
+      - "sync.mjs"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-record
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Sync from the GitHub API
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node sync.mjs
+
+      - name: Rebuild assets
+        run: node build.mjs
+
+      - name: Commit if changed
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "nothing changed"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "refresh record ($(date -u +%Y-%m-%d))"
+          git push

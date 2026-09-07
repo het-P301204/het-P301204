@@ -3,12 +3,16 @@
   An index to the repositories, not a homepage. The chart plots what has
   actually been built; repositories are the only bright marks on it.
 
+  The chart is generated: sync.mjs pulls repos, dates and language mix from
+  the GitHub API, build.mjs renders the SVGs, and .github/workflows/refresh.yml
+  runs both daily. Classify a new repo once in record.json "map" and the
+  chart maintains itself. This index is hand-written on purpose — it holds
+  judgement (what to read first, why it exists) that cannot be generated.
+
   INTERACTION NOTE: chip hrefs must target #user-content-* because GitHub
   prefixes id attributes but leaves hrefs alone. Fragment navigation into a
   closed <details> opens it — and opens every ancestor, so a repo link opens
   its domain too. Do not remove the bare <a id="..."> tags; they are the targets.
-
-  Regenerate assets: node build.mjs      Daily edit: record.json
 -->
 
 <div align="center">
@@ -27,7 +31,7 @@
 
 <br>
 
-<a href="#user-content-r-aegislens"><kbd> ↳ &nbsp;NEW HERE? START WITH AEGISLENS &nbsp;</kbd></a>
+<a href="#user-content-r-trustedge"><kbd> ↳ &nbsp;NEW HERE? START WITH TRUSTEDGE &nbsp;</kbd></a>
 
 <img src="assets/divider.svg" width="100%" alt="">
 
@@ -35,9 +39,9 @@
 
 ## Index
 
-Six domains, three repositories. Open a domain, then open a repository —
-the second level is where the evidence is. Repository names link straight
-to the code.
+Four repositories across five of six domains. Open a domain, then open a
+repository — the second level is where the evidence is. Repository names link
+straight to the code.
 
 <details id="domain-assurance">
 <summary><b>ASSURANCE</b> &nbsp;<sub>iso 27001 / isms / controls / evidence &nbsp;—&nbsp; 2 repositories</sub></summary>
@@ -70,7 +74,7 @@ Evidence in, risk scored, findings tracked, report out.
 | **Stack** | `Python` `FastAPI` `React` `TypeScript` `Docker` |
 | **Evidence** | 108 tests, CI, a worked example in `docs/` |
 | **Read first** | `backend/tests` — if you want to know whether I can actually build. |
-| **Also in** | [ENGINEERING](#user-content-d-engineering) — it genuinely spans both |
+| **Also in** | [ENGINEERING](#user-content-r-aegislens-eng) — it genuinely spans both |
 
 </details>
 
@@ -124,33 +128,60 @@ Cross-platform network latency you can actually read.
 <summary><b>APPSEC</b> &nbsp;<sub>secure sdlc / code review / api surface &nbsp;—&nbsp; empty</sub></summary>
 <a id="d-appsec"></a>
 
-Empty, and I would rather show an empty row than pin a tutorial.
+The one empty row, and I would rather show it than pin a tutorial.
 
 Currently working through authorisation bugs that survive code review,
 dependency trust, and what a useful API threat model looks like when the API
-is small. When something ships, it appears on the chart.
+is small. When something ships, the chart fills itself in.
 
 </details>
 
 <details id="domain-cloud">
-<summary><b>CLOUD</b> &nbsp;<sub>identity / posture / logging / iac &nbsp;—&nbsp; empty</sub></summary>
+<summary><b>CLOUD</b> &nbsp;<sub>identity / posture / logging / iac &nbsp;—&nbsp; 1 repository</sub></summary>
 <a id="d-cloud"></a>
 
-Empty. This is the row I most want to fill, and the direction I am heading.
+<details id="repo-trustedge">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/TrustEdge-AWS-IAM-analyzer">TrustEdge</a></b> &nbsp;<sub>who outside your AWS account can get inside it</sub></summary>
+<a id="r-trustedge"></a>
 
-The question I keep coming back to: the gap between what a cloud provider
-promises, what a control framework asks for, and what the logs can actually
-prove.
+An IAM trust policy is a door — whoever gets through it is holding real AWS
+credentials. TrustEdge reads those doors offline and grades each one by
+exposure × blast radius.
+
+| | |
+| :-- | :-- |
+| **Stack** | `Python 3.9–3.14` |
+| **Evidence** | 601 tests, CI, **zero runtime dependencies** |
+| **Runs** | Offline. No credentials, no API calls, nothing leaves the machine. |
+| **Read first** | The trust-policy grading logic — that is where the argument is. |
+| **Also in** | [OFFENSIVE](#user-content-r-trustedge-off) — it reasons about attack paths |
+
+</details>
+
+<sub>This is the row I most wanted to fill: the gap between what a cloud provider promises, what a control framework asks for, and what the policy actually permits.</sub>
 
 </details>
 
 <details id="domain-offensive">
-<summary><b>OFFENSIVE</b> &nbsp;<sub>attack paths / control validation &nbsp;—&nbsp; empty</sub></summary>
+<summary><b>OFFENSIVE</b> &nbsp;<sub>attack paths / control validation &nbsp;—&nbsp; 1 repository</sub></summary>
 <a id="d-offensive"></a>
 
-Empty, and honestly so. Offence here exists to validate the assurance and
-detection work above — not as a separate hobby, and not something I will claim
-before there is code behind it.
+<details id="repo-trustedge-off">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/TrustEdge-AWS-IAM-analyzer">TrustEdge</a></b> &nbsp;<sub>ranked by exposure × blast radius</sub></summary>
+<a id="r-trustedge-off"></a>
+
+Read offensively, TrustEdge enumerates the inbound trust paths into an AWS
+account and ranks them by how far an attacker gets once through one.
+
+| | |
+| :-- | :-- |
+| **Answers** | Which principals outside the account can assume a role inside it? |
+| **Then** | What can they reach once they have? |
+| **Also in** | [CLOUD](#user-content-r-trustedge) — the same repo, defensive lens |
+
+</details>
+
+<sub>Offence here exists to validate the assurance and detection work above, not as a separate hobby. TrustEdge qualifies because it produces a defensible finding rather than a demo.</sub>
 
 </details>
 
@@ -168,6 +199,6 @@ before there is code behind it.
 
 <br>
 
-<sub>Every project here uses synthetic data.</sub>
+<sub>The chart above rebuilds itself from the GitHub API every day. Every project uses synthetic data.</sub>
 
 </div>

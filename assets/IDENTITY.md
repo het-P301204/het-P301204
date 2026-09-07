@@ -80,26 +80,34 @@ mapping. Do not remove the bare `<a id="d-*">` tags — they are the targets.
 Do **not** put a bare `<img>` inside a `<summary>`: GitHub auto-wraps it in a
 link to the image file, which breaks the toggle.
 
-## Maintenance
+## Maintenance — the chart maintains itself
 
-Edit **`record.json`**, run `node build.mjs`.
+`.github/workflows/refresh.yml` runs daily at 05:17 UTC (and on demand, and on
+any push that touches the build inputs). It runs `sync.mjs`, which pulls the
+live repository list, creation dates, language mix and last-push time from the
+GitHub API, then `build.mjs`, then commits only if something changed.
+
+**Your entire job when you ship a repository is one line:**
 
 ```json
-{ "n": "03", "date": "07.09.2026", "short": "ToolName", "domains": ["appsec"] }
+"map": { "TrustEdge-AWS-IAM-analyzer": ["cloud", "offensive"] }
 ```
 
-Mark the finished entry with a `short` name and its `domains`, then add the
-next `{ "open": true }` entry. The chart grows a mark, the trace extends, the
-domain row lights, the counts update and the pen moves — all from that one
-edit. Then add a row to the Entries table in `README.md`.
+Add the repo to `map` (and optionally `short` for a display name). Dates,
+ordering, column count, domain counts, the language strip and the freshness
+readout are all derived. Anything unclassified is listed as `UNCLASSIFIED` in
+the Action log and simply left off the chart — it never renders something wrong.
 
-`slots` controls how many entry columns are drawn; column pitch is derived from
-it, so the chart always fills its width. Raise it as entries accumulate, and
-drop the oldest once it gets crowded.
+`exclude` keeps non-security repositories (the portfolio, this profile repo)
+out of the record.
 
-The moment worth waiting for is a first repository in `appsec` or `cloud` —
-that is when an empty row lights up and the profile tells a visibly new story,
-for the cost of one line of JSON.
+The index in `README.md` stays hand-written on purpose. It carries judgement —
+what to read first, why a project exists, which repositories connect — and that
+is the part a generator cannot produce.
+
+The moment worth waiting for is a first repository in `appsec`: the last empty
+row lights up, and the profile tells a visibly new story for the cost of one
+line of JSON.
 
 ## Repository previews
 

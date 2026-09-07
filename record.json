@@ -1,17 +1,131 @@
 {
   "domains": [
-    { "id": "assurance",   "name": "ASSURANCE",   "note": "iso 27001 / isms / controls / evidence" },
-    { "id": "engineering", "name": "ENGINEERING", "note": "tooling / automation / risk scoring" },
-    { "id": "detection",   "name": "DETECTION",   "note": "telemetry / signals / triage" },
-    { "id": "appsec",      "name": "APPSEC",      "note": "secure sdlc / code review / api surface" },
-    { "id": "cloud",       "name": "CLOUD",       "note": "identity / posture / logging / iac" },
-    { "id": "offensive",   "name": "OFFENSIVE",   "note": "attack paths / control validation" }
+    {
+      "id": "assurance",
+      "name": "ASSURANCE",
+      "note": "iso 27001 / isms / controls / evidence"
+    },
+    {
+      "id": "engineering",
+      "name": "ENGINEERING",
+      "note": "tooling / automation / risk scoring"
+    },
+    {
+      "id": "detection",
+      "name": "DETECTION",
+      "note": "telemetry / signals / triage"
+    },
+    {
+      "id": "appsec",
+      "name": "APPSEC",
+      "note": "secure sdlc / code review / api surface"
+    },
+    {
+      "id": "cloud",
+      "name": "CLOUD",
+      "note": "identity / posture / logging / iac"
+    },
+    {
+      "id": "offensive",
+      "name": "OFFENSIVE",
+      "note": "attack paths / control validation"
+    }
   ],
+  "map": {
+    "PingMaster": [
+      "detection"
+    ],
+    "SecureBridge-ISMS-360": [
+      "assurance"
+    ],
+    "AegisLens-security-workbench": [
+      "assurance",
+      "engineering"
+    ],
+    "TrustEdge-AWS-IAM-analyzer": [
+      "cloud",
+      "offensive"
+    ]
+  },
+  "short": {
+    "SecureBridge-ISMS-360": "SecureBridge",
+    "AegisLens-security-workbench": "AegisLens",
+    "TrustEdge-AWS-IAM-analyzer": "TrustEdge"
+  },
+  "exclude": [
+    "het-P301204",
+    "HETPATEL-Portfolio",
+    "V15.55-portfolio"
+  ],
+  "open": true,
+  "slots": 6,
   "entries": [
-    { "n": "00", "date": "19.10.2025", "short": "PingMaster",   "domains": ["detection"] },
-    { "n": "01", "date": "05.09.2026", "short": "SecureBridge", "domains": ["assurance"] },
-    { "n": "02", "date": "06.09.2026", "short": "AegisLens",    "domains": ["assurance", "engineering"] },
-    { "n": "03", "date": "07.09.2026", "short": "",             "domains": [], "open": true }
+    {
+      "date": "19.10.2025",
+      "short": "PingMaster",
+      "repo": "PingMaster",
+      "domains": [
+        "detection"
+      ]
+    },
+    {
+      "date": "05.09.2026",
+      "short": "SecureBridge",
+      "repo": "SecureBridge-ISMS-360",
+      "domains": [
+        "assurance"
+      ]
+    },
+    {
+      "date": "06.09.2026",
+      "short": "AegisLens",
+      "repo": "AegisLens-security-workbench",
+      "domains": [
+        "assurance",
+        "engineering"
+      ]
+    },
+    {
+      "date": "07.09.2026",
+      "short": "TrustEdge",
+      "repo": "TrustEdge-AWS-IAM-analyzer",
+      "domains": [
+        "cloud",
+        "offensive"
+      ]
+    },
+    {
+      "date": "07.09.2026",
+      "short": "",
+      "domains": [],
+      "open": true
+    }
   ],
-  "slots": 5
+  "stack": [
+    {
+      "name": "Python",
+      "pct": 73.8
+    },
+    {
+      "name": "TypeScript",
+      "pct": 18.9
+    },
+    {
+      "name": "Rust",
+      "pct": 5.9
+    },
+    {
+      "name": "CSS",
+      "pct": 0.5
+    },
+    {
+      "name": "Dockerfile",
+      "pct": 0.5
+    }
+  ],
+  "lastPush": {
+    "repo": "TrustEdge",
+    "date": "07.09.2026"
+  },
+  "synced": "2026-09-07"
 }

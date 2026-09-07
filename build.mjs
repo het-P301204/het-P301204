@@ -87,12 +87,22 @@ const W = (f, s) => {
 <text class="m ink" x="${x}" y="${yTop - 12}" font-size="12.5" text-anchor="middle">${e.short}</text></g>`;
   });
 
+
+  const stack = R.stack || [];
+  let sx = 0, strip = "";
+  stack.forEach((L, i) => {
+    const w = 1200 * L.pct / 100, op = (1 - i * 0.17).toFixed(2);
+    strip += `<rect class="sig" x="${sx.toFixed(1)}" y="672" width="${Math.max(w - 3, 1).toFixed(1)}" height="13" opacity="${op}"/>`;
+    if (L.pct >= 5) strip += `<text class="m soft" x="${(sx + w / 2).toFixed(1)}" y="706" font-size="10.5" letter-spacing="1.1" text-anchor="middle">${L.name} ${L.pct}%</text>`;
+    sx += w;
+  });
+
   const trace = pts.map((p, i) => `${i ? 'L' : 'M'}${p[0]} ${p[1]}`).join(' ');
   const penX = colX(R.entries.indexOf(openEntry));
 
-  W('record.svg', `<svg xmlns="http://www.w3.org/2000/svg" viewBox="-18 0 1236 704" width="1236" height="704" role="img" aria-label="Record of work: repositories plotted by security domain across successive entries">
+  W('record.svg', `<svg xmlns="http://www.w3.org/2000/svg" viewBox="-18 0 1236 776" width="1236" height="776" role="img" aria-label="Record of work: repositories plotted by security domain across successive entries">
 <title>Het Patel - record of work</title>${S()}
-<rect class="paper" x="-18" y="0" width="1236" height="704"/>
+<rect class="paper" x="-18" y="0" width="1236" height="776"/>
 
 <rect class="sig" x="0" y="19" width="9" height="9"/>
 <text class="m ink" x="20" y="28" font-size="12" letter-spacing="2.2">RECORD OF WORK</text>
@@ -127,9 +137,12 @@ ${marks}
   <rect class="live breathe" x="${penX - 5}" y="${TOP - 5}" width="10" height="10"/>
 </g>
 
-<line class="r" x1="-18" y1="668" x2="1218" y2="668"/>
-<text class="m soft" x="0" y="690" font-size="11" letter-spacing="2.2">EMPTY ROWS ARE HONEST / NOTHING SHIPPED THERE YET</text>
-<text class="m sig" x="1200" y="690" font-size="11" letter-spacing="2.2" text-anchor="end">OPEN A DOMAIN BELOW</text>
+<text class="m soft" x="0" y="656" font-size="10.5" letter-spacing="2.2">BUILT WITH</text>
+<text class="m soft" x="1200" y="656" font-size="10.5" letter-spacing="2.2" text-anchor="end">LAST PUSH / ${(R.lastPush||{}).repo||"-"} / ${(R.lastPush||{}).date||"-"}</text>
+${strip}
+<line class="r" x1="-18" y1="740" x2="1218" y2="740"/>
+<text class="m soft" x="0" y="762" font-size="11" letter-spacing="2.2">SYNCED FROM THE GITHUB API / ${R.synced || "-"}</text>
+<text class="m sig" x="1200" y="762" font-size="11" letter-spacing="2.2" text-anchor="end">OPEN A DOMAIN BELOW</text>
 </svg>`);
 }
 

@@ -32,10 +32,20 @@
 <br>
 
 <a href="#user-content-r-trustedge"><kbd> ↳ &nbsp;NEW HERE? START WITH TRUSTEDGE &nbsp;</kbd></a>
+<a href="https://github.com/het-P301204/het-P301204/issues/new?template=teardown.md&title=teardown%7C%3CYOUR%20TOPIC%3E"><kbd> ⊕ &nbsp;REQUEST A TEARDOWN &nbsp;</kbd></a>
 
 <img src="assets/divider.svg" width="100%" alt="">
 
 </div>
+
+I work on the load-bearing parts of security — how a control is evidenced, how
+risk becomes a number someone can act on, and how a system tells you it is
+being abused. I am mostly interested in why things fail and what makes them
+hold.
+
+<!--TESTS:START-->
+**709 tests** across the lab — AegisLens 108, TrustEdge 601. Counted from each repository's own README, not asserted here.
+<!--TESTS:END-->
 
 ## Index
 
@@ -212,6 +222,35 @@ says what must be true, TrustEdge and PingMaster produce evidence about the
 world, and AegisLens is where evidence becomes a number someone can act on.
 
 Wiring them together for real is the interesting problem, and it is not done.
+
+</details>
+
+<details id="the-bench">
+<summary><b>ON THE BENCH</b> &nbsp;<sub>what the lab is doing right now — updated by a robot, not by me</sub></summary>
+<a id="d-bench"></a>
+
+**Latest commits across every repository**
+
+<!--ACTIVITY:START-->
+- `dac014f` **[TrustEdge](https://github.com/het-P301204/TrustEdge-AWS-IAM-analyzer)** — Add the technical substance the README was missing <sub>just now</sub>
+- `d2f5a08` **[TrustEdge](https://github.com/het-P301204/TrustEdge-AWS-IAM-analyzer)** — Rewrite the README around diagrams, and diagram the architecture doc <sub>just now</sub>
+- `aa385ea` **[TrustEdge](https://github.com/het-P301204/TrustEdge-AWS-IAM-analyzer)** — Fix Python 3.9 test collection and the Docker bind-mount write <sub>1h ago</sub>
+- `09f2a77` **[TrustEdge](https://github.com/het-P301204/TrustEdge-AWS-IAM-analyzer)** — TrustEdge: AWS inbound trust boundary analyzer <sub>1h ago</sub>
+- `87d25bb` **[AegisLens](https://github.com/het-P301204/AegisLens-security-workbench)** — Add social preview card and README badges <sub>yesterday</sub>
+<!--ACTIVITY:END-->
+
+**The queue.** Anyone can add to it — the
+[`REQUEST A TEARDOWN`](https://github.com/het-P301204/het-P301204/issues/new?template=teardown.md&title=teardown%7C%3CYOUR%20TOPIC%3E)
+link opens a prefilled issue, an Action sanitises the title, appends it here
+and closes the issue. I work through it in roughly the order it arrives.
+
+<!--QUEUE:START-->
+_Nothing queued yet._
+<!--QUEUE:END-->
+
+<sub>Think a repository is filed under the wrong domain?
+<a href="https://github.com/het-P301204/het-P301204/issues/new?template=classify.md&title=classify%7C%3CREPO%3E%7C%3CDOMAIN%3E">Say so</a> —
+I would rather be corrected than flattering about my own work.</sub>
 
 </details>
 

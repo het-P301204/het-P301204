@@ -26,6 +26,7 @@ svg{
 .ghost{stroke:var(--faint);stroke-width:1.4;fill:none;stroke-dasharray:3 8}
 .trace{stroke:var(--sig);stroke-width:2.2;fill:none;stroke-linejoin:round}
 .pen{stroke:var(--live);stroke-width:1.8;fill:none}
+.stem{stroke:var(--sig);stroke-width:1.3;fill:none;opacity:.3}
 @keyframes bl{0%,55%{opacity:1}56%,100%{opacity:0}}
 .blink{animation:bl 1.2s steps(1) infinite}
 @keyframes breathe{0%,100%{opacity:1}50%{opacity:.32}}

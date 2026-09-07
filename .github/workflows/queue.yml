@@ -1,0 +1,70 @@
+name: teardown queue
+
+# A visitor opens a prefilled issue; this appends it to the public queue in the
+# README and closes the issue. The only path by which untrusted input reaches
+# this repository, so it is deliberately narrow:
+#
+#   * the title is passed through `env`, never interpolated into a run: script
+#     (that would be a script-injection hole)
+#   * queue.mjs allowlists the charset and caps length and queue depth
+#   * permissions are the minimum needed
+#   * every change is an ordinary commit, so it reverts in one command
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: teardown-queue          # serialise, so two issues cannot race the file
+  cancel-in-progress: false
+
+jobs:
+  queue:
+    # cheap pre-filter; queue.mjs re-validates properly
+    if: startsWith(github.event.issue.title, 'teardown|')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Add to the queue
+        id: add
+        env:
+          TITLE: ${{ github.event.issue.title }}
+          ACTOR: ${{ github.event.issue.user.login }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: node queue.mjs
+
+      - name: Commit
+        id: commit
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "queue: teardown request from #${{ github.event.issue.number }}"
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Close the issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NUM: ${{ github.event.issue.number }}
+          CHANGED: ${{ steps.commit.outputs.changed }}
+        run: |
+          if [ "$CHANGED" = "true" ]; then
+            gh issue comment "$NUM" --body "Queued — it is on the profile now. Thanks."
+          else
+            gh issue comment "$NUM" --body "Nothing usable survived sanitising, or it was already queued. Nothing added."
+          fi
+          gh issue close "$NUM"

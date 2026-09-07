@@ -127,5 +127,16 @@
     "repo": "TrustEdge",
     "date": "07.09.2026"
   },
-  "synced": "2026-09-07"
+  "synced": "2026-09-07",
+  "tests": [
+    {
+      "repo": "AegisLens",
+      "n": 108
+    },
+    {
+      "repo": "TrustEdge",
+      "n": 601
+    }
+  ],
+  "testTotal": 709
 }

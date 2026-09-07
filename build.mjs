@@ -42,6 +42,7 @@ svg{
 .ghost{stroke:var(--faint);stroke-width:1.4;fill:none;stroke-dasharray:3 8}
 .trace{stroke:var(--sig);stroke-width:2.2;fill:none;stroke-linejoin:round}
 .pen{stroke:var(--live);stroke-width:1.8;fill:none}
+.stem{stroke:var(--sig);stroke-width:1.3;fill:none;opacity:.3}
 @keyframes bl{0%,55%{opacity:1}56%,100%{opacity:0}}
 .blink{animation:bl 1.2s steps(1) infinite}
 @keyframes breathe{0%,100%{opacity:1}50%{opacity:.32}}
@@ -76,15 +77,20 @@ const W = (f, s) => {
     if (e) ticks += `<text class="m ${e.open ? 'live' : 'soft'}" x="${colX(i)}" y="${BOT + 28}" font-size="11" letter-spacing="1.1" text-anchor="middle">${e.open ? 'building now' : e.date}</text>`;
   }
 
-  let marks = '', pts = [];
+  /* No connecting line: the domain axis is categorical, so a trend line would
+     imply an ordering and a direction that do not exist. Each repository gets
+     a stem down to its date instead — it anchors the mark in time and claims
+     nothing else. */
+  let marks = '';
   shipped.forEach((e, k) => {
     const x = colX(R.entries.indexOf(e));
     const rs = e.domains.map(rowOf).sort((a, b) => a - b);
-    const yTop = rowY(rs[0]) - 5, yBot = rowY(rs[rs.length - 1]) + 5;
-    pts.push([x, (rowY(rs[0]) + rowY(rs[rs.length - 1])) / 2]);
-    marks += `<g class="u" style="animation-delay:${(1.1 + k * 0.14).toFixed(2)}s">
-<rect class="sig" x="${x - 5}" y="${yTop}" width="10" height="${yBot - yTop}"/>
-<text class="m ink" x="${x}" y="${yTop - 12}" font-size="12.5" text-anchor="middle">${e.short}</text></g>`;
+    const yTop = rowY(rs[0]) - 8, yBot = rowY(rs[rs.length - 1]) + 8;
+    marks += `<g class="u" style="animation-delay:${(0.45 + k * 0.13).toFixed(2)}s">
+<line class="stem" x1="${x}" y1="${yBot}" x2="${x}" y2="${BOT}"/>
+<rect class="sig" x="${x - 7}" y="${yTop}" width="14" height="${yBot - yTop}"/>
+<text class="m ink" x="${x}" y="${yTop - 13}" font-size="12.5" text-anchor="middle">${e.short}</text>
+<text class="m soft" x="${x}" y="${yBot + 20}" font-size="9.5" text-anchor="middle">${e.domains.length > 1 ? e.domains.length + ' domains' : ''}</text></g>`;
   });
 
 
@@ -97,7 +103,6 @@ const W = (f, s) => {
     sx += w;
   });
 
-  const trace = pts.map((p, i) => `${i ? 'L' : 'M'}${p[0]} ${p[1]}`).join(' ');
   const penX = colX(R.entries.indexOf(openEntry));
 
   W('record.svg', `<svg xmlns="http://www.w3.org/2000/svg" viewBox="-18 0 1236 776" width="1236" height="776" role="img" aria-label="Record of work: repositories plotted by security domain across successive entries">
@@ -127,9 +132,6 @@ ${yAxis}
 ${ticks}
 <text class="m soft" x="190" y="${BOT + 28}" font-size="10.5" letter-spacing="1.9" text-anchor="end">TIMELINE</text>
 
-<path class="trace" d="${trace}" stroke-dasharray="1400">
-  <animate attributeName="stroke-dashoffset" from="1400" to="0" dur="1.15s" begin=".25s" fill="freeze"/>
-</path>
 ${marks}
 
 <g class="u" style="animation-delay:1.6s">

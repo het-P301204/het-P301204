@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: The repositories themselves
+    url: https://github.com/het-P301204?tab=repositories
+    about: Bugs and questions about a specific tool belong in that tool's repo.

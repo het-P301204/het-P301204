@@ -25,6 +25,7 @@ svg{
 .ghost{stroke:var(--faint);stroke-width:1.4;fill:none;stroke-dasharray:3 8}
 .trace{stroke:var(--sig);stroke-width:2.2;fill:none;stroke-linejoin:round}
 .pen{stroke:var(--live);stroke-width:1.8;fill:none}
+.stem{stroke:var(--sig);stroke-width:1.3;fill:none;opacity:.3}
 @keyframes bl{0%,55%{opacity:1}56%,100%{opacity:0}}
 .blink{animation:bl 1.2s steps(1) infinite}
 @keyframes breathe{0%,100%{opacity:1}50%{opacity:.32}}
@@ -58,18 +59,23 @@ svg{
 <text class="m soft" x="300" y="618" font-size="11" letter-spacing="1.1" text-anchor="middle">19.10.2025</text><text class="m soft" x="470" y="618" font-size="11" letter-spacing="1.1" text-anchor="middle">05.09.2026</text><text class="m soft" x="640" y="618" font-size="11" letter-spacing="1.1" text-anchor="middle">06.09.2026</text><text class="m soft" x="810" y="618" font-size="11" letter-spacing="1.1" text-anchor="middle">07.09.2026</text><text class="m live" x="980" y="618" font-size="11" letter-spacing="1.1" text-anchor="middle">building now</text>
 <text class="m soft" x="190" y="618" font-size="10.5" letter-spacing="1.9" text-anchor="end">TIMELINE</text>
 
-<path class="trace" d="M300 404 L470 300 L640 326 L810 534" stroke-dasharray="1400">
-  <animate attributeName="stroke-dashoffset" from="1400" to="0" dur="1.15s" begin=".25s" fill="freeze"/>
-</path>
-<g class="u" style="animation-delay:1.10s">
-<rect class="sig" x="295" y="399" width="10" height="10"/>
-<text class="m ink" x="300" y="387" font-size="12.5" text-anchor="middle">PingMaster</text></g><g class="u" style="animation-delay:1.24s">
-<rect class="sig" x="465" y="295" width="10" height="10"/>
-<text class="m ink" x="470" y="283" font-size="12.5" text-anchor="middle">SecureBridge</text></g><g class="u" style="animation-delay:1.38s">
-<rect class="sig" x="635" y="295" width="10" height="62"/>
-<text class="m ink" x="640" y="283" font-size="12.5" text-anchor="middle">AegisLens</text></g><g class="u" style="animation-delay:1.52s">
-<rect class="sig" x="805" y="503" width="10" height="62"/>
-<text class="m ink" x="810" y="491" font-size="12.5" text-anchor="middle">TrustEdge</text></g>
+<g class="u" style="animation-delay:0.45s">
+<line class="stem" x1="300" y1="412" x2="300" y2="590"/>
+<rect class="sig" x="293" y="396" width="14" height="16"/>
+<text class="m ink" x="300" y="383" font-size="12.5" text-anchor="middle">PingMaster</text>
+<text class="m soft" x="300" y="432" font-size="9.5" text-anchor="middle"></text></g><g class="u" style="animation-delay:0.58s">
+<line class="stem" x1="470" y1="308" x2="470" y2="590"/>
+<rect class="sig" x="463" y="292" width="14" height="16"/>
+<text class="m ink" x="470" y="279" font-size="12.5" text-anchor="middle">SecureBridge</text>
+<text class="m soft" x="470" y="328" font-size="9.5" text-anchor="middle"></text></g><g class="u" style="animation-delay:0.71s">
+<line class="stem" x1="640" y1="360" x2="640" y2="590"/>
+<rect class="sig" x="633" y="292" width="14" height="68"/>
+<text class="m ink" x="640" y="279" font-size="12.5" text-anchor="middle">AegisLens</text>
+<text class="m soft" x="640" y="380" font-size="9.5" text-anchor="middle">2 domains</text></g><g class="u" style="animation-delay:0.84s">
+<line class="stem" x1="810" y1="568" x2="810" y2="590"/>
+<rect class="sig" x="803" y="500" width="14" height="68"/>
+<text class="m ink" x="810" y="487" font-size="12.5" text-anchor="middle">TrustEdge</text>
+<text class="m soft" x="810" y="588" font-size="9.5" text-anchor="middle">2 domains</text></g>
 
 <g class="u" style="animation-delay:1.6s">
   <line class="pen" x1="980" y1="274" x2="980" y2="590" stroke-dasharray="3 5"/>

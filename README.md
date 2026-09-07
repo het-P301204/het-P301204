@@ -185,6 +185,36 @@ account and ranks them by how far an attacker gets once through one.
 
 </details>
 
+<details id="how-they-fit">
+<summary><b>HOW THE FOUR FIT TOGETHER</b> &nbsp;<sub>one diagram, click to expand it</sub></summary>
+<a id="d-fit"></a>
+
+```mermaid
+flowchart LR
+  SB["SecureBridge-ISMS-360<br/><i>what controls must exist</i>"]
+  TE["TrustEdge<br/><i>who can get into the account</i>"]
+  PM["PingMaster<br/><i>can I see the traffic at all</i>"]
+  AL["AegisLens<br/><i>do the controls operate,<br/>and at what risk</i>"]
+
+  SB -. "what must be true" .-> AL
+  TE -. "a finding" .-> AL
+  PM -. "a signal" .-> AL
+
+  click SB "https://github.com/het-P301204/SecureBridge-ISMS-360"
+  click TE "https://github.com/het-P301204/TrustEdge-AWS-IAM-analyzer"
+  click PM "https://github.com/het-P301204/PingMaster"
+  click AL "https://github.com/het-P301204/AegisLens-security-workbench"
+```
+
+**The arrows are dashed for a reason.** These are four separate tools, not an
+integrated platform. The diagram shows how the *questions* relate — governance
+says what must be true, TrustEdge and PingMaster produce evidence about the
+world, and AegisLens is where evidence becomes a number someone can act on.
+
+Wiring them together for real is the interesting problem, and it is not done.
+
+</details>
+
 <div align="center"><img src="assets/divider.svg" width="100%" alt=""></div>
 
 <div align="center">

@@ -245,7 +245,9 @@ link opens a prefilled issue, an Action sanitises the title, appends it here
 and closes the issue. I work through it in roughly the order it arrives.
 
 <!--QUEUE:START-->
-_Nothing queued yet._
+| In the queue | Requested by | Issue |
+| :-- | :-- | :-- |
+| S3 bucket policy evaluation order | [@het-P301204](https://github.com/het-P301204) | [#1](../../issues/1) |
 <!--QUEUE:END-->
 
 <sub>Think a repository is filed under the wrong domain?

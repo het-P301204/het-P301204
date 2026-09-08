@@ -232,10 +232,10 @@ Wiring them together for real is the interesting problem, and it is not done.
 **Latest commits across every repository**
 
 <!--ACTIVITY:START-->
-- `dac014f` **[TrustEdge](https://github.com/het-P301204/TrustEdge-AWS-IAM-analyzer)** — Add the technical substance the README was missing <sub>just now</sub>
-- `d2f5a08` **[TrustEdge](https://github.com/het-P301204/TrustEdge-AWS-IAM-analyzer)** — Rewrite the README around diagrams, and diagram the architecture doc <sub>just now</sub>
-- `aa385ea` **[TrustEdge](https://github.com/het-P301204/TrustEdge-AWS-IAM-analyzer)** — Fix Python 3.9 test collection and the Docker bind-mount write <sub>1h ago</sub>
-- `09f2a77` **[TrustEdge](https://github.com/het-P301204/TrustEdge-AWS-IAM-analyzer)** — TrustEdge: AWS inbound trust boundary analyzer <sub>1h ago</sub>
+- `dac014f` **[TrustEdge](https://github.com/het-P301204/TrustEdge-AWS-IAM-analyzer)** — Add the technical substance the README was missing <sub>15h ago</sub>
+- `d2f5a08` **[TrustEdge](https://github.com/het-P301204/TrustEdge-AWS-IAM-analyzer)** — Rewrite the README around diagrams, and diagram the architecture doc <sub>15h ago</sub>
+- `aa385ea` **[TrustEdge](https://github.com/het-P301204/TrustEdge-AWS-IAM-analyzer)** — Fix Python 3.9 test collection and the Docker bind-mount write <sub>15h ago</sub>
+- `09f2a77` **[TrustEdge](https://github.com/het-P301204/TrustEdge-AWS-IAM-analyzer)** — TrustEdge: AWS inbound trust boundary analyzer <sub>15h ago</sub>
 - `87d25bb` **[AegisLens](https://github.com/het-P301204/AegisLens-security-workbench)** — Add social preview card and README badges <sub>yesterday</sub>
 <!--ACTIVITY:END-->
 

@@ -325,7 +325,11 @@ Wiring them together for real is the interesting problem, and it is not done.
 **Latest commits across every repository**
 
 <!--ACTIVITY:START-->
-_no recent commits_
+- `bbfd38d` **[BlackOut](https://github.com/het-P301204/BlackOut)** — Record what CI verified on Linux <sub>just now</sub>
+- `116434c` **[BlackOut](https://github.com/het-P301204/BlackOut)** — Rewrite the README as the front door <sub>just now</sub>
+- `8f8c8be` **[BlackOut](https://github.com/het-P301204/BlackOut)** — Style the scrollbars, and stop the console flooding its own audit log <sub>just now</sub>
+- `d6354ab` **[BlackOut](https://github.com/het-P301204/BlackOut)** — Redesign the console as a substation panel, and fix what the screenshots <sub>1h ago</sub>
+- `5c76d45` **[BlackOut](https://github.com/het-P301204/BlackOut)** — Record what has been executed here and what has not <sub>1h ago</sub>
 <!--ACTIVITY:END-->
 
 **The queue.** Anyone can add to it — the

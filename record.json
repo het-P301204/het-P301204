@@ -268,16 +268,24 @@
   ],
   "stack": [
     {
+      "name": "Python",
+      "pct": 66.7
+    },
+    {
+      "name": "TypeScript",
+      "pct": 26.5
+    },
+    {
       "name": "Rust",
-      "pct": 94.9
+      "pct": 2.8
     },
     {
-      "name": "Roff",
-      "pct": 4.4
+      "name": "CSS",
+      "pct": 1.6
     },
     {
-      "name": "Dockerfile",
-      "pct": 0.7
+      "name": "JavaScript",
+      "pct": 1.1
     }
   ],
   "tests": [

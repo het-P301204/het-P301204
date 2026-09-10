@@ -44,47 +44,44 @@ being abused. I am mostly interested in why things fail and what makes them
 hold.
 
 <!--TESTS:START-->
-**709 tests** across the lab — AegisLens 108, TrustEdge 601. Counted from each repository's own README, not asserted here.
+**1,561 tests** across the lab — AegisLens 108, TrustEdge 601, Pedigree 198, NullFire 424, BlackOut 230. Counted from each repository's own README, not asserted here.
 <!--TESTS:END-->
 
 ## Index
 
-Four repositories across five of six domains. Open a domain, then open a
-repository — the second level is where the evidence is. Repository names link
-straight to the code.
+<!--SUMMARY:START-->
+7 repositories across 6 of 6 domains. Open a domain, then open a repository — the second level is where the evidence is. Repository names link straight to the code.
+<!--SUMMARY:END-->
 
+<!--INDEX:START-->
 <details id="domain-assurance">
 <summary><b>ASSURANCE</b> &nbsp;<sub>iso 27001 / isms / controls / evidence &nbsp;—&nbsp; 2 repositories</sub></summary>
 <a id="d-assurance"></a>
 
-<details id="repo-securebridge">
-<summary>&nbsp;<b><a href="https://github.com/het-P301204/SecureBridge-ISMS-360">SecureBridge-ISMS-360</a></b> &nbsp;<sub>a whole ISMS, end to end</sub></summary>
+<details id="repo-securebridge-assurance">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/SecureBridge-ISMS-360">SecureBridge</a></b> &nbsp;<sub>a whole ISMS, end to end</sub></summary>
 <a id="r-securebridge"></a>
 
-Ten interconnected GRC projects wired into a single management system —
-governance, risk, controls, policy, audit, evidence, management review and
-certification readiness for one fictional company.
+An interactive, evidence-driven ISO 27001 Integrated ISMS portfolio for SecureBridge Technologies Pvt. Ltd., connecting governance, risk, controls, policies, audits, evidence, management review, and certification readiness across 10 interconnected GRC projects.
 
 | | |
 | :-- | :-- |
-| **Shape** | Documentation-led. The artefacts *are* the deliverable. |
 | **Read first** | The risk register and the control-to-evidence mapping. |
-| **Why it exists** | Most GRC examples show one control. This shows the system they live in. |
 
 </details>
 
-<details id="repo-aegislens">
-<summary>&nbsp;<b><a href="https://github.com/het-P301204/AegisLens-security-workbench">AegisLens</a></b> &nbsp;<sub>the tooling half of the same problem</sub></summary>
+<details id="repo-aegislens-assurance">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/AegisLens-security-workbench">AegisLens</a></b> &nbsp;<sub>evidence in, risk scored, report out</sub></summary>
 <a id="r-aegislens"></a>
 
-Evidence in, risk scored, findings tracked, report out.
+AegisLens is an educational and defensive security assessment workbench using synthetic data. It is not a replacement for a SIEM, GRC platform, vulnerability scanner, or professional security audit.
 
 | | |
 | :-- | :-- |
-| **Stack** | `Python` `FastAPI` `React` `TypeScript` `Docker` |
-| **Evidence** | 108 tests, CI, a worked example in `docs/` |
+| **Stack** | `TypeScript` `Python` `CSS` |
+| **Evidence** | 108 tests, CI |
 | **Read first** | `backend/tests` — if you want to know whether I can actually build. |
-| **Also in** | [ENGINEERING](#user-content-r-aegislens-eng) — it genuinely spans both |
+| **Also in** | [ENGINEERING](#user-content-r-aegislens-engineering) |
 
 </details>
 
@@ -93,56 +90,143 @@ Evidence in, risk scored, findings tracked, report out.
 </details>
 
 <details id="domain-engineering">
-<summary><b>ENGINEERING</b> &nbsp;<sub>tooling / automation / risk scoring &nbsp;—&nbsp; 1 repository</sub></summary>
+<summary><b>ENGINEERING</b> &nbsp;<sub>tooling / automation / pipelines &nbsp;—&nbsp; 3 repositories</sub></summary>
 <a id="d-engineering"></a>
 
-<details id="repo-aegislens-eng">
-<summary>&nbsp;<b><a href="https://github.com/het-P301204/AegisLens-security-workbench">AegisLens</a></b> &nbsp;<sub>read as software, not as GRC</sub></summary>
-<a id="r-aegislens-eng"></a>
+<details id="repo-aegislens-engineering">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/AegisLens-security-workbench">AegisLens</a></b> &nbsp;<sub>evidence in, risk scored, report out</sub></summary>
+<a id="r-aegislens-engineering"></a>
 
-A FastAPI service, a React client, a scoring model, a test suite and a
-container. The GRC framing is the domain; this is the build.
+AegisLens is an educational and defensive security assessment workbench using synthetic data. It is not a replacement for a SIEM, GRC platform, vulnerability scanner, or professional security audit.
 
 | | |
 | :-- | :-- |
-| **Read first** | `backend/` for the API, then `backend/tests` |
-| **Runs with** | `docker compose up` |
-| **Also in** | [ASSURANCE](#user-content-r-aegislens) — the same repo, other lens |
+| **Stack** | `TypeScript` `Python` `CSS` |
+| **Evidence** | 108 tests, CI |
+| **Read first** | `backend/tests` — if you want to know whether I can actually build. |
+| **Also in** | [ASSURANCE](#user-content-r-aegislens) |
 
 </details>
 
-<sub>AegisLens sits in two rows on the chart because it really does span both. That crossover is the work I find most interesting.</sub>
+<details id="repo-trustedge-engineering">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/TrustEdge-AWS-IAM-analyzer">TrustEdge</a></b> &nbsp;<sub>who outside your AWS account can get inside it</sub></summary>
+<a id="r-trustedge"></a>
+
+Grades who outside an AWS account can become an identity inside it, ranked by exposure x blast radius. Offline IAM trust-policy analyzer - no credentials, no API calls, zero dependencies.
+
+| | |
+| :-- | :-- |
+| **Stack** | `Python` `Dockerfile` |
+| **Evidence** | 601 tests, CI |
+| **Runs** | Offline. No credentials, no API calls, nothing leaves the machine. |
+| **Read first** | The trust-policy grading logic — that is where the argument is. |
+| **Also in** | [CLOUD](#user-content-r-trustedge-cloud) |
+
+</details>
+
+<details id="repo-pedigree-engineering">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/Pedigree-npm-provenance-gate">Pedigree</a></b> &nbsp;<sub>where did this dependency actually come from</sub></summary>
+<a id="r-pedigree"></a>
+
+Consumer-side npm provenance verification and policy enforcement. Verifies each dependency's origin against an expected source, then tells you what would break if you enforced it today. Verifies origin - not the absence of malicious code.
+
+| | |
+| :-- | :-- |
+| **Stack** | `TypeScript` `JavaScript` |
+| **Evidence** | 198 tests, CI |
+| **Read first** | The dry-run report — what would break if you enforced the policy today. |
+| **Also in** | [APPSEC](#user-content-r-pedigree-appsec) |
+
+</details>
+
+<sub>Security work only counts once it runs unattended. This row is the difference between an opinion and a tool.</sub>
 
 </details>
 
 <details id="domain-detection">
-<summary><b>DETECTION</b> &nbsp;<sub>telemetry / signals / triage &nbsp;—&nbsp; 1 repository</sub></summary>
+<summary><b>DETECTION</b> &nbsp;<sub>telemetry / signals / triage &nbsp;—&nbsp; 3 repositories</sub></summary>
 <a id="d-detection"></a>
 
-<details id="repo-pingmaster">
+<details id="repo-pingmaster-detection">
 <summary>&nbsp;<b><a href="https://github.com/het-P301204/PingMaster">PingMaster</a></b> &nbsp;<sub>ping, with a graph</sub></summary>
 <a id="r-pingmaster"></a>
 
-Cross-platform network latency you can actually read.
+Ping, but with a graph. A simple, cross-platform tool for visualizing network latency. 🚀  A lightweight, intuitive, and cross-platform graphical ping for developers and network administrators.
 
 | | |
 | :-- | :-- |
-| **Stack** | `Rust` |
-| **Why it is here** | The first half of every detection story is seeing the traffic at all. |
+| **Stack** | `Rust` `Roff` `Dockerfile` |
 
 </details>
+
+<details id="repo-nullfire-detection">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/NullFire">NullFire</a></b> &nbsp;<sub>the Sigma rules that can never fire</sub></summary>
+<a id="r-nullfire"></a>
+
+Detection Matchability Analyzer - finds the Sigma rules that can never match your real post-pipeline data, explains why, and generates the minimal event that would prove each one can fire.
+
+| | |
+| :-- | :-- |
+| **Stack** | `Python` |
+| **Evidence** | 424 tests, CI |
+| **Read first** | The matchability analysis — why a rule is dead against your real data. |
+
+</details>
+
+<details id="repo-blackout-detection">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/BlackOut">BlackOut</a></b> &nbsp;<sub>one control failure, followed all the way through</sub></summary>
+<a id="r-blackout"></a>
+
+Security control failure & detection lab: an authorization fail-open, its exploit, root cause, fix, detection rule and regression test. Local red/blue lab, synthetic data only.
+
+| | |
+| :-- | :-- |
+| **Stack** | `Python` `CSS` `JavaScript` |
+| **Evidence** | 230 tests, CI |
+| **Read first** | The exploit, then the detection rule written against it. |
+| **Also in** | [APPSEC](#user-content-r-blackout-appsec) · [OFFENSIVE](#user-content-r-blackout-offensive) |
+
+</details>
+
+<sub>A control you cannot observe failing is a control you are trusting on faith.</sub>
 
 </details>
 
 <details id="domain-appsec">
-<summary><b>APPSEC</b> &nbsp;<sub>secure sdlc / code review / api surface &nbsp;—&nbsp; empty</sub></summary>
+<summary><b>APPSEC</b> &nbsp;<sub>secure sdlc / code review / supply chain &nbsp;—&nbsp; 2 repositories</sub></summary>
 <a id="d-appsec"></a>
 
-The one empty row, and I would rather show it than pin a tutorial.
+<details id="repo-pedigree-appsec">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/Pedigree-npm-provenance-gate">Pedigree</a></b> &nbsp;<sub>where did this dependency actually come from</sub></summary>
+<a id="r-pedigree-appsec"></a>
 
-Currently working through authorisation bugs that survive code review,
-dependency trust, and what a useful API threat model looks like when the API
-is small. When something ships, the chart fills itself in.
+Consumer-side npm provenance verification and policy enforcement. Verifies each dependency's origin against an expected source, then tells you what would break if you enforced it today. Verifies origin - not the absence of malicious code.
+
+| | |
+| :-- | :-- |
+| **Stack** | `TypeScript` `JavaScript` |
+| **Evidence** | 198 tests, CI |
+| **Read first** | The dry-run report — what would break if you enforced the policy today. |
+| **Also in** | [ENGINEERING](#user-content-r-pedigree) |
+
+</details>
+
+<details id="repo-blackout-appsec">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/BlackOut">BlackOut</a></b> &nbsp;<sub>one control failure, followed all the way through</sub></summary>
+<a id="r-blackout-appsec"></a>
+
+Security control failure & detection lab: an authorization fail-open, its exploit, root cause, fix, detection rule and regression test. Local red/blue lab, synthetic data only.
+
+| | |
+| :-- | :-- |
+| **Stack** | `Python` `CSS` `JavaScript` |
+| **Evidence** | 230 tests, CI |
+| **Read first** | The exploit, then the detection rule written against it. |
+| **Also in** | [DETECTION](#user-content-r-blackout) · [OFFENSIVE](#user-content-r-blackout-offensive) |
+
+</details>
+
+<sub>Most of what breaks applications is authorisation and trust in things you did not write.</sub>
 
 </details>
 
@@ -150,25 +234,23 @@ is small. When something ships, the chart fills itself in.
 <summary><b>CLOUD</b> &nbsp;<sub>identity / posture / logging / iac &nbsp;—&nbsp; 1 repository</sub></summary>
 <a id="d-cloud"></a>
 
-<details id="repo-trustedge">
+<details id="repo-trustedge-cloud">
 <summary>&nbsp;<b><a href="https://github.com/het-P301204/TrustEdge-AWS-IAM-analyzer">TrustEdge</a></b> &nbsp;<sub>who outside your AWS account can get inside it</sub></summary>
-<a id="r-trustedge"></a>
+<a id="r-trustedge-cloud"></a>
 
-An IAM trust policy is a door — whoever gets through it is holding real AWS
-credentials. TrustEdge reads those doors offline and grades each one by
-exposure × blast radius.
+Grades who outside an AWS account can become an identity inside it, ranked by exposure x blast radius. Offline IAM trust-policy analyzer - no credentials, no API calls, zero dependencies.
 
 | | |
 | :-- | :-- |
-| **Stack** | `Python 3.9–3.14` |
-| **Evidence** | 601 tests, CI, **zero runtime dependencies** |
+| **Stack** | `Python` `Dockerfile` |
+| **Evidence** | 601 tests, CI |
 | **Runs** | Offline. No credentials, no API calls, nothing leaves the machine. |
 | **Read first** | The trust-policy grading logic — that is where the argument is. |
-| **Also in** | [OFFENSIVE](#user-content-r-trustedge-off) — it reasons about attack paths |
+| **Also in** | [ENGINEERING](#user-content-r-trustedge) |
 
 </details>
 
-<sub>This is the row I most wanted to fill: the gap between what a cloud provider promises, what a control framework asks for, and what the policy actually permits.</sub>
+<sub>The gap between what a cloud provider promises, what a framework asks for, and what the policy actually permits.</sub>
 
 </details>
 
@@ -176,50 +258,61 @@ exposure × blast radius.
 <summary><b>OFFENSIVE</b> &nbsp;<sub>attack paths / control validation &nbsp;—&nbsp; 1 repository</sub></summary>
 <a id="d-offensive"></a>
 
-<details id="repo-trustedge-off">
-<summary>&nbsp;<b><a href="https://github.com/het-P301204/TrustEdge-AWS-IAM-analyzer">TrustEdge</a></b> &nbsp;<sub>ranked by exposure × blast radius</sub></summary>
-<a id="r-trustedge-off"></a>
+<details id="repo-blackout-offensive">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/BlackOut">BlackOut</a></b> &nbsp;<sub>one control failure, followed all the way through</sub></summary>
+<a id="r-blackout-offensive"></a>
 
-Read offensively, TrustEdge enumerates the inbound trust paths into an AWS
-account and ranks them by how far an attacker gets once through one.
+Security control failure & detection lab: an authorization fail-open, its exploit, root cause, fix, detection rule and regression test. Local red/blue lab, synthetic data only.
 
 | | |
 | :-- | :-- |
-| **Answers** | Which principals outside the account can assume a role inside it? |
-| **Then** | What can they reach once they have? |
-| **Also in** | [CLOUD](#user-content-r-trustedge) — the same repo, defensive lens |
+| **Stack** | `Python` `CSS` `JavaScript` |
+| **Evidence** | 230 tests, CI |
+| **Read first** | The exploit, then the detection rule written against it. |
+| **Also in** | [DETECTION](#user-content-r-blackout) · [APPSEC](#user-content-r-blackout-appsec) |
 
 </details>
 
-<sub>Offence here exists to validate the assurance and detection work above, not as a separate hobby. TrustEdge qualifies because it produces a defensible finding rather than a demo.</sub>
+<sub>Offence here exists to validate the defensive work above, not as a separate hobby.</sub>
 
 </details>
+<!--INDEX:END-->
 
 <details id="how-they-fit">
-<summary><b>HOW THE FOUR FIT TOGETHER</b> &nbsp;<sub>one diagram, click to expand it</sub></summary>
+<summary><b>HOW THEY FIT TOGETHER</b> &nbsp;<sub>one diagram — click it to zoom</sub></summary>
 <a id="d-fit"></a>
 
 ```mermaid
 flowchart LR
-  SB["SecureBridge-ISMS-360<br/><i>what controls must exist</i>"]
+  SB["SecureBridge<br/><i>what must be true</i>"]
   TE["TrustEdge<br/><i>who can get into the account</i>"]
-  PM["PingMaster<br/><i>can I see the traffic at all</i>"]
-  AL["AegisLens<br/><i>do the controls operate,<br/>and at what risk</i>"]
+  PD["Pedigree<br/><i>where the dependencies came from</i>"]
+  BO["BlackOut<br/><i>a control that failed</i>"]
+  PM["PingMaster<br/><i>can I see the traffic</i>"]
+  NF["NullFire<br/><i>which rules can never fire</i>"]
+  AL["AegisLens<br/><i>evidence into a number</i>"]
 
   SB -. "what must be true" .-> AL
   TE -. "a finding" .-> AL
-  PM -. "a signal" .-> AL
+  PD -. "a finding" .-> AL
+  BO -. "a failure, and a rule for it" .-> NF
+  PM -. "a signal" .-> NF
+  NF -. "can we actually see it" .-> AL
 
   click SB "https://github.com/het-P301204/SecureBridge-ISMS-360"
   click TE "https://github.com/het-P301204/TrustEdge-AWS-IAM-analyzer"
+  click PD "https://github.com/het-P301204/Pedigree-npm-provenance-gate"
+  click BO "https://github.com/het-P301204/BlackOut"
   click PM "https://github.com/het-P301204/PingMaster"
+  click NF "https://github.com/het-P301204/NullFire"
   click AL "https://github.com/het-P301204/AegisLens-security-workbench"
 ```
 
-**The arrows are dashed for a reason.** These are four separate tools, not an
-integrated platform. The diagram shows how the *questions* relate — governance
-says what must be true, TrustEdge and PingMaster produce evidence about the
-world, and AegisLens is where evidence becomes a number someone can act on.
+**The arrows are dashed for a reason.** These are separate tools, not an
+integrated platform. The diagram maps how the *questions* relate — governance
+says what must be true, the analysers produce findings about what is actually
+true, detection asks whether you would notice, and assurance turns all of it
+into a number someone can act on.
 
 Wiring them together for real is the interesting problem, and it is not done.
 
@@ -232,11 +325,7 @@ Wiring them together for real is the interesting problem, and it is not done.
 **Latest commits across every repository**
 
 <!--ACTIVITY:START-->
-- `dac014f` **[TrustEdge](https://github.com/het-P301204/TrustEdge-AWS-IAM-analyzer)** — Add the technical substance the README was missing <sub>2d ago</sub>
-- `d2f5a08` **[TrustEdge](https://github.com/het-P301204/TrustEdge-AWS-IAM-analyzer)** — Rewrite the README around diagrams, and diagram the architecture doc <sub>2d ago</sub>
-- `aa385ea` **[TrustEdge](https://github.com/het-P301204/TrustEdge-AWS-IAM-analyzer)** — Fix Python 3.9 test collection and the Docker bind-mount write <sub>2d ago</sub>
-- `09f2a77` **[TrustEdge](https://github.com/het-P301204/TrustEdge-AWS-IAM-analyzer)** — TrustEdge: AWS inbound trust boundary analyzer <sub>2d ago</sub>
-- `87d25bb` **[AegisLens](https://github.com/het-P301204/AegisLens-security-workbench)** — Add social preview card and README badges <sub>3d ago</sub>
+_no recent commits_
 <!--ACTIVITY:END-->
 
 **The queue.** Anyone can add to it — the

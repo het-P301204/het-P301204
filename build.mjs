@@ -43,6 +43,7 @@ svg{
 .trace{stroke:var(--sig);stroke-width:2.2;fill:none;stroke-linejoin:round}
 .pen{stroke:var(--live);stroke-width:1.8;fill:none}
 .stem{stroke:var(--sig);stroke-width:1.3;fill:none;opacity:.3}
+.span{stroke:var(--sig);stroke-width:3;fill:none;opacity:.3}
 @keyframes bl{0%,55%{opacity:1}56%,100%{opacity:0}}
 .blink{animation:bl 1.2s steps(1) infinite}
 @keyframes breathe{0%,100%{opacity:1}50%{opacity:.32}}
@@ -81,16 +82,21 @@ const W = (f, s) => {
      imply an ordering and a direction that do not exist. Each repository gets
      a stem down to its date instead — it anchors the mark in time and claims
      nothing else. */
+  /* One square per domain, not one bar spanning min..max — a repo in
+     detection and offensive does not also occupy the rows between them.
+     A faint tie shows the squares belong to the same repository. */
   let marks = '';
   shipped.forEach((e, k) => {
     const x = colX(R.entries.indexOf(e));
-    const rs = e.domains.map(rowOf).sort((a, b) => a - b);
-    const yTop = rowY(rs[0]) - 8, yBot = rowY(rs[rs.length - 1]) + 8;
-    marks += `<g class="u" style="animation-delay:${(0.45 + k * 0.13).toFixed(2)}s">
-<line class="stem" x1="${x}" y1="${yBot}" x2="${x}" y2="${BOT}"/>
-<rect class="sig" x="${x - 7}" y="${yTop}" width="14" height="${yBot - yTop}"/>
-<text class="m ink" x="${x}" y="${yTop - 13}" font-size="12.5" text-anchor="middle">${e.short}</text>
-<text class="m soft" x="${x}" y="${yBot + 20}" font-size="9.5" text-anchor="middle">${e.domains.length > 1 ? e.domains.length + ' domains' : ''}</text></g>`;
+    const rs = e.domains.map(rowOf).filter(i => i >= 0).sort((a, b) => a - b);
+    if (!rs.length) return;
+    const yFirst = rowY(rs[0]), yLast = rowY(rs[rs.length - 1]);
+    const squares = rs.map(r => `<rect class="sig" x="${x - 7}" y="${rowY(r) - 7}" width="14" height="14"/>`).join('');
+    const tie = rs.length > 1 ? `<line class="span" x1="${x}" y1="${yFirst}" x2="${x}" y2="${yLast}"/>` : '';
+    marks += `<g class="u" style="animation-delay:${(0.45 + k * 0.11).toFixed(2)}s">
+<line class="stem" x1="${x}" y1="${yLast + 8}" x2="${x}" y2="${BOT}"/>
+${tie}${squares}
+<text class="m ink" x="${x}" y="${yFirst - 16}" font-size="12" text-anchor="middle">${e.short}</text></g>`;
   });
 
 

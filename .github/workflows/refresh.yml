@@ -6,7 +6,7 @@ name: refresh record
 
 on:
   schedule:
-    - cron: "17 5 * * *"     # 05:17 UTC daily
+    - cron: "17 5,17 * * *"   # twice daily, so a new repo lands within hours
   workflow_dispatch:          # and on demand from the Actions tab
   push:
     paths:
@@ -39,6 +39,41 @@ jobs:
 
       - name: Rebuild assets
         run: node build.mjs
+
+      # A repo with no recognised topics is left off the profile rather than
+      # guessed at. Say so out loud instead of failing silently.
+      - name: Flag anything that could not classify itself
+        if: hashFiles('unclassified.txt') != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BODY=$(node -e '
+            const fs=require("fs");
+            const rows=fs.readFileSync("unclassified.txt","utf8").trim().split("\n").map(l=>l.split("|"));
+            console.log("These repositories are not on the profile because nothing in `record.json` `topicMap` matched their topics:\n");
+            for(const [name,topics] of rows) console.log(`- **${name}** — topics: ${topics||"_none set_"}`);
+            console.log("\nFix either way:\n");
+            console.log("1. Add a recognised topic to the repository (preferred — it then classifies itself), or");
+            console.log("2. Add it to `map` in `record.json` for an explicit override.\n");
+            console.log("This issue closes itself once every repository classifies.");
+          ')
+          EXISTING=$(gh issue list --state open --label unclassified --json number --jq '.[0].number // empty')
+          if [ -n "$EXISTING" ]; then
+            gh issue edit "$EXISTING" --body "$BODY"
+          else
+            gh issue create --title "Unclassified repositories are missing from the profile" \
+                            --label unclassified --body "$BODY"
+          fi
+
+      - name: Close the flag once everything classifies
+        if: hashFiles('unclassified.txt') == ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          for n in $(gh issue list --state open --label unclassified --json number --jq '.[].number'); do
+            gh issue comment "$n" --body "Everything classifies now. Closing."
+            gh issue close "$n"
+          done
 
       - name: Commit if changed
         run: |

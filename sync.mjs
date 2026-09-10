@@ -21,7 +21,15 @@ const headers = {
   ...(token ? { authorization: `Bearer ${token}` } : {}),
 };
 const get = async p => { const r = await fetch(API + p, { headers }); if (!r.ok) throw new Error(`${p} -> ${r.status}`); return r.json(); };
-const tryGet = async p => { try { return await get(p); } catch { return null; } };
+let degraded = 0;
+const tryGet = async (p, optional = false) => {
+  try { return await get(p); }
+  catch (e) {
+    if (optional && /-> 404/.test(e.message)) return null;   // genuinely absent, fine
+    degraded++; console.error(`  FETCH FAILED ${p} — ${e.message}`);
+    return null;
+  }
+};
 
 const R = JSON.parse(fs.readFileSync('record.json', 'utf8'));
 const DOM = R.domains, topicMap = R.topicMap || {}, override = R.map || {};
@@ -60,14 +68,14 @@ const repos = [];
 for (const r of all) {
   const doms = domainsFor(r);
   const langs = await tryGet(`/repos/${USER}/${r.name}/languages`) || {};
-  const readmeMeta = await tryGet(`/repos/${USER}/${r.name}/readme`);
+  const readmeMeta = await tryGet(`/repos/${USER}/${r.name}/readme`, true);
   const readme = readmeMeta?.content ? Buffer.from(readmeMeta.content, 'base64').toString('utf8') : '';
   const tm = readme.match(/tests?-(\d[\d,_]*)[-_ ]?passing/i) || readme.match(/(\d[\d,_]{1,6})\s+tests?\b/i);
   repos.push({
     name: r.name, short: shortFor(r.name), slug: slug(shortFor(r.name)),
     desc: (r.description || '').trim(), domains: doms, topics: r.topics || [],
     created: r.created_at, pushed: r.pushed_at,
-    langs: Object.keys(langs).slice(0, 3),
+    langs: Object.keys(langs).slice(0, 3), langBytes: langs,
     tests: tm ? +tm[1].replace(/[,_]/g, '') : null,
     ci: /actions\/workflows|workflow.*badge\.svg/i.test(readme),
   });
@@ -99,6 +107,14 @@ for (const r of classified) {
   });
 }
 commits = commits.sort((a, b) => new Date(b.when) - new Date(a.when)).slice(0, 5);
+
+if (degraded) {
+  console.error(`
+ABORTING: ${degraded} API call(s) failed. Publishing now would put wrong`);
+  console.error(`numbers on the profile. Re-run with GITHUB_TOKEN set (rate limits) or when`);
+  console.error(`the API recovers. Nothing was written.`);
+  process.exit(1);
+}
 
 /* ── record.json ─────────────────────────────────────────────────── */
 const entries = classified.map(r => ({ date: d(r.created), short: r.short, repo: r.name, domains: r.domains }));

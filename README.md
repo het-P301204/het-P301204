@@ -50,7 +50,7 @@ hold.
 ## Index
 
 <!--SUMMARY:START-->
-8 repositories across 6 of 6 domains. Open a domain, then open a repository — the second level is where the evidence is. Repository names link straight to the code.
+9 repositories across 6 of 6 domains. Open a domain, then open a repository — the second level is where the evidence is. Repository names link straight to the code.
 <!--SUMMARY:END-->
 
 <!--INDEX:START-->
@@ -207,7 +207,7 @@ Revocation persistence detection lab: when the password reset succeeds but the a
 </details>
 
 <details id="domain-appsec">
-<summary><b>APPSEC</b> &nbsp;<sub>secure sdlc / code review / supply chain &nbsp;—&nbsp; 3 repositories</sub></summary>
+<summary><b>APPSEC</b> &nbsp;<sub>secure sdlc / code review / supply chain &nbsp;—&nbsp; 4 repositories</sub></summary>
 <a id="d-appsec"></a>
 
 <details id="repo-pedigree-appsec">
@@ -251,6 +251,18 @@ Revocation persistence detection lab: when the password reset succeeds but the a
 | **Stack** | `Python` `JavaScript` `CSS` |
 | **Evidence** | 290 tests, CI |
 | **Also in** | [DETECTION](#user-content-r-afterlife) · [OFFENSIVE](#user-content-r-afterlife-offensive) |
+
+</details>
+
+<details id="repo-spectressrflab-appsec">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/spectre-ssrf-lab">spectre-ssrf-lab</a></b></summary>
+<a id="r-spectressrflab"></a>
+
+Self-contained SSRF research lab — 7 services, 13 scenarios, 6 bypass techniques, detection rules, and an animated dashboard. All on 127.0.0.1.
+
+| | |
+| :-- | :-- |
+| **Stack** | `Python` `HTML` `PowerShell` |
 
 </details>
 
@@ -367,11 +379,11 @@ Wiring them together for real is the interesting problem, and it is not done.
 **Latest commits across every repository**
 
 <!--ACTIVITY:START-->
-- `9a226e3` **[AfterLife](https://github.com/het-P301204/AfterLife)** — Give the README figures, and the console the argument it was missing <sub>1h ago</sub>
-- `6ca6ae3` **[AfterLife](https://github.com/het-P301204/AfterLife)** — Add the rule pack, the state audit and the lifeline console <sub>2h ago</sub>
-- `e0a7967` **[AfterLife](https://github.com/het-P301204/AfterLife)** — Build AFTERLIFE, a revocation persistence detection lab <sub>2h ago</sub>
-- `e06d9da` **[BlackOut](https://github.com/het-P301204/BlackOut)** — Show all three states in the README, including the fix <sub>14h ago</sub>
-- `bbfd38d` **[BlackOut](https://github.com/het-P301204/BlackOut)** — Record what CI verified on Linux <sub>15h ago</sub>
+- `5cc6548` **[spectre-ssrf-lab](https://github.com/het-P301204/spectre-ssrf-lab)** — Add SPECTRE SSRF research lab — initial release <sub>just now</sub>
+- `3ee5453` **[spectre-ssrf-lab](https://github.com/het-P301204/spectre-ssrf-lab)** — Add SPECTRE — localhost SSRF research lab <sub>1h ago</sub>
+- `9a226e3` **[AfterLife](https://github.com/het-P301204/AfterLife)** — Give the README figures, and the console the argument it was missing <sub>11h ago</sub>
+- `6ca6ae3` **[AfterLife](https://github.com/het-P301204/AfterLife)** — Add the rule pack, the state audit and the lifeline console <sub>12h ago</sub>
+- `e0a7967` **[AfterLife](https://github.com/het-P301204/AfterLife)** — Build AFTERLIFE, a revocation persistence detection lab <sub>13h ago</sub>
 <!--ACTIVITY:END-->
 
 **The queue.** Anyone can add to it — the

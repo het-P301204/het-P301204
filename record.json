@@ -271,6 +271,14 @@
     },
     {
       "date": "11.09.2026",
+      "short": "spectre-ssrf-lab",
+      "repo": "spectre-ssrf-lab",
+      "domains": [
+        "appsec"
+      ]
+    },
+    {
+      "date": "11.09.2026",
       "short": "",
       "domains": [],
       "open": true
@@ -279,22 +287,22 @@
   "stack": [
     {
       "name": "Python",
-      "pct": 71.2
+      "pct": 71.4
     },
     {
       "name": "TypeScript",
-      "pct": 21.1
+      "pct": 19.7
+    },
+    {
+      "name": "HTML",
+      "pct": 2.1
     },
     {
       "name": "Rust",
-      "pct": 2.2
+      "pct": 2.1
     },
     {
       "name": "CSS",
-      "pct": 2
-    },
-    {
-      "name": "JavaScript",
       "pct": 1.9
     }
   ],
@@ -325,9 +333,9 @@
     }
   ],
   "testTotal": 1851,
-  "slots": 10,
+  "slots": 11,
   "lastPush": {
-    "repo": "AfterLife",
+    "repo": "spectre-ssrf-lab",
     "date": "11.09.2026"
   },
   "synced": "2026-09-11"

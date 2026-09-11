@@ -260,7 +260,17 @@
       ]
     },
     {
-      "date": "10.09.2026",
+      "date": "11.09.2026",
+      "short": "AfterLife",
+      "repo": "AfterLife",
+      "domains": [
+        "detection",
+        "appsec",
+        "offensive"
+      ]
+    },
+    {
+      "date": "11.09.2026",
       "short": "",
       "domains": [],
       "open": true
@@ -269,23 +279,23 @@
   "stack": [
     {
       "name": "Python",
-      "pct": 66.7
+      "pct": 71.2
     },
     {
       "name": "TypeScript",
-      "pct": 26.5
+      "pct": 21.1
     },
     {
       "name": "Rust",
-      "pct": 2.8
+      "pct": 2.2
     },
     {
       "name": "CSS",
-      "pct": 1.6
+      "pct": 2
     },
     {
       "name": "JavaScript",
-      "pct": 1.1
+      "pct": 1.9
     }
   ],
   "tests": [
@@ -308,13 +318,17 @@
     {
       "repo": "BlackOut",
       "n": 230
+    },
+    {
+      "repo": "AfterLife",
+      "n": 290
     }
   ],
-  "testTotal": 1561,
-  "slots": 9,
+  "testTotal": 1851,
+  "slots": 10,
   "lastPush": {
-    "repo": "BlackOut",
-    "date": "10.09.2026"
+    "repo": "AfterLife",
+    "date": "11.09.2026"
   },
-  "synced": "2026-09-10"
+  "synced": "2026-09-11"
 }

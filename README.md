@@ -44,13 +44,13 @@ being abused. I am mostly interested in why things fail and what makes them
 hold.
 
 <!--TESTS:START-->
-**1,561 tests** across the lab — AegisLens 108, TrustEdge 601, Pedigree 198, NullFire 424, BlackOut 230. Counted from each repository's own README, not asserted here.
+**1,851 tests** across the lab — AegisLens 108, TrustEdge 601, Pedigree 198, NullFire 424, BlackOut 230, AfterLife 290. Counted from each repository's own README, not asserted here.
 <!--TESTS:END-->
 
 ## Index
 
 <!--SUMMARY:START-->
-7 repositories across 6 of 6 domains. Open a domain, then open a repository — the second level is where the evidence is. Repository names link straight to the code.
+8 repositories across 6 of 6 domains. Open a domain, then open a repository — the second level is where the evidence is. Repository names link straight to the code.
 <!--SUMMARY:END-->
 
 <!--INDEX:START-->
@@ -144,7 +144,7 @@ Consumer-side npm provenance verification and policy enforcement. Verifies each 
 </details>
 
 <details id="domain-detection">
-<summary><b>DETECTION</b> &nbsp;<sub>telemetry / signals / triage &nbsp;—&nbsp; 3 repositories</sub></summary>
+<summary><b>DETECTION</b> &nbsp;<sub>telemetry / signals / triage &nbsp;—&nbsp; 4 repositories</sub></summary>
 <a id="d-detection"></a>
 
 <details id="repo-pingmaster-detection">
@@ -188,12 +188,26 @@ Security control failure & detection lab: an authorization fail-open, its exploi
 
 </details>
 
+<details id="repo-afterlife-detection">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/AfterLife">AfterLife</a></b></summary>
+<a id="r-afterlife"></a>
+
+Revocation persistence detection lab: when the password reset succeeds but the attacker never leaves. Reproduces the Strapi CVE-2026-22706 conditional-revocation bug, its fix, a three-rule detection pack, and the naive rule that misses it.
+
+| | |
+| :-- | :-- |
+| **Stack** | `Python` `JavaScript` `CSS` |
+| **Evidence** | 290 tests, CI |
+| **Also in** | [APPSEC](#user-content-r-afterlife-appsec) · [OFFENSIVE](#user-content-r-afterlife-offensive) |
+
+</details>
+
 <sub>A control you cannot observe failing is a control you are trusting on faith.</sub>
 
 </details>
 
 <details id="domain-appsec">
-<summary><b>APPSEC</b> &nbsp;<sub>secure sdlc / code review / supply chain &nbsp;—&nbsp; 2 repositories</sub></summary>
+<summary><b>APPSEC</b> &nbsp;<sub>secure sdlc / code review / supply chain &nbsp;—&nbsp; 3 repositories</sub></summary>
 <a id="d-appsec"></a>
 
 <details id="repo-pedigree-appsec">
@@ -226,6 +240,20 @@ Security control failure & detection lab: an authorization fail-open, its exploi
 
 </details>
 
+<details id="repo-afterlife-appsec">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/AfterLife">AfterLife</a></b></summary>
+<a id="r-afterlife-appsec"></a>
+
+Revocation persistence detection lab: when the password reset succeeds but the attacker never leaves. Reproduces the Strapi CVE-2026-22706 conditional-revocation bug, its fix, a three-rule detection pack, and the naive rule that misses it.
+
+| | |
+| :-- | :-- |
+| **Stack** | `Python` `JavaScript` `CSS` |
+| **Evidence** | 290 tests, CI |
+| **Also in** | [DETECTION](#user-content-r-afterlife) · [OFFENSIVE](#user-content-r-afterlife-offensive) |
+
+</details>
+
 <sub>Most of what breaks applications is authorisation and trust in things you did not write.</sub>
 
 </details>
@@ -255,7 +283,7 @@ Grades who outside an AWS account can become an identity inside it, ranked by ex
 </details>
 
 <details id="domain-offensive">
-<summary><b>OFFENSIVE</b> &nbsp;<sub>attack paths / control validation &nbsp;—&nbsp; 1 repository</sub></summary>
+<summary><b>OFFENSIVE</b> &nbsp;<sub>attack paths / control validation &nbsp;—&nbsp; 2 repositories</sub></summary>
 <a id="d-offensive"></a>
 
 <details id="repo-blackout-offensive">
@@ -270,6 +298,20 @@ Security control failure & detection lab: an authorization fail-open, its exploi
 | **Evidence** | 230 tests, CI |
 | **Read first** | The exploit, then the detection rule written against it. |
 | **Also in** | [DETECTION](#user-content-r-blackout) · [APPSEC](#user-content-r-blackout-appsec) |
+
+</details>
+
+<details id="repo-afterlife-offensive">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/AfterLife">AfterLife</a></b></summary>
+<a id="r-afterlife-offensive"></a>
+
+Revocation persistence detection lab: when the password reset succeeds but the attacker never leaves. Reproduces the Strapi CVE-2026-22706 conditional-revocation bug, its fix, a three-rule detection pack, and the naive rule that misses it.
+
+| | |
+| :-- | :-- |
+| **Stack** | `Python` `JavaScript` `CSS` |
+| **Evidence** | 290 tests, CI |
+| **Also in** | [DETECTION](#user-content-r-afterlife) · [APPSEC](#user-content-r-afterlife-appsec) |
 
 </details>
 
@@ -325,11 +367,11 @@ Wiring them together for real is the interesting problem, and it is not done.
 **Latest commits across every repository**
 
 <!--ACTIVITY:START-->
-- `e06d9da` **[BlackOut](https://github.com/het-P301204/BlackOut)** — Show all three states in the README, including the fix <sub>just now</sub>
-- `bbfd38d` **[BlackOut](https://github.com/het-P301204/BlackOut)** — Record what CI verified on Linux <sub>just now</sub>
-- `116434c` **[BlackOut](https://github.com/het-P301204/BlackOut)** — Rewrite the README as the front door <sub>just now</sub>
-- `8f8c8be` **[BlackOut](https://github.com/het-P301204/BlackOut)** — Style the scrollbars, and stop the console flooding its own audit log <sub>just now</sub>
-- `d6354ab` **[BlackOut](https://github.com/het-P301204/BlackOut)** — Redesign the console as a substation panel, and fix what the screenshots <sub>1h ago</sub>
+- `9a226e3` **[AfterLife](https://github.com/het-P301204/AfterLife)** — Give the README figures, and the console the argument it was missing <sub>1h ago</sub>
+- `6ca6ae3` **[AfterLife](https://github.com/het-P301204/AfterLife)** — Add the rule pack, the state audit and the lifeline console <sub>2h ago</sub>
+- `e0a7967` **[AfterLife](https://github.com/het-P301204/AfterLife)** — Build AFTERLIFE, a revocation persistence detection lab <sub>2h ago</sub>
+- `e06d9da` **[BlackOut](https://github.com/het-P301204/BlackOut)** — Show all three states in the README, including the fix <sub>14h ago</sub>
+- `bbfd38d` **[BlackOut](https://github.com/het-P301204/BlackOut)** — Record what CI verified on Linux <sub>15h ago</sub>
 <!--ACTIVITY:END-->
 
 **The queue.** Anyone can add to it — the

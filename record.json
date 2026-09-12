@@ -278,7 +278,15 @@
       ]
     },
     {
-      "date": "11.09.2026",
+      "date": "12.09.2026",
+      "short": "sunset",
+      "repo": "sunset",
+      "domains": [
+        "engineering"
+      ]
+    },
+    {
+      "date": "12.09.2026",
       "short": "",
       "domains": [],
       "open": true
@@ -287,23 +295,23 @@
   "stack": [
     {
       "name": "Python",
-      "pct": 71.4
+      "pct": 59.2
     },
     {
       "name": "TypeScript",
-      "pct": 19.7
-    },
-    {
-      "name": "HTML",
-      "pct": 2.1
-    },
-    {
-      "name": "Rust",
-      "pct": 2.1
+      "pct": 32.7
     },
     {
       "name": "CSS",
-      "pct": 1.9
+      "pct": 2.1
+    },
+    {
+      "name": "HTML",
+      "pct": 1.8
+    },
+    {
+      "name": "Rust",
+      "pct": 1.7
     }
   ],
   "tests": [
@@ -330,13 +338,17 @@
     {
       "repo": "AfterLife",
       "n": 290
+    },
+    {
+      "repo": "sunset",
+      "n": 44
     }
   ],
-  "testTotal": 1851,
-  "slots": 11,
+  "testTotal": 1895,
+  "slots": 12,
   "lastPush": {
-    "repo": "spectre-ssrf-lab",
-    "date": "11.09.2026"
+    "repo": "sunset",
+    "date": "12.09.2026"
   },
-  "synced": "2026-09-11"
+  "synced": "2026-09-12"
 }

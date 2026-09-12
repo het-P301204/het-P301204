@@ -44,13 +44,13 @@ being abused. I am mostly interested in why things fail and what makes them
 hold.
 
 <!--TESTS:START-->
-**1,851 tests** across the lab — AegisLens 108, TrustEdge 601, Pedigree 198, NullFire 424, BlackOut 230, AfterLife 290. Counted from each repository's own README, not asserted here.
+**1,895 tests** across the lab — AegisLens 108, TrustEdge 601, Pedigree 198, NullFire 424, BlackOut 230, AfterLife 290, sunset 44. Counted from each repository's own README, not asserted here.
 <!--TESTS:END-->
 
 ## Index
 
 <!--SUMMARY:START-->
-9 repositories across 6 of 6 domains. Open a domain, then open a repository — the second level is where the evidence is. Repository names link straight to the code.
+10 repositories across 6 of 6 domains. Open a domain, then open a repository — the second level is where the evidence is. Repository names link straight to the code.
 <!--SUMMARY:END-->
 
 <!--INDEX:START-->
@@ -90,7 +90,7 @@ AegisLens is an educational and defensive security assessment workbench using sy
 </details>
 
 <details id="domain-engineering">
-<summary><b>ENGINEERING</b> &nbsp;<sub>tooling / automation / pipelines &nbsp;—&nbsp; 3 repositories</sub></summary>
+<summary><b>ENGINEERING</b> &nbsp;<sub>tooling / automation / pipelines &nbsp;—&nbsp; 4 repositories</sub></summary>
 <a id="d-engineering"></a>
 
 <details id="repo-aegislens-engineering">
@@ -136,6 +136,19 @@ Consumer-side npm provenance verification and policy enforcement. Verifies each 
 | **Evidence** | 198 tests, CI |
 | **Read first** | The dry-run report — what would break if you enforced the policy today. |
 | **Also in** | [APPSEC](#user-content-r-pedigree-appsec) |
+
+</details>
+
+<details id="repo-sunset-engineering">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/sunset">sunset</a></b></summary>
+<a id="r-sunset"></a>
+
+Cryptographic posture and post-quantum migration triage. Turns a CycloneDX CBOM into a deadline-anchored, risk-ranked migration plan — and says plainly what it could not assess. Offline, deterministic, no network.
+
+| | |
+| :-- | :-- |
+| **Stack** | `TypeScript` `CSS` `Python` |
+| **Evidence** | 44 tests, CI |
 
 </details>
 
@@ -379,11 +392,11 @@ Wiring them together for real is the interesting problem, and it is not done.
 **Latest commits across every repository**
 
 <!--ACTIVITY:START-->
-- `5cc6548` **[spectre-ssrf-lab](https://github.com/het-P301204/spectre-ssrf-lab)** — Add SPECTRE SSRF research lab — initial release <sub>just now</sub>
-- `3ee5453` **[spectre-ssrf-lab](https://github.com/het-P301204/spectre-ssrf-lab)** — Add SPECTRE — localhost SSRF research lab <sub>1h ago</sub>
-- `9a226e3` **[AfterLife](https://github.com/het-P301204/AfterLife)** — Give the README figures, and the console the argument it was missing <sub>11h ago</sub>
-- `6ca6ae3` **[AfterLife](https://github.com/het-P301204/AfterLife)** — Add the rule pack, the state audit and the lifeline console <sub>12h ago</sub>
-- `e0a7967` **[AfterLife](https://github.com/het-P301204/AfterLife)** — Build AFTERLIFE, a revocation persistence detection lab <sub>13h ago</sub>
+- `a9b60c4` **[sunset](https://github.com/het-P301204/sunset)** — CI: current actions, current Node <sub>1h ago</sub>
+- `9b8724c` **[sunset](https://github.com/het-P301204/sunset)** — Untrack local editor configuration <sub>1h ago</sub>
+- `3b31e44` **[sunset](https://github.com/het-P301204/sunset)** — Prepare for publication: README, screenshots, CI, and a drawer fix <sub>1h ago</sub>
+- `83427a3` **[sunset](https://github.com/het-P301204/sunset)** — Rebuild the theme wave so it is actually a wave <sub>2h ago</sub>
+- `a028edc` **[sunset](https://github.com/het-P301204/sunset)** — Fix clipped rail tooltips, add a theme wave, drop the landing's timeline <sub>2h ago</sub>
 <!--ACTIVITY:END-->
 
 **The queue.** Anyone can add to it — the

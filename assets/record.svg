@@ -45,7 +45,7 @@ svg{
 <text class="d ink" x="-4" y="142" font-size="82" letter-spacing="-3.7">HET PATEL</text>
 <text class="m grey" x="2" y="178" font-size="13.5">security engineering</text>
 <text class="m soft" x="2" y="200" font-size="13.5">cloud security / security architecture</text>
-<text class="m soft" x="1200" y="178" font-size="12" letter-spacing="1.6" text-anchor="end">9 REPOSITORIES / 6 OF 6 DOMAINS</text>
+<text class="m soft" x="1200" y="178" font-size="12" letter-spacing="1.6" text-anchor="end">10 REPOSITORIES / 6 OF 6 DOMAINS</text>
 <text class="m live" x="1200" y="200" font-size="12" letter-spacing="1.6" text-anchor="end">BUILDING NOW</text>
 <line class="r" x1="-18" y1="224" x2="1218" y2="224"/>
 
@@ -53,51 +53,54 @@ svg{
 <text class="m soft" x="1200" y="258" font-size="10.5" letter-spacing="2.2" text-anchor="end">EACH MARK IS A REPOSITORY</text>
 
 <line class="grid" x1="210" y1="300" x2="1200" y2="300"/><line class="grid" x1="210" y1="352" x2="1200" y2="352"/><line class="grid" x1="210" y1="404" x2="1200" y2="404"/><line class="grid" x1="210" y1="456" x2="1200" y2="456"/><line class="grid" x1="210" y1="508" x2="1200" y2="508"/><line class="grid" x1="210" y1="560" x2="1200" y2="560"/>
-<line class="ghost" x1="1065" y1="274" x2="1065" y2="590"/><line class="ghost" x1="1150" y1="274" x2="1150" y2="590"/>
+<line class="ghost" x1="1072.7272727272725" y1="274" x2="1072.7272727272725" y2="590"/><line class="ghost" x1="1150" y1="274" x2="1150" y2="590"/>
 <text class="m ink" x="190" y="304" font-size="12" letter-spacing="1.9" text-anchor="end">ASSURANCE</text><text class="m ink" x="190" y="356" font-size="12" letter-spacing="1.9" text-anchor="end">ENGINEERING</text><text class="m ink" x="190" y="408" font-size="12" letter-spacing="1.9" text-anchor="end">DETECTION</text><text class="m ink" x="190" y="460" font-size="12" letter-spacing="1.9" text-anchor="end">APPSEC</text><text class="m ink" x="190" y="512" font-size="12" letter-spacing="1.9" text-anchor="end">CLOUD</text><text class="m ink" x="190" y="564" font-size="12" letter-spacing="1.9" text-anchor="end">OFFENSIVE</text>
 <line class="axis" x1="210" y1="274" x2="210" y2="590"/>
 <line class="axis" x1="210" y1="590" x2="1200" y2="590"/>
-<text class="m soft" x="300" y="618" font-size="11" letter-spacing="1.1" text-anchor="middle">19.10.2025</text><text class="m soft" x="385" y="618" font-size="11" letter-spacing="1.1" text-anchor="middle">05.09.2026</text><text class="m soft" x="470" y="618" font-size="11" letter-spacing="1.1" text-anchor="middle">06.09.2026</text><text class="m soft" x="555" y="618" font-size="11" letter-spacing="1.1" text-anchor="middle">07.09.2026</text><text class="m soft" x="640" y="618" font-size="11" letter-spacing="1.1" text-anchor="middle">08.09.2026</text><text class="m soft" x="725" y="618" font-size="11" letter-spacing="1.1" text-anchor="middle">10.09.2026</text><text class="m soft" x="810" y="618" font-size="11" letter-spacing="1.1" text-anchor="middle">10.09.2026</text><text class="m soft" x="895" y="618" font-size="11" letter-spacing="1.1" text-anchor="middle">11.09.2026</text><text class="m soft" x="980" y="618" font-size="11" letter-spacing="1.1" text-anchor="middle">11.09.2026</text><text class="m live" x="1065" y="618" font-size="11" letter-spacing="1.1" text-anchor="middle">building now</text>
+<text class="m soft" x="300" y="618" font-size="11" letter-spacing="1.1" text-anchor="middle">19.10.2025</text><text class="m soft" x="377.27272727272725" y="618" font-size="11" letter-spacing="1.1" text-anchor="middle">05.09.2026</text><text class="m soft" x="454.5454545454545" y="618" font-size="11" letter-spacing="1.1" text-anchor="middle">06.09.2026</text><text class="m soft" x="531.8181818181818" y="618" font-size="11" letter-spacing="1.1" text-anchor="middle">07.09.2026</text><text class="m soft" x="609.090909090909" y="618" font-size="11" letter-spacing="1.1" text-anchor="middle">08.09.2026</text><text class="m soft" x="686.3636363636363" y="618" font-size="11" letter-spacing="1.1" text-anchor="middle">10.09.2026</text><text class="m soft" x="763.6363636363636" y="618" font-size="11" letter-spacing="1.1" text-anchor="middle">10.09.2026</text><text class="m soft" x="840.9090909090909" y="618" font-size="11" letter-spacing="1.1" text-anchor="middle">11.09.2026</text><text class="m soft" x="918.1818181818181" y="618" font-size="11" letter-spacing="1.1" text-anchor="middle">11.09.2026</text><text class="m soft" x="995.4545454545454" y="618" font-size="11" letter-spacing="1.1" text-anchor="middle">12.09.2026</text><text class="m live" x="1072.7272727272725" y="618" font-size="11" letter-spacing="1.1" text-anchor="middle">building now</text>
 <text class="m soft" x="190" y="618" font-size="10.5" letter-spacing="1.9" text-anchor="end">TIMELINE</text>
 
 <g class="u" style="animation-delay:0.45s">
 <line class="stem" x1="300" y1="412" x2="300" y2="590"/>
 <rect class="sig" x="293" y="397" width="14" height="14"/>
 <text class="m ink" x="300" y="388" font-size="12" text-anchor="middle">PingMaster</text></g><g class="u" style="animation-delay:0.56s">
-<line class="stem" x1="385" y1="308" x2="385" y2="590"/>
-<rect class="sig" x="378" y="293" width="14" height="14"/>
-<text class="m ink" x="385" y="284" font-size="12" text-anchor="middle">SecureBridge</text></g><g class="u" style="animation-delay:0.67s">
-<line class="stem" x1="470" y1="360" x2="470" y2="590"/>
-<line class="span" x1="470" y1="300" x2="470" y2="352"/><rect class="sig" x="463" y="293" width="14" height="14"/><rect class="sig" x="463" y="345" width="14" height="14"/>
-<text class="m ink" x="470" y="284" font-size="12" text-anchor="middle">AegisLens</text></g><g class="u" style="animation-delay:0.78s">
-<line class="stem" x1="555" y1="516" x2="555" y2="590"/>
-<line class="span" x1="555" y1="352" x2="555" y2="508"/><rect class="sig" x="548" y="345" width="14" height="14"/><rect class="sig" x="548" y="501" width="14" height="14"/>
-<text class="m ink" x="555" y="336" font-size="12" text-anchor="middle">TrustEdge</text></g><g class="u" style="animation-delay:0.89s">
-<line class="stem" x1="640" y1="464" x2="640" y2="590"/>
-<line class="span" x1="640" y1="352" x2="640" y2="456"/><rect class="sig" x="633" y="345" width="14" height="14"/><rect class="sig" x="633" y="449" width="14" height="14"/>
-<text class="m ink" x="640" y="336" font-size="12" text-anchor="middle">Pedigree</text></g><g class="u" style="animation-delay:1.00s">
-<line class="stem" x1="725" y1="412" x2="725" y2="590"/>
-<rect class="sig" x="718" y="397" width="14" height="14"/>
-<text class="m ink" x="725" y="388" font-size="12" text-anchor="middle">NullFire</text></g><g class="u" style="animation-delay:1.11s">
-<line class="stem" x1="810" y1="568" x2="810" y2="590"/>
-<line class="span" x1="810" y1="404" x2="810" y2="560"/><rect class="sig" x="803" y="397" width="14" height="14"/><rect class="sig" x="803" y="449" width="14" height="14"/><rect class="sig" x="803" y="553" width="14" height="14"/>
-<text class="m ink" x="810" y="388" font-size="12" text-anchor="middle">BlackOut</text></g><g class="u" style="animation-delay:1.22s">
-<line class="stem" x1="895" y1="568" x2="895" y2="590"/>
-<line class="span" x1="895" y1="404" x2="895" y2="560"/><rect class="sig" x="888" y="397" width="14" height="14"/><rect class="sig" x="888" y="449" width="14" height="14"/><rect class="sig" x="888" y="553" width="14" height="14"/>
-<text class="m ink" x="895" y="388" font-size="12" text-anchor="middle">AfterLife</text></g><g class="u" style="animation-delay:1.33s">
-<line class="stem" x1="980" y1="464" x2="980" y2="590"/>
-<rect class="sig" x="973" y="449" width="14" height="14"/>
-<text class="m ink" x="980" y="440" font-size="12" text-anchor="middle">spectre-ssrf-lab</text></g>
+<line class="stem" x1="377.27272727272725" y1="308" x2="377.27272727272725" y2="590"/>
+<rect class="sig" x="370.27272727272725" y="293" width="14" height="14"/>
+<text class="m ink" x="377.27272727272725" y="284" font-size="12" text-anchor="middle">SecureBridge</text></g><g class="u" style="animation-delay:0.67s">
+<line class="stem" x1="454.5454545454545" y1="360" x2="454.5454545454545" y2="590"/>
+<line class="span" x1="454.5454545454545" y1="300" x2="454.5454545454545" y2="352"/><rect class="sig" x="447.5454545454545" y="293" width="14" height="14"/><rect class="sig" x="447.5454545454545" y="345" width="14" height="14"/>
+<text class="m ink" x="454.5454545454545" y="284" font-size="12" text-anchor="middle">AegisLens</text></g><g class="u" style="animation-delay:0.78s">
+<line class="stem" x1="531.8181818181818" y1="516" x2="531.8181818181818" y2="590"/>
+<line class="span" x1="531.8181818181818" y1="352" x2="531.8181818181818" y2="508"/><rect class="sig" x="524.8181818181818" y="345" width="14" height="14"/><rect class="sig" x="524.8181818181818" y="501" width="14" height="14"/>
+<text class="m ink" x="531.8181818181818" y="336" font-size="12" text-anchor="middle">TrustEdge</text></g><g class="u" style="animation-delay:0.89s">
+<line class="stem" x1="609.090909090909" y1="464" x2="609.090909090909" y2="590"/>
+<line class="span" x1="609.090909090909" y1="352" x2="609.090909090909" y2="456"/><rect class="sig" x="602.090909090909" y="345" width="14" height="14"/><rect class="sig" x="602.090909090909" y="449" width="14" height="14"/>
+<text class="m ink" x="609.090909090909" y="336" font-size="12" text-anchor="middle">Pedigree</text></g><g class="u" style="animation-delay:1.00s">
+<line class="stem" x1="686.3636363636363" y1="412" x2="686.3636363636363" y2="590"/>
+<rect class="sig" x="679.3636363636363" y="397" width="14" height="14"/>
+<text class="m ink" x="686.3636363636363" y="388" font-size="12" text-anchor="middle">NullFire</text></g><g class="u" style="animation-delay:1.11s">
+<line class="stem" x1="763.6363636363636" y1="568" x2="763.6363636363636" y2="590"/>
+<line class="span" x1="763.6363636363636" y1="404" x2="763.6363636363636" y2="560"/><rect class="sig" x="756.6363636363636" y="397" width="14" height="14"/><rect class="sig" x="756.6363636363636" y="449" width="14" height="14"/><rect class="sig" x="756.6363636363636" y="553" width="14" height="14"/>
+<text class="m ink" x="763.6363636363636" y="388" font-size="12" text-anchor="middle">BlackOut</text></g><g class="u" style="animation-delay:1.22s">
+<line class="stem" x1="840.9090909090909" y1="568" x2="840.9090909090909" y2="590"/>
+<line class="span" x1="840.9090909090909" y1="404" x2="840.9090909090909" y2="560"/><rect class="sig" x="833.9090909090909" y="397" width="14" height="14"/><rect class="sig" x="833.9090909090909" y="449" width="14" height="14"/><rect class="sig" x="833.9090909090909" y="553" width="14" height="14"/>
+<text class="m ink" x="840.9090909090909" y="388" font-size="12" text-anchor="middle">AfterLife</text></g><g class="u" style="animation-delay:1.33s">
+<line class="stem" x1="918.1818181818181" y1="464" x2="918.1818181818181" y2="590"/>
+<rect class="sig" x="911.1818181818181" y="449" width="14" height="14"/>
+<text class="m ink" x="918.1818181818181" y="440" font-size="12" text-anchor="middle">spectre-ssrf-lab</text></g><g class="u" style="animation-delay:1.44s">
+<line class="stem" x1="995.4545454545454" y1="360" x2="995.4545454545454" y2="590"/>
+<rect class="sig" x="988.4545454545454" y="345" width="14" height="14"/>
+<text class="m ink" x="995.4545454545454" y="336" font-size="12" text-anchor="middle">sunset</text></g>
 
 <g class="u" style="animation-delay:1.6s">
-  <line class="pen" x1="1065" y1="274" x2="1065" y2="590" stroke-dasharray="3 5"/>
-  <rect class="live breathe" x="1060" y="269" width="10" height="10"/>
+  <line class="pen" x1="1072.7272727272725" y1="274" x2="1072.7272727272725" y2="590" stroke-dasharray="3 5"/>
+  <rect class="live breathe" x="1067.7272727272725" y="269" width="10" height="10"/>
 </g>
 
 <text class="m soft" x="0" y="656" font-size="10.5" letter-spacing="2.2">BUILT WITH</text>
-<text class="m soft" x="1200" y="656" font-size="10.5" letter-spacing="2.2" text-anchor="end">LAST PUSH / spectre-ssrf-lab / 11.09.2026</text>
-<rect class="sig" x="0.0" y="672" width="853.8" height="13" opacity="1.00"/><text class="m soft" x="428.4" y="706" font-size="10.5" letter-spacing="1.1" text-anchor="middle">Python 71.4%</text><rect class="sig" x="856.8" y="672" width="233.4" height="13" opacity="0.83"/><text class="m soft" x="975.0" y="706" font-size="10.5" letter-spacing="1.1" text-anchor="middle">TypeScript 19.7%</text><rect class="sig" x="1093.2" y="672" width="22.2" height="13" opacity="0.66"/><rect class="sig" x="1118.4" y="672" width="22.2" height="13" opacity="0.49"/><rect class="sig" x="1143.6" y="672" width="19.8" height="13" opacity="0.32"/>
+<text class="m soft" x="1200" y="656" font-size="10.5" letter-spacing="2.2" text-anchor="end">LAST PUSH / sunset / 12.09.2026</text>
+<rect class="sig" x="0.0" y="672" width="707.4" height="13" opacity="1.00"/><text class="m soft" x="355.2" y="706" font-size="10.5" letter-spacing="1.1" text-anchor="middle">Python 59.2%</text><rect class="sig" x="710.4" y="672" width="389.4" height="13" opacity="0.83"/><text class="m soft" x="906.6" y="706" font-size="10.5" letter-spacing="1.1" text-anchor="middle">TypeScript 32.7%</text><rect class="sig" x="1102.8" y="672" width="22.2" height="13" opacity="0.66"/><rect class="sig" x="1128.0" y="672" width="18.6" height="13" opacity="0.49"/><rect class="sig" x="1149.6" y="672" width="17.4" height="13" opacity="0.32"/>
 <line class="r" x1="-18" y1="740" x2="1218" y2="740"/>
-<text class="m soft" x="0" y="762" font-size="11" letter-spacing="2.2">SYNCED FROM THE GITHUB API / 2026-09-11</text>
+<text class="m soft" x="0" y="762" font-size="11" letter-spacing="2.2">SYNCED FROM THE GITHUB API / 2026-09-12</text>
 <text class="m sig" x="1200" y="762" font-size="11" letter-spacing="2.2" text-anchor="end">OPEN A DOMAIN BELOW</text>
 </svg>

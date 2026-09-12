@@ -82,35 +82,68 @@ link to the image file, which breaks the toggle.
 
 ## Maintenance — the chart maintains itself
 
-`.github/workflows/refresh.yml` runs daily at 05:17 UTC (and on demand, and on
-any push that touches the build inputs). It runs `sync.mjs`, which pulls the
-live repository list, creation dates, language mix and last-push time from the
-GitHub API, then `build.mjs`, then commits only if something changed.
+`.github/workflows/refresh.yml` runs twice daily (05:17 and 17:17 UTC), on
+demand, and on any push touching the build inputs. It runs `sync.mjs` — which
+pulls repositories, topics, dates, language mix, test counts and commits from
+the GitHub API — then `build.mjs`, then commits only if something changed.
 
-**Your entire job when you ship a repository is one line:**
+**Shipping a repository requires no edit here at all.** Tag it on GitHub and
+`record.json` `topicMap` classifies it into domains. It appears on the chart
+and gets a generated index entry within hours.
 
-```json
-"map": { "TrustEdge-AWS-IAM-analyzer": ["cloud", "offensive"] }
-```
+Precedence is `map` → topics → unclassified:
 
-Add the repo to `map` (and optionally `short` for a display name). Dates,
-ordering, column count, domain counts, the language strip and the freshness
-readout are all derived. Anything unclassified is listed as `UNCLASSIFIED` in
-the Action log and simply left off the chart — it never renders something wrong.
+- **`map`** is an explicit override, used for the four repositories that
+  predate the tagging habit and have no topics.
+- **`topicMap`** maps a GitHub topic to a domain. A repository scores against
+  every domain its topics touch, keeps the strongest (up to
+  `maxDomainsPerRepo`), and needs `minTopicScore` to pick up a second.
+- Anything matching nothing is **left off and reported**, never guessed. The
+  Action opens a labelled issue naming the repo and its topics, and closes it
+  once resolved.
+
+The only optional step is a `notes` entry — `tag`, `readFirst`, `why`, `runs`.
+That is judgement a generator cannot produce, and it is the difference between
+a repository that reads as a bare API description and one worth opening.
 
 `exclude` keeps non-security repositories (the portfolio, this profile repo)
 out of the record.
 
-The index in `README.md` stays hand-written on purpose. It carries judgement —
-what to read first, why a project exists, which repositories connect — and that
-is the part a generator cannot produce.
-
-The moment worth waiting for is a first repository in `appsec`: the last empty
-row lights up, and the profile tells a visibly new story for the cost of one
-line of JSON.
+`sync.mjs` **aborts before writing** if any required API call fails. It once
+published `Rust 94.9%` as the language mix because rate limiting made the
+`/languages` calls fail silently and the percentages were computed from the one
+repository that survived. Wrong numbers are worse than no update.
 
 ## Repository previews
 
 Edit the `FIELD` lines in `social-preview.svg`, export 1280×640 PNG, upload at
 repo → Settings → General → Social preview. Field 4 carries the evidence
 (stack, test count) because that is what makes someone open the link.
+
+## Scaling
+
+The chart is built to survive a repository a day. Three things adapt on their
+own, so nothing needs tuning as the record grows:
+
+| Repos | What the chart does |
+| :-- | :-- |
+| up to ~19 | every mark is labelled, staggered so neighbours cannot collide |
+| ~20 and up | mark labels drop; the caption above the plot names the newest four |
+| ~28 and up | the view windows to the most recent columns, with `+N earlier` stated |
+| any | domain counts sit in the left gutter and never degrade |
+
+Squares are sized from whatever column pitch is left, with a 5px floor.
+Date ticks thin out to roughly five rather than one per column.
+
+`record.json` exposes two knobs, neither of which normally needs touching:
+
+- `window` (default 28) — how many columns the desktop chart shows
+- `mobilePerDomain` (default 3) — repositories listed per domain on mobile
+
+Mobile has the opposite failure mode: it grows downward. It caps the listing
+per domain and states the remainder, so its height flattens at about 2.9×
+its width no matter how many repositories exist. The count per domain is
+always exact; only the listing is capped.
+
+Stress-tested from 10 to 300 repositories: no label collisions, no unreadable
+squares, no state where nothing on the chart has a name.

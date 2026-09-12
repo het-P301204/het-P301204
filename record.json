@@ -389,5 +389,7 @@
     "repo": "sunset",
     "date": "12.09.2026"
   },
-  "synced": "2026-09-12"
+  "synced": "2026-09-12",
+  "window": 28,
+  "mobilePerDomain": 3
 }

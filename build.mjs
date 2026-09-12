@@ -60,23 +60,46 @@ const W = (f, s) => {
 
 /* ══ RECORD — the hero chart ═══════════════════════════════════════ */
 {
-  const X0 = 210, X1 = 1200, TOP = 274, BOT = 590;
+  const X0 = 250, X1 = 1200, TOP = 274, BOT = 590;
   const rowY = i => 300 + i * 52;
-  const colX = i => 300 + i * ((1150 - 300) / (R.slots - 1));
+
+  /* The chart has to survive a repository a day. Past a certain density,
+     naming every mark is impossible — and unnecessary, because the index
+     below names them all. So the view adapts: window to the most recent
+     columns, size the squares to whatever pitch is left, and label the marks
+     only while labels genuinely fit. Row counts in the gutter carry the
+     shape at any scale and never degrade. */
+  const WINDOW = R.window || 28;
+  const total = shipped.length;
+  const view = R.entries.slice(Math.max(0, R.entries.length - WINDOW));   // keeps the open column
+  const hidden = R.entries.length - view.length;
+  const plotW = X1 - X0;
+  const pitch = plotW / Math.max(view.length, 1);
+  const colX = i => X0 + pitch * (i + 0.5);
+  const SQ = Math.max(5, Math.min(14, pitch * 0.42));
+  const CH = 11.5 * 0.6;
+  const longest = Math.max(...view.filter(e => e.short).map(e => e.short.length), 1);
+  const labelMarks = longest * CH < pitch * 2 - 10;   // staggered, so two pitches available
 
   let yAxis = '', grid = '';
   DOM.forEach((d, i) => {
-    const on = filled.has(d.id);
-    yAxis += `<text class="m ${on ? 'ink' : 'soft'}" x="190" y="${rowY(i) + 4}" font-size="12" letter-spacing="1.9" text-anchor="end">${d.name}</text>`;
+    const n = shipped.filter(e => e.domains.includes(d.id)).length;
+    const on = n > 0;
+    yAxis += `<text class="m ${on ? 'ink' : 'soft'}" x="${X0 - 46}" y="${rowY(i) + 4}" font-size="12" letter-spacing="1.9" text-anchor="end">${d.name}</text>`
+           + `<text class="m ${on ? 'sig' : 'soft'}" x="${X0 - 16}" y="${rowY(i) + 4}" font-size="12" text-anchor="end">${n || '·'}</text>`;
     grid += `<line class="grid" x1="${X0}" y1="${rowY(i)}" x2="${X1}" y2="${rowY(i)}"/>`;
   });
 
+  /* Date ticks get sparse rather than crowded: ends, a few interior, plus the
+     live column which always earns a label. */
+  const tickEvery = Math.max(1, Math.ceil(view.length / 5));
   let ghosts = '', ticks = '';
-  for (let i = 0; i < R.slots; i++) {
-    const e = R.entries[i];
-    if (!e || e.open) ghosts += `<line class="ghost" x1="${colX(i)}" y1="${TOP}" x2="${colX(i)}" y2="${BOT}"/>`;
-    if (e) ticks += `<text class="m ${e.open ? 'live' : 'soft'}" x="${colX(i)}" y="${BOT + 28}" font-size="11" letter-spacing="1.1" text-anchor="middle">${e.open ? 'building now' : e.date}</text>`;
-  }
+  view.forEach((e, i) => {
+    if (e.open) ghosts += `<line class="ghost" x1="${colX(i)}" y1="${TOP}" x2="${colX(i)}" y2="${BOT}"/>`;
+    const show = e.open || i === 0 || i === view.length - 1 || i % tickEvery === 0;
+    if (show) ticks += `<text class="m ${e.open ? 'live' : 'soft'}" x="${colX(i)}" y="${BOT + 28}" font-size="10.5" letter-spacing="1" text-anchor="middle">${e.open ? 'building now' : e.date}</text>`;
+  });
+  if (hidden > 0) ticks += `<text class="m soft" x="${X0 - 16}" y="${BOT + 28}" font-size="10.5" letter-spacing="1" text-anchor="end">+${hidden} earlier</text>`;
 
   /* No connecting line: the domain axis is categorical, so a trend line would
      imply an ordering and a direction that do not exist. Each repository gets
@@ -86,25 +109,36 @@ const W = (f, s) => {
      detection and offensive does not also occupy the rows between them.
      A faint tie shows the squares belong to the same repository. */
   let marks = '';
-  shipped.forEach((e, k) => {
-    const x = colX(R.entries.indexOf(e));
-    const rs = e.domains.map(rowOf).filter(i => i >= 0).sort((a, b) => a - b);
+  view.forEach((e, i) => {
+    if (e.open) return;
+    const x = colX(i);
+    const rs = e.domains.map(rowOf).filter(n => n >= 0).sort((a, b) => a - b);
     if (!rs.length) return;
     const yFirst = rowY(rs[0]), yLast = rowY(rs[rs.length - 1]);
-    const squares = rs.map(r => `<rect class="sig" x="${x - 7}" y="${rowY(r) - 7}" width="14" height="14"/>`).join('');
-    const tie = rs.length > 1 ? `<line class="span" x1="${x}" y1="${yFirst}" x2="${x}" y2="${yLast}"/>` : '';
-    /* Columns get tight as the record grows, and labels are wider than the
-       pitch. Stagger alternate columns so neighbours can never overlap, and
-       run a leader from the raised label back down to its mark. */
-    const i = R.entries.indexOf(e);
-    const raised = i % 2 === 1;
-    const ly = yFirst - (raised ? 34 : 16);
-    const leader = raised ? `<line class="stem" x1="${x}" y1="${ly + 5}" x2="${x}" y2="${yFirst - 9}"/>` : '';
-    marks += `<g class="u" style="animation-delay:${(0.45 + k * 0.09).toFixed(2)}s">
-<line class="stem" x1="${x}" y1="${yLast + 8}" x2="${x}" y2="${BOT}"/>
-${tie}${squares}${leader}
-<text class="m ink" x="${x}" y="${ly}" font-size="11.5" text-anchor="middle">${e.short}</text></g>`;
+    const h = SQ / 2;
+    const squares = rs.map(r => `<rect class="sig" x="${(x - h).toFixed(1)}" y="${(rowY(r) - h).toFixed(1)}" width="${SQ.toFixed(1)}" height="${SQ.toFixed(1)}"/>`).join('');
+    const tie = rs.length > 1 ? `<line class="span" x1="${x.toFixed(1)}" y1="${yFirst}" x2="${x.toFixed(1)}" y2="${yLast}"/>` : '';
+    const delay = (0.4 + Math.min(i, 14) * 0.06).toFixed(2);
+
+    let label = '';
+    if (labelMarks) {
+      const raised = i % 2 === 1;
+      const ly = yFirst - (raised ? 34 : 16);
+      const leader = raised ? `<line class="stem" x1="${x.toFixed(1)}" y1="${ly + 5}" x2="${x.toFixed(1)}" y2="${yFirst - h - 2}"/>` : '';
+      label = `${leader}<text class="m ink" x="${x.toFixed(1)}" y="${ly}" font-size="11.5" text-anchor="middle">${e.short}</text>`;
+    }
+    marks += `<g class="u" style="animation-delay:${delay}s">
+<line class="stem" x1="${x.toFixed(1)}" y1="${yLast + h + 1}" x2="${x.toFixed(1)}" y2="${BOT}"/>
+${tie}${squares}${label}</g>`;
   });
+
+  /* The caption above the plot carries whatever the marks cannot. Once the
+     record is too dense to label, it names the newest few instead, so there
+     is never a state where nothing on the chart has a name. */
+  const recent = shipped.slice(-4).reverse().map(e => e.short);
+  const caption = !labelMarks ? `NEWEST &#183; ${recent.join(' &#183; ')}`
+    : hidden > 0 ? `SHOWING THE MOST RECENT ${view.length - 1} OF ${total}`
+    : 'EACH MARK IS A REPOSITORY';
 
 
   const stack = R.stack || [];
@@ -135,7 +169,7 @@ ${tie}${squares}${leader}
 <line class="r" x1="-18" y1="224" x2="1218" y2="224"/>
 
 <text class="m soft" x="0" y="258" font-size="10.5" letter-spacing="2.2">DOMAIN</text>
-<text class="m soft" x="1200" y="258" font-size="10.5" letter-spacing="2.2" text-anchor="end">EACH MARK IS A REPOSITORY</text>
+<text class="m soft" x="1200" y="258" font-size="10.5" letter-spacing="2.2" text-anchor="end">${caption}</text>
 
 ${grid}
 ${ghosts}
@@ -163,13 +197,21 @@ ${strip}
 
 /* ══ RECORD (mobile) — the same record as a vertical index ═════════ */
 {
+  /* This one grows downward rather than sideways, so it needs its own limit:
+     a phone should not scroll through two hundred names. The count per domain
+     is always exact; only the listing is capped, newest first, with the
+     remainder stated rather than hidden. */
+  const PER_DOMAIN = R.mobilePerDomain || 3;
   let y = 300, rows = '';
-  DOM.forEach((d, i) => {
-    const rp = reposIn(d.id), on = rp.length > 0;
+  DOM.forEach(d => {
+    const all = reposIn(d.id), on = all.length > 0;
+    const show = all.slice(-PER_DOMAIN).reverse();
+    const more = all.length - show.length;
     rows += `<line class="grid" x1="-16" y1="${y - 24}" x2="396" y2="${y - 24}"/>
 <text class="m ${on ? 'ink' : 'soft'}" x="0" y="${y}" font-size="13" letter-spacing="1.9">${d.name}</text>
-<text class="m ${on ? 'sig' : 'soft'}" x="380" y="${y}" font-size="13" text-anchor="end">${rp.length}</text>`;
-    if (on) { rp.forEach(n => { y += 24; rows += `<rect class="sig" x="0" y="${y - 11}" width="4" height="13"/><text class="m ink" x="14" y="${y}" font-size="12.5">${n}</text>`; }); }
+<text class="m ${on ? 'sig' : 'soft'}" x="380" y="${y}" font-size="13" text-anchor="end">${all.length || '·'}</text>`;
+    show.forEach(n => { y += 24; rows += `<rect class="sig" x="0" y="${y - 11}" width="4" height="13"/><text class="m ink" x="14" y="${y}" font-size="12.5">${n}</text>`; });
+    if (more > 0) { y += 22; rows += `<text class="m soft" x="14" y="${y}" font-size="11.5">+${more} more</text>`; }
     y += 40;
   });
 

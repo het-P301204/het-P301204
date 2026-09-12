@@ -93,10 +93,17 @@ const W = (f, s) => {
     const yFirst = rowY(rs[0]), yLast = rowY(rs[rs.length - 1]);
     const squares = rs.map(r => `<rect class="sig" x="${x - 7}" y="${rowY(r) - 7}" width="14" height="14"/>`).join('');
     const tie = rs.length > 1 ? `<line class="span" x1="${x}" y1="${yFirst}" x2="${x}" y2="${yLast}"/>` : '';
-    marks += `<g class="u" style="animation-delay:${(0.45 + k * 0.11).toFixed(2)}s">
+    /* Columns get tight as the record grows, and labels are wider than the
+       pitch. Stagger alternate columns so neighbours can never overlap, and
+       run a leader from the raised label back down to its mark. */
+    const i = R.entries.indexOf(e);
+    const raised = i % 2 === 1;
+    const ly = yFirst - (raised ? 34 : 16);
+    const leader = raised ? `<line class="stem" x1="${x}" y1="${ly + 5}" x2="${x}" y2="${yFirst - 9}"/>` : '';
+    marks += `<g class="u" style="animation-delay:${(0.45 + k * 0.09).toFixed(2)}s">
 <line class="stem" x1="${x}" y1="${yLast + 8}" x2="${x}" y2="${BOT}"/>
-${tie}${squares}
-<text class="m ink" x="${x}" y="${yFirst - 16}" font-size="12" text-anchor="middle">${e.short}</text></g>`;
+${tie}${squares}${leader}
+<text class="m ink" x="${x}" y="${ly}" font-size="11.5" text-anchor="middle">${e.short}</text></g>`;
   });
 
 

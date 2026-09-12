@@ -1,18 +1,24 @@
 <!--
   het-P301204 — profile README
-  An index to the repositories, not a homepage. The chart plots what has
-  actually been built; repositories are the only bright marks on it.
 
-  The chart is generated: sync.mjs pulls repos, dates and language mix from
-  the GitHub API, build.mjs renders the SVGs, and .github/workflows/refresh.yml
-  runs both daily. Classify a new repo once in record.json "map" and the
-  chart maintains itself. This index is hand-written on purpose — it holds
-  judgement (what to read first, why it exists) that cannot be generated.
+  MOSTLY GENERATED. sync.mjs pulls repositories, topics, dates, language mix,
+  test counts and commits from the GitHub API; build.mjs renders the SVGs;
+  .github/workflows/refresh.yml runs both twice daily and commits on change.
+  Regions between <!==REGION:START==> markers are overwritten — do not hand-edit
+  SUMMARY, INDEX, ACTIVITY or TESTS.
+
+  ADDING A REPOSITORY needs no edit here at all. Tag it on GitHub and
+  record.json topicMap classifies it. Optionally add a record.json "notes"
+  entry for the prose a generator cannot write: what to read first, why it
+  exists. Anything unclassifiable opens a self-closing issue.
+
+  HAND-WRITTEN: this header, the intro paragraph, the mermaid diagram, the
+  bench section and the footer.
 
   INTERACTION NOTE: chip hrefs must target #user-content-* because GitHub
   prefixes id attributes but leaves hrefs alone. Fragment navigation into a
-  closed <details> opens it — and opens every ancestor, so a repo link opens
-  its domain too. Do not remove the bare <a id="..."> tags; they are the targets.
+  closed <details> opens it — and every ancestor — so a repo link opens its
+  domain too. Do not remove the bare <a id="..."> tags; they are the targets.
 -->
 
 <div align="center">
@@ -55,7 +61,7 @@ hold.
 
 <!--INDEX:START-->
 <details id="domain-assurance">
-<summary><b>ASSURANCE</b> &nbsp;<sub>iso 27001 / isms / controls / evidence &nbsp;—&nbsp; 2 repositories</sub></summary>
+<summary><b>ASSURANCE</b> &nbsp;<sub>iso 27001 / isms / controls / evidence &nbsp;—&nbsp; 3 repositories</sub></summary>
 <a id="d-assurance"></a>
 
 <details id="repo-securebridge-assurance">
@@ -85,12 +91,27 @@ AegisLens is an educational and defensive security assessment workbench using sy
 
 </details>
 
+<details id="repo-sunset-assurance">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/sunset">sunset</a></b> &nbsp;<sub>what breaks when the cryptography expires</sub></summary>
+<a id="r-sunset"></a>
+
+Cryptographic posture and post-quantum migration triage. Turns a CycloneDX CBOM into a deadline-anchored, risk-ranked migration plan — and says plainly what it could not assess. Offline, deterministic, no network.
+
+| | |
+| :-- | :-- |
+| **Stack** | `TypeScript` `CSS` `Python` |
+| **Evidence** | 44 tests, CI |
+| **Runs** | Offline and deterministic. No network. |
+| **Read first** | The triage output - especially the section listing what it could not assess. |
+
+</details>
+
 <sub>What I am chasing here: the smallest honest evidence set that proves a control operates.</sub>
 
 </details>
 
 <details id="domain-engineering">
-<summary><b>ENGINEERING</b> &nbsp;<sub>tooling / automation / pipelines &nbsp;—&nbsp; 4 repositories</sub></summary>
+<summary><b>ENGINEERING</b> &nbsp;<sub>tooling / automation / pipelines &nbsp;—&nbsp; 3 repositories</sub></summary>
 <a id="d-engineering"></a>
 
 <details id="repo-aegislens-engineering">
@@ -136,19 +157,6 @@ Consumer-side npm provenance verification and policy enforcement. Verifies each 
 | **Evidence** | 198 tests, CI |
 | **Read first** | The dry-run report — what would break if you enforced the policy today. |
 | **Also in** | [APPSEC](#user-content-r-pedigree-appsec) |
-
-</details>
-
-<details id="repo-sunset-engineering">
-<summary>&nbsp;<b><a href="https://github.com/het-P301204/sunset">sunset</a></b></summary>
-<a id="r-sunset"></a>
-
-Cryptographic posture and post-quantum migration triage. Turns a CycloneDX CBOM into a deadline-anchored, risk-ranked migration plan — and says plainly what it could not assess. Offline, deterministic, no network.
-
-| | |
-| :-- | :-- |
-| **Stack** | `TypeScript` `CSS` `Python` |
-| **Evidence** | 44 tests, CI |
 
 </details>
 
@@ -202,7 +210,7 @@ Security control failure & detection lab: an authorization fail-open, its exploi
 </details>
 
 <details id="repo-afterlife-detection">
-<summary>&nbsp;<b><a href="https://github.com/het-P301204/AfterLife">AfterLife</a></b></summary>
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/AfterLife">AfterLife</a></b> &nbsp;<sub>the password reset worked; the attacker stayed</sub></summary>
 <a id="r-afterlife"></a>
 
 Revocation persistence detection lab: when the password reset succeeds but the attacker never leaves. Reproduces the Strapi CVE-2026-22706 conditional-revocation bug, its fix, a three-rule detection pack, and the naive rule that misses it.
@@ -211,6 +219,7 @@ Revocation persistence detection lab: when the password reset succeeds but the a
 | :-- | :-- |
 | **Stack** | `Python` `JavaScript` `CSS` |
 | **Evidence** | 290 tests, CI |
+| **Read first** | The naive detection rule that misses it - that contrast is the point. |
 | **Also in** | [APPSEC](#user-content-r-afterlife-appsec) · [OFFENSIVE](#user-content-r-afterlife-offensive) |
 
 </details>
@@ -254,7 +263,7 @@ Security control failure & detection lab: an authorization fail-open, its exploi
 </details>
 
 <details id="repo-afterlife-appsec">
-<summary>&nbsp;<b><a href="https://github.com/het-P301204/AfterLife">AfterLife</a></b></summary>
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/AfterLife">AfterLife</a></b> &nbsp;<sub>the password reset worked; the attacker stayed</sub></summary>
 <a id="r-afterlife-appsec"></a>
 
 Revocation persistence detection lab: when the password reset succeeds but the attacker never leaves. Reproduces the Strapi CVE-2026-22706 conditional-revocation bug, its fix, a three-rule detection pack, and the naive rule that misses it.
@@ -263,19 +272,22 @@ Revocation persistence detection lab: when the password reset succeeds but the a
 | :-- | :-- |
 | **Stack** | `Python` `JavaScript` `CSS` |
 | **Evidence** | 290 tests, CI |
+| **Read first** | The naive detection rule that misses it - that contrast is the point. |
 | **Also in** | [DETECTION](#user-content-r-afterlife) · [OFFENSIVE](#user-content-r-afterlife-offensive) |
 
 </details>
 
-<details id="repo-spectressrflab-appsec">
-<summary>&nbsp;<b><a href="https://github.com/het-P301204/spectre-ssrf-lab">spectre-ssrf-lab</a></b></summary>
-<a id="r-spectressrflab"></a>
+<details id="repo-spectre-appsec">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/spectre-ssrf-lab">Spectre</a></b> &nbsp;<sub>seven services, thirteen ways in</sub></summary>
+<a id="r-spectre"></a>
 
 Self-contained SSRF research lab — 7 services, 13 scenarios, 6 bypass techniques, detection rules, and an animated dashboard. All on 127.0.0.1.
 
 | | |
 | :-- | :-- |
 | **Stack** | `Python` `HTML` `PowerShell` |
+| **Read first** | The bypass techniques, then the detection rules written against them. |
+| **Also in** | [OFFENSIVE](#user-content-r-spectre-offensive) |
 
 </details>
 
@@ -308,7 +320,7 @@ Grades who outside an AWS account can become an identity inside it, ranked by ex
 </details>
 
 <details id="domain-offensive">
-<summary><b>OFFENSIVE</b> &nbsp;<sub>attack paths / control validation &nbsp;—&nbsp; 2 repositories</sub></summary>
+<summary><b>OFFENSIVE</b> &nbsp;<sub>attack paths / control validation &nbsp;—&nbsp; 3 repositories</sub></summary>
 <a id="d-offensive"></a>
 
 <details id="repo-blackout-offensive">
@@ -327,7 +339,7 @@ Security control failure & detection lab: an authorization fail-open, its exploi
 </details>
 
 <details id="repo-afterlife-offensive">
-<summary>&nbsp;<b><a href="https://github.com/het-P301204/AfterLife">AfterLife</a></b></summary>
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/AfterLife">AfterLife</a></b> &nbsp;<sub>the password reset worked; the attacker stayed</sub></summary>
 <a id="r-afterlife-offensive"></a>
 
 Revocation persistence detection lab: when the password reset succeeds but the attacker never leaves. Reproduces the Strapi CVE-2026-22706 conditional-revocation bug, its fix, a three-rule detection pack, and the naive rule that misses it.
@@ -336,7 +348,22 @@ Revocation persistence detection lab: when the password reset succeeds but the a
 | :-- | :-- |
 | **Stack** | `Python` `JavaScript` `CSS` |
 | **Evidence** | 290 tests, CI |
+| **Read first** | The naive detection rule that misses it - that contrast is the point. |
 | **Also in** | [DETECTION](#user-content-r-afterlife) · [APPSEC](#user-content-r-afterlife-appsec) |
+
+</details>
+
+<details id="repo-spectre-offensive">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/spectre-ssrf-lab">Spectre</a></b> &nbsp;<sub>seven services, thirteen ways in</sub></summary>
+<a id="r-spectre-offensive"></a>
+
+Self-contained SSRF research lab — 7 services, 13 scenarios, 6 bypass techniques, detection rules, and an animated dashboard. All on 127.0.0.1.
+
+| | |
+| :-- | :-- |
+| **Stack** | `Python` `HTML` `PowerShell` |
+| **Read first** | The bypass techniques, then the detection rules written against them. |
+| **Also in** | [APPSEC](#user-content-r-spectre) |
 
 </details>
 
@@ -346,40 +373,54 @@ Revocation persistence detection lab: when the password reset succeeds but the a
 <!--INDEX:END-->
 
 <details id="how-they-fit">
-<summary><b>HOW THEY FIT TOGETHER</b> &nbsp;<sub>one diagram — click it to zoom</sub></summary>
+<summary><b>HOW THEY FIT TOGETHER</b> &nbsp;<sub>one diagram — click it to zoom, click a box to open the repo</sub></summary>
 <a id="d-fit"></a>
 
 ```mermaid
 flowchart LR
-  SB["SecureBridge<br/><i>what must be true</i>"]
-  TE["TrustEdge<br/><i>who can get into the account</i>"]
-  PD["Pedigree<br/><i>where the dependencies came from</i>"]
-  BO["BlackOut<br/><i>a control that failed</i>"]
-  PM["PingMaster<br/><i>can I see the traffic</i>"]
-  NF["NullFire<br/><i>which rules can never fire</i>"]
-  AL["AegisLens<br/><i>evidence into a number</i>"]
+  subgraph S1["WHAT MUST BE TRUE"]
+    SB["SecureBridge"]
+    SU["sunset"]
+  end
+  subgraph S2["WHAT IS ACTUALLY TRUE"]
+    TE["TrustEdge"]
+    PD["Pedigree"]
+  end
+  subgraph S3["HOW IT BREAKS"]
+    BO["BlackOut"]
+    AF["AfterLife"]
+    SP["Spectre"]
+  end
+  subgraph S4["WOULD YOU NOTICE"]
+    NF["NullFire"]
+    PM["PingMaster"]
+  end
+  subgraph S5["WHAT IS IT WORTH"]
+    AL["AegisLens"]
+  end
 
-  SB -. "what must be true" .-> AL
-  TE -. "a finding" .-> AL
-  PD -. "a finding" .-> AL
-  BO -. "a failure, and a rule for it" .-> NF
-  PM -. "a signal" .-> NF
-  NF -. "can we actually see it" .-> AL
+  S1 -. "controls, deadlines" .-> S2
+  S2 -. "findings" .-> S5
+  S3 -. "a failure, and a rule for it" .-> S4
+  S4 -. "coverage you can trust" .-> S5
 
   click SB "https://github.com/het-P301204/SecureBridge-ISMS-360"
+  click SU "https://github.com/het-P301204/sunset"
   click TE "https://github.com/het-P301204/TrustEdge-AWS-IAM-analyzer"
   click PD "https://github.com/het-P301204/Pedigree-npm-provenance-gate"
   click BO "https://github.com/het-P301204/BlackOut"
-  click PM "https://github.com/het-P301204/PingMaster"
+  click AF "https://github.com/het-P301204/AfterLife"
+  click SP "https://github.com/het-P301204/spectre-ssrf-lab"
   click NF "https://github.com/het-P301204/NullFire"
+  click PM "https://github.com/het-P301204/PingMaster"
   click AL "https://github.com/het-P301204/AegisLens-security-workbench"
 ```
 
-**The arrows are dashed for a reason.** These are separate tools, not an
-integrated platform. The diagram maps how the *questions* relate — governance
-says what must be true, the analysers produce findings about what is actually
-true, detection asks whether you would notice, and assurance turns all of it
-into a number someone can act on.
+**The arrows are dashed for a reason.** These are ten separate tools, not an
+integrated platform. The diagram maps how the *questions* relate: governance
+says what must be true, the analysers report what is actually true, the labs
+reproduce how it breaks, detection asks whether you would notice, and assurance
+turns all of it into a number someone can act on.
 
 Wiring them together for real is the interesting problem, and it is not done.
 
@@ -392,11 +433,11 @@ Wiring them together for real is the interesting problem, and it is not done.
 **Latest commits across every repository**
 
 <!--ACTIVITY:START-->
-- `a9b60c4` **[sunset](https://github.com/het-P301204/sunset)** — CI: current actions, current Node <sub>1h ago</sub>
-- `9b8724c` **[sunset](https://github.com/het-P301204/sunset)** — Untrack local editor configuration <sub>1h ago</sub>
-- `3b31e44` **[sunset](https://github.com/het-P301204/sunset)** — Prepare for publication: README, screenshots, CI, and a drawer fix <sub>1h ago</sub>
-- `83427a3` **[sunset](https://github.com/het-P301204/sunset)** — Rebuild the theme wave so it is actually a wave <sub>2h ago</sub>
-- `a028edc` **[sunset](https://github.com/het-P301204/sunset)** — Fix clipped rail tooltips, add a theme wave, drop the landing's timeline <sub>2h ago</sub>
+- `a9b60c4` **[sunset](https://github.com/het-P301204/sunset)** — CI: current actions, current Node <sub>3h ago</sub>
+- `9b8724c` **[sunset](https://github.com/het-P301204/sunset)** — Untrack local editor configuration <sub>3h ago</sub>
+- `3b31e44` **[sunset](https://github.com/het-P301204/sunset)** — Prepare for publication: README, screenshots, CI, and a drawer fix <sub>3h ago</sub>
+- `83427a3` **[sunset](https://github.com/het-P301204/sunset)** — Rebuild the theme wave so it is actually a wave <sub>3h ago</sub>
+- `a028edc` **[sunset](https://github.com/het-P301204/sunset)** — Fix clipped rail tooltips, add a theme wave, drop the landing's timeline <sub>3h ago</sub>
 <!--ACTIVITY:END-->
 
 **The queue.** Anyone can add to it — the

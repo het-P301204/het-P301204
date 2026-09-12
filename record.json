@@ -56,7 +56,14 @@
       "security-audit",
       "risk-management",
       "risk-assessment",
-      "policy-as-code"
+      "policy-as-code",
+      "post-quantum",
+      "pqc",
+      "cryptography",
+      "crypto-agility",
+      "cbom",
+      "cyclonedx",
+      "sbom"
     ],
     "engineering": [
       "security-tools",
@@ -84,7 +91,9 @@
       "telemetry",
       "observability",
       "network-monitoring",
-      "incident-response"
+      "incident-response",
+      "detection-rules",
+      "sigma-rules"
     ],
     "appsec": [
       "appsec",
@@ -104,7 +113,15 @@
       "provenance",
       "artifact-attestation",
       "dependency-security",
-      "npm"
+      "npm",
+      "web-security",
+      "ssrf",
+      "session-management",
+      "jwt",
+      "oauth2",
+      "xss",
+      "csrf",
+      "idor"
     ],
     "cloud": [
       "cloud-security",
@@ -131,7 +148,11 @@
       "exploitation",
       "adversary-emulation",
       "attack-path",
-      "security-lab"
+      "security-lab",
+      "ctf",
+      "vulnerability-research",
+      "security-research",
+      "exploit-development"
     ]
   },
   "map": {
@@ -150,7 +171,8 @@
     "SecureBridge-ISMS-360": "SecureBridge",
     "AegisLens-security-workbench": "AegisLens",
     "TrustEdge-AWS-IAM-analyzer": "TrustEdge",
-    "Pedigree-npm-provenance-gate": "Pedigree"
+    "Pedigree-npm-provenance-gate": "Pedigree",
+    "spectre-ssrf-lab": "Spectre"
   },
   "exclude": [
     "het-P301204",
@@ -192,6 +214,22 @@
       "tag": "where did this dependency actually come from",
       "readFirst": "The dry-run report — what would break if you enforced the policy today.",
       "why": "Verifies origin, not the absence of malicious code. Being clear about what it does not prove is the point."
+    },
+    "sunset": {
+      "tag": "what breaks when the cryptography expires",
+      "readFirst": "The triage output - especially the section listing what it could not assess.",
+      "why": "Turns a CycloneDX CBOM into a deadline-anchored migration plan for post-quantum cryptography.",
+      "runs": "Offline and deterministic. No network."
+    },
+    "spectre-ssrf-lab": {
+      "tag": "seven services, thirteen ways in",
+      "readFirst": "The bypass techniques, then the detection rules written against them.",
+      "why": "A self-contained SSRF research lab. Every scenario is reproducible on 127.0.0.1, which is the only responsible way to publish this."
+    },
+    "AfterLife": {
+      "tag": "the password reset worked; the attacker stayed",
+      "readFirst": "The naive detection rule that misses it - that contrast is the point.",
+      "why": "Reproduces a real conditional-revocation bug (Strapi CVE-2026-22706) end to end: the flaw, its fix, a three-rule detection pack, and the rule that looks right but fails."
     }
   },
   "open": true,
@@ -271,10 +309,11 @@
     },
     {
       "date": "11.09.2026",
-      "short": "spectre-ssrf-lab",
+      "short": "Spectre",
       "repo": "spectre-ssrf-lab",
       "domains": [
-        "appsec"
+        "appsec",
+        "offensive"
       ]
     },
     {
@@ -282,7 +321,7 @@
       "short": "sunset",
       "repo": "sunset",
       "domains": [
-        "engineering"
+        "assurance"
       ]
     },
     {

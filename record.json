@@ -458,11 +458,11 @@
   "stack": [
     {
       "name": "TypeScript",
-      "pct": 61.3
+      "pct": 61.4
     },
     {
       "name": "Python",
-      "pct": 31.6
+      "pct": 31.5
     },
     {
       "name": "HTML",
@@ -526,7 +526,7 @@
   "testTotal": 2906,
   "slots": 18,
   "lastPush": {
-    "repo": "parallax",
+    "repo": "deadweight",
     "date": "20.09.2026"
   },
   "synced": "2026-09-20",

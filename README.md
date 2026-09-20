@@ -562,7 +562,7 @@ done.
 </details>
 
 <details id="the-bench">
-<summary><b>ON THE BENCH</b> &nbsp;<sub>what the lab is doing right now — updated by a robot, not by me</sub></summary>
+<summary><b>ON THE BENCH</b> &nbsp;<sub>what the lab is doing right now — updated by Elis, not by me</sub></summary>
 <a id="d-bench"></a>
 
 **Latest commits across every repository**

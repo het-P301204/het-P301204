@@ -61,7 +61,12 @@ const W = (f, s) => {
 /* ══ RECORD — the hero chart ═══════════════════════════════════════ */
 {
   const X0 = 250, X1 = 1200, TOP = 274, BOT = 590;
-  const rowY = i => 300 + i * 52;
+
+  /* Rows divide the plot rather than assuming a fixed gap, so adding a domain
+     never pushes the last row through the axis. */
+  const ROW_TOP = 300, ROW_BOT = BOT - 26;
+  const rowGap = DOM.length > 1 ? (ROW_BOT - ROW_TOP) / (DOM.length - 1) : 0;
+  const rowY = i => ROW_TOP + i * rowGap;
 
   /* The chart has to survive a repository a day. Past a certain density,
      naming every mark is impossible — and unnecessary, because the index

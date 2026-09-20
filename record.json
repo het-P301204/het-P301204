@@ -42,6 +42,13 @@
       "note": "attack paths / control validation",
       "chasing": "Offence here exists to validate the defensive work above, not as a separate hobby.",
       "empty": "Nothing here yet."
+    },
+    {
+      "id": "aisec",
+      "name": "AI SECURITY",
+      "note": "model supply chain / agent capability",
+      "chasing": "The novel part is not the model. It is what loading an artifact, or composing a toolset, quietly grants.",
+      "empty": "Nothing here yet."
     }
   ],
   "topicMap": {
@@ -63,7 +70,13 @@
       "crypto-agility",
       "cbom",
       "cyclonedx",
-      "sbom"
+      "sbom",
+      "gdpr",
+      "data-governance",
+      "data-retention",
+      "privacy-engineering",
+      "privacy-by-design",
+      "data-privacy"
     ],
     "engineering": [
       "security-tools",
@@ -93,7 +106,8 @@
       "network-monitoring",
       "incident-response",
       "detection-rules",
-      "sigma-rules"
+      "sigma-rules",
+      "security-telemetry"
     ],
     "appsec": [
       "appsec",
@@ -121,7 +135,9 @@
       "oauth2",
       "xss",
       "csrf",
-      "idor"
+      "idor",
+      "oauth",
+      "static-analysis"
     ],
     "cloud": [
       "cloud-security",
@@ -136,7 +152,13 @@
       "assume-role",
       "kubernetes",
       "terraform",
-      "iac"
+      "iac",
+      "nhi",
+      "non-human-identity",
+      "credential-assessment",
+      "saas-security",
+      "identity",
+      "access-review"
     ],
     "offensive": [
       "offensive-security",
@@ -152,7 +174,22 @@
       "ctf",
       "vulnerability-research",
       "security-research",
-      "exploit-development"
+      "exploit-development",
+      "privilege-escalation",
+      "blast-radius",
+      "attack-surface"
+    ],
+    "aisec": [
+      "ai-security",
+      "machine-learning-security",
+      "mlsecops",
+      "llm-security",
+      "prompt-injection",
+      "model-security",
+      "agent-security",
+      "pickle",
+      "ai-agents",
+      "mcp"
     ]
   },
   "map": {
@@ -165,6 +202,10 @@
     "AegisLens-security-workbench": [
       "assurance",
       "engineering"
+    ],
+    "handler": [
+      "aisec",
+      "appsec"
     ]
   },
   "short": {
@@ -230,6 +271,37 @@
       "tag": "the password reset worked; the attacker stayed",
       "readFirst": "The naive detection rule that misses it - that contrast is the point.",
       "why": "Reproduces a real conditional-revocation bug (Strapi CVE-2026-22706) end to end: the flaw, its fix, a three-rule detection pack, and the rule that looks right but fails."
+    },
+    "credscope": {
+      "tag": "what the credential can actually do",
+      "readFirst": "The blast-radius scoring — a key is only as interesting as its reach.",
+      "why": "Non-human identity attack surface. Machine credentials outnumber human ones and nobody reviews them."
+    },
+    "sleeper": {
+      "tag": "the grant nobody revoked",
+      "readFirst": "Where reach and detectability disagree — that gap is the finding.",
+      "why": "OAuth grant drift, with reach scored independently of whether you would notice it being used.",
+      "runs": "Offline and deterministic."
+    },
+    "tombstone": {
+      "tag": "when retention and erasure collide",
+      "readFirst": "A field where the retention floor and the erasure obligation cannot both be met.",
+      "why": "Security telemetry must be kept; privacy law says delete it. This works out field by field whether deletion is technically achievable at all."
+    },
+    "deadweight": {
+      "tag": "what happens when you load the model",
+      "readFirst": "The pickle analysis — it answers the question without ever executing the artifact.",
+      "why": "AI model and skill supply-chain analysis. Loading an artifact is code execution, and most tooling treats it as data."
+    },
+    "handler": {
+      "tag": "what a toolset can do in combination",
+      "readFirst": "The minimal change that breaks the capability path.",
+      "why": "Individual agent tools look harmless. Composition is where the capability appears, and that is what this attributes."
+    },
+    "parallax": {
+      "tag": "numbers that cannot carry the decision",
+      "readFirst": "The triage — which few risks are actually worth quantifying.",
+      "why": "A qualitative risk register produces numbers people then make decisions on. This finds where those numbers cannot bear the weight."
     }
   },
   "open": true,
@@ -325,7 +397,59 @@
       ]
     },
     {
-      "date": "12.09.2026",
+      "date": "13.09.2026",
+      "short": "handler",
+      "repo": "handler",
+      "domains": [
+        "aisec",
+        "appsec"
+      ]
+    },
+    {
+      "date": "14.09.2026",
+      "short": "credscope",
+      "repo": "credscope",
+      "domains": [
+        "cloud",
+        "offensive"
+      ]
+    },
+    {
+      "date": "15.09.2026",
+      "short": "sleeper",
+      "repo": "sleeper",
+      "domains": [
+        "cloud"
+      ]
+    },
+    {
+      "date": "16.09.2026",
+      "short": "tombstone",
+      "repo": "tombstone",
+      "domains": [
+        "assurance",
+        "detection"
+      ]
+    },
+    {
+      "date": "17.09.2026",
+      "short": "deadweight",
+      "repo": "deadweight",
+      "domains": [
+        "appsec",
+        "aisec"
+      ]
+    },
+    {
+      "date": "19.09.2026",
+      "short": "parallax",
+      "repo": "parallax",
+      "domains": [
+        "assurance"
+      ]
+    },
+    {
+      "date": "20.09.2026",
       "short": "",
       "domains": [],
       "open": true
@@ -333,24 +457,24 @@
   ],
   "stack": [
     {
-      "name": "Python",
-      "pct": 59.2
-    },
-    {
       "name": "TypeScript",
-      "pct": 32.7
+      "pct": 61.3
     },
     {
-      "name": "CSS",
-      "pct": 2.1
+      "name": "Python",
+      "pct": 31.6
     },
     {
       "name": "HTML",
-      "pct": 1.8
+      "pct": 2.8
     },
     {
-      "name": "Rust",
-      "pct": 1.7
+      "name": "CSS",
+      "pct": 1.6
+    },
+    {
+      "name": "JavaScript",
+      "pct": 1.4
     }
   ],
   "tests": [
@@ -381,15 +505,31 @@
     {
       "repo": "sunset",
       "n": 44
+    },
+    {
+      "repo": "credscope",
+      "n": 93
+    },
+    {
+      "repo": "sleeper",
+      "n": 230
+    },
+    {
+      "repo": "tombstone",
+      "n": 497
+    },
+    {
+      "repo": "parallax",
+      "n": 191
     }
   ],
-  "testTotal": 1895,
-  "slots": 12,
+  "testTotal": 2906,
+  "slots": 18,
   "lastPush": {
-    "repo": "sunset",
-    "date": "12.09.2026"
+    "repo": "parallax",
+    "date": "20.09.2026"
   },
-  "synced": "2026-09-12",
+  "synced": "2026-09-20",
   "window": 28,
   "mobilePerDomain": 3
 }

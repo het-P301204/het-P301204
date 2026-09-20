@@ -34,6 +34,7 @@
 <a href="#user-content-d-appsec"><kbd> APPSEC </kbd></a>
 <a href="#user-content-d-cloud"><kbd> CLOUD </kbd></a>
 <a href="#user-content-d-offensive"><kbd> OFFENSIVE </kbd></a>
+<a href="#user-content-d-aisec"><kbd> AI SECURITY </kbd></a>
 
 <br>
 
@@ -50,18 +51,18 @@ being abused. I am mostly interested in why things fail and what makes them
 hold.
 
 <!--TESTS:START-->
-**1,895 tests** across the lab — AegisLens 108, TrustEdge 601, Pedigree 198, NullFire 424, BlackOut 230, AfterLife 290, sunset 44. Counted from each repository's own README, not asserted here.
+**2,906 tests** across the lab — AegisLens 108, TrustEdge 601, Pedigree 198, NullFire 424, BlackOut 230, AfterLife 290, sunset 44, credscope 93, sleeper 230, tombstone 497, parallax 191. Counted from each repository's own README, not asserted here.
 <!--TESTS:END-->
 
 ## Index
 
 <!--SUMMARY:START-->
-10 repositories across 6 of 6 domains. Open a domain, then open a repository — the second level is where the evidence is. Repository names link straight to the code.
+16 repositories across 7 of 7 domains. Open a domain, then open a repository — the second level is where the evidence is. Repository names link straight to the code.
 <!--SUMMARY:END-->
 
 <!--INDEX:START-->
 <details id="domain-assurance">
-<summary><b>ASSURANCE</b> &nbsp;<sub>iso 27001 / isms / controls / evidence &nbsp;—&nbsp; 3 repositories</sub></summary>
+<summary><b>ASSURANCE</b> &nbsp;<sub>iso 27001 / isms / controls / evidence &nbsp;—&nbsp; 5 repositories</sub></summary>
 <a id="d-assurance"></a>
 
 <details id="repo-securebridge-assurance">
@@ -103,6 +104,35 @@ Cryptographic posture and post-quantum migration triage. Turns a CycloneDX CBOM 
 | **Evidence** | 44 tests, CI |
 | **Runs** | Offline and deterministic. No network. |
 | **Read first** | The triage output - especially the section listing what it could not assess. |
+
+</details>
+
+<details id="repo-tombstone-assurance">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/tombstone">tombstone</a></b> &nbsp;<sub>when retention and erasure collide</sub></summary>
+<a id="r-tombstone"></a>
+
+Retention x erasure reconciliation for security telemetry. Finds where security retention floors and privacy erasure obligations collide field by field, decides whether deletion is technically achievable, and emits machine-readable deletion metadata. Offline, deterministic, no dependencies beyond React.
+
+| | |
+| :-- | :-- |
+| **Stack** | `TypeScript` `HTML` `JavaScript` |
+| **Evidence** | 497 tests, CI |
+| **Read first** | A field where the retention floor and the erasure obligation cannot both be met. |
+| **Also in** | [DETECTION](#user-content-r-tombstone-detection) |
+
+</details>
+
+<details id="repo-parallax-assurance">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/parallax">parallax</a></b> &nbsp;<sub>numbers that cannot carry the decision</sub></summary>
+<a id="r-parallax"></a>
+
+Risk register measurement auditor. Finds where a qualitative risk register's numbers cannot support the decisions built on them, and triages the few risks worth quantifying.
+
+| | |
+| :-- | :-- |
+| **Stack** | `TypeScript` `JavaScript` `CSS` |
+| **Evidence** | 191 tests |
+| **Read first** | The triage — which few risks are actually worth quantifying. |
 
 </details>
 
@@ -165,7 +195,7 @@ Consumer-side npm provenance verification and policy enforcement. Verifies each 
 </details>
 
 <details id="domain-detection">
-<summary><b>DETECTION</b> &nbsp;<sub>telemetry / signals / triage &nbsp;—&nbsp; 4 repositories</sub></summary>
+<summary><b>DETECTION</b> &nbsp;<sub>telemetry / signals / triage &nbsp;—&nbsp; 5 repositories</sub></summary>
 <a id="d-detection"></a>
 
 <details id="repo-pingmaster-detection">
@@ -224,12 +254,27 @@ Revocation persistence detection lab: when the password reset succeeds but the a
 
 </details>
 
+<details id="repo-tombstone-detection">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/tombstone">tombstone</a></b> &nbsp;<sub>when retention and erasure collide</sub></summary>
+<a id="r-tombstone-detection"></a>
+
+Retention x erasure reconciliation for security telemetry. Finds where security retention floors and privacy erasure obligations collide field by field, decides whether deletion is technically achievable, and emits machine-readable deletion metadata. Offline, deterministic, no dependencies beyond React.
+
+| | |
+| :-- | :-- |
+| **Stack** | `TypeScript` `HTML` `JavaScript` |
+| **Evidence** | 497 tests, CI |
+| **Read first** | A field where the retention floor and the erasure obligation cannot both be met. |
+| **Also in** | [ASSURANCE](#user-content-r-tombstone) |
+
+</details>
+
 <sub>A control you cannot observe failing is a control you are trusting on faith.</sub>
 
 </details>
 
 <details id="domain-appsec">
-<summary><b>APPSEC</b> &nbsp;<sub>secure sdlc / code review / supply chain &nbsp;—&nbsp; 4 repositories</sub></summary>
+<summary><b>APPSEC</b> &nbsp;<sub>secure sdlc / code review / supply chain &nbsp;—&nbsp; 6 repositories</sub></summary>
 <a id="d-appsec"></a>
 
 <details id="repo-pedigree-appsec">
@@ -291,12 +336,42 @@ Self-contained SSRF research lab — 7 services, 13 scenarios, 6 bypass techniqu
 
 </details>
 
+<details id="repo-handler-appsec">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/handler">handler</a></b> &nbsp;<sub>what a toolset can do in combination</sub></summary>
+<a id="r-handler-appsec"></a>
+
+Capability composition analysis for AI agent tool configurations. Finds what a toolset can do in combination, attributes each finding to exact tools, and computes the minimal change that breaks the path. Static, offline, deterministic.
+
+| | |
+| :-- | :-- |
+| **Stack** | `TypeScript` `CSS` `JavaScript` |
+| **Evidence** | CI |
+| **Read first** | The minimal change that breaks the capability path. |
+| **Also in** | [AI SECURITY](#user-content-r-handler) |
+
+</details>
+
+<details id="repo-deadweight-appsec">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/deadweight">deadweight</a></b> &nbsp;<sub>what happens when you load the model</sub></summary>
+<a id="r-deadweight"></a>
+
+AI model and skill supply-chain analyzer. Answers what happens when an AI artifact is loaded - without ever loading it.
+
+| | |
+| :-- | :-- |
+| **Stack** | `TypeScript` `JavaScript` `CSS` |
+| **Evidence** | CI |
+| **Read first** | The pickle analysis — it answers the question without ever executing the artifact. |
+| **Also in** | [AI SECURITY](#user-content-r-deadweight-aisec) |
+
+</details>
+
 <sub>Most of what breaks applications is authorisation and trust in things you did not write.</sub>
 
 </details>
 
 <details id="domain-cloud">
-<summary><b>CLOUD</b> &nbsp;<sub>identity / posture / logging / iac &nbsp;—&nbsp; 1 repository</sub></summary>
+<summary><b>CLOUD</b> &nbsp;<sub>identity / posture / logging / iac &nbsp;—&nbsp; 3 repositories</sub></summary>
 <a id="d-cloud"></a>
 
 <details id="repo-trustedge-cloud">
@@ -315,12 +390,42 @@ Grades who outside an AWS account can become an identity inside it, ranked by ex
 
 </details>
 
+<details id="repo-credscope-cloud">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/credscope">credscope</a></b> &nbsp;<sub>what the credential can actually do</sub></summary>
+<a id="r-credscope"></a>
+
+Non-Human Identity attack surface assessment — know what the credential can actually do
+
+| | |
+| :-- | :-- |
+| **Stack** | `Python` `HTML` |
+| **Evidence** | 93 tests |
+| **Read first** | The blast-radius scoring — a key is only as interesting as its reach. |
+| **Also in** | [OFFENSIVE](#user-content-r-credscope-offensive) |
+
+</details>
+
+<details id="repo-sleeper-cloud">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/sleeper">sleeper</a></b> &nbsp;<sub>the grant nobody revoked</sub></summary>
+<a id="r-sleeper"></a>
+
+OAuth grant drift & detectability review. Offline, deterministic, evidence-bounded — reach scored independently of detectability.
+
+| | |
+| :-- | :-- |
+| **Stack** | `TypeScript` `Python` `JavaScript` |
+| **Evidence** | 230 tests, CI |
+| **Runs** | Offline and deterministic. |
+| **Read first** | Where reach and detectability disagree — that gap is the finding. |
+
+</details>
+
 <sub>The gap between what a cloud provider promises, what a framework asks for, and what the policy actually permits.</sub>
 
 </details>
 
 <details id="domain-offensive">
-<summary><b>OFFENSIVE</b> &nbsp;<sub>attack paths / control validation &nbsp;—&nbsp; 3 repositories</sub></summary>
+<summary><b>OFFENSIVE</b> &nbsp;<sub>attack paths / control validation &nbsp;—&nbsp; 4 repositories</sub></summary>
 <a id="d-offensive"></a>
 
 <details id="repo-blackout-offensive">
@@ -367,62 +472,92 @@ Self-contained SSRF research lab — 7 services, 13 scenarios, 6 bypass techniqu
 
 </details>
 
+<details id="repo-credscope-offensive">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/credscope">credscope</a></b> &nbsp;<sub>what the credential can actually do</sub></summary>
+<a id="r-credscope-offensive"></a>
+
+Non-Human Identity attack surface assessment — know what the credential can actually do
+
+| | |
+| :-- | :-- |
+| **Stack** | `Python` `HTML` |
+| **Evidence** | 93 tests |
+| **Read first** | The blast-radius scoring — a key is only as interesting as its reach. |
+| **Also in** | [CLOUD](#user-content-r-credscope) |
+
+</details>
+
 <sub>Offence here exists to validate the defensive work above, not as a separate hobby.</sub>
+
+</details>
+
+<details id="domain-aisec">
+<summary><b>AI SECURITY</b> &nbsp;<sub>model supply chain / agent capability &nbsp;—&nbsp; 2 repositories</sub></summary>
+<a id="d-aisec"></a>
+
+<details id="repo-handler-aisec">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/handler">handler</a></b> &nbsp;<sub>what a toolset can do in combination</sub></summary>
+<a id="r-handler"></a>
+
+Capability composition analysis for AI agent tool configurations. Finds what a toolset can do in combination, attributes each finding to exact tools, and computes the minimal change that breaks the path. Static, offline, deterministic.
+
+| | |
+| :-- | :-- |
+| **Stack** | `TypeScript` `CSS` `JavaScript` |
+| **Evidence** | CI |
+| **Read first** | The minimal change that breaks the capability path. |
+| **Also in** | [APPSEC](#user-content-r-handler-appsec) |
+
+</details>
+
+<details id="repo-deadweight-aisec">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/deadweight">deadweight</a></b> &nbsp;<sub>what happens when you load the model</sub></summary>
+<a id="r-deadweight-aisec"></a>
+
+AI model and skill supply-chain analyzer. Answers what happens when an AI artifact is loaded - without ever loading it.
+
+| | |
+| :-- | :-- |
+| **Stack** | `TypeScript` `JavaScript` `CSS` |
+| **Evidence** | CI |
+| **Read first** | The pickle analysis — it answers the question without ever executing the artifact. |
+| **Also in** | [APPSEC](#user-content-r-deadweight) |
+
+</details>
+
+<sub>The novel part is not the model. It is what loading an artifact, or composing a toolset, quietly grants.</sub>
 
 </details>
 <!--INDEX:END-->
 
 <details id="how-they-fit">
-<summary><b>HOW THEY FIT TOGETHER</b> &nbsp;<sub>one diagram — click it to zoom, click a box to open the repo</sub></summary>
+<summary><b>HOW THE WORK FITS TOGETHER</b> &nbsp;<sub>one diagram — click it to zoom</sub></summary>
 <a id="d-fit"></a>
 
 ```mermaid
 flowchart LR
-  subgraph S1["WHAT MUST BE TRUE"]
-    SB["SecureBridge"]
-    SU["sunset"]
-  end
-  subgraph S2["WHAT IS ACTUALLY TRUE"]
-    TE["TrustEdge"]
-    PD["Pedigree"]
-  end
-  subgraph S3["HOW IT BREAKS"]
-    BO["BlackOut"]
-    AF["AfterLife"]
-    SP["Spectre"]
-  end
-  subgraph S4["WOULD YOU NOTICE"]
-    NF["NullFire"]
-    PM["PingMaster"]
-  end
-  subgraph S5["WHAT IS IT WORTH"]
-    AL["AegisLens"]
-  end
+  G["GOVERN<br/><i>what must be true</i>"]
+  O["OBSERVE<br/><i>what is actually true</i>"]
+  B["BREAK<br/><i>how it fails</i>"]
+  D["DETECT<br/><i>would you notice</i>"]
+  V["VALUE<br/><i>what is it worth</i>"]
 
-  S1 -. "controls, deadlines" .-> S2
-  S2 -. "findings" .-> S5
-  S3 -. "a failure, and a rule for it" .-> S4
-  S4 -. "coverage you can trust" .-> S5
-
-  click SB "https://github.com/het-P301204/SecureBridge-ISMS-360"
-  click SU "https://github.com/het-P301204/sunset"
-  click TE "https://github.com/het-P301204/TrustEdge-AWS-IAM-analyzer"
-  click PD "https://github.com/het-P301204/Pedigree-npm-provenance-gate"
-  click BO "https://github.com/het-P301204/BlackOut"
-  click AF "https://github.com/het-P301204/AfterLife"
-  click SP "https://github.com/het-P301204/spectre-ssrf-lab"
-  click NF "https://github.com/het-P301204/NullFire"
-  click PM "https://github.com/het-P301204/PingMaster"
-  click AL "https://github.com/het-P301204/AegisLens-security-workbench"
+  G -. "controls, deadlines, obligations" .-> O
+  O -. "findings" .-> V
+  B -. "a failure, and a rule for it" .-> D
+  D -. "coverage you can trust" .-> V
+  V -. "what to fix first" .-> G
 ```
 
-**The arrows are dashed for a reason.** These are ten separate tools, not an
-integrated platform. The diagram maps how the *questions* relate: governance
-says what must be true, the analysers report what is actually true, the labs
-reproduce how it breaks, detection asks whether you would notice, and assurance
-turns all of it into a number someone can act on.
+The diagram is domain-level now rather than naming every repository — at
+sixteen that stopped being readable. The **Index** above is the navigation;
+every repository sits under the domain it belongs to, and the chart shows
+when each one landed.
 
-Wiring them together for real is the interesting problem, and it is not done.
+**The arrows are dashed for a reason.** These are separate tools, not an
+integrated platform. The loop describes how the *questions* relate, not how
+the code does. Closing it for real is the interesting problem, and it is not
+done.
 
 </details>
 
@@ -433,11 +568,11 @@ Wiring them together for real is the interesting problem, and it is not done.
 **Latest commits across every repository**
 
 <!--ACTIVITY:START-->
-- `a9b60c4` **[sunset](https://github.com/het-P301204/sunset)** — CI: current actions, current Node <sub>11h ago</sub>
-- `9b8724c` **[sunset](https://github.com/het-P301204/sunset)** — Untrack local editor configuration <sub>11h ago</sub>
-- `3b31e44` **[sunset](https://github.com/het-P301204/sunset)** — Prepare for publication: README, screenshots, CI, and a drawer fix <sub>11h ago</sub>
-- `83427a3` **[sunset](https://github.com/het-P301204/sunset)** — Rebuild the theme wave so it is actually a wave <sub>12h ago</sub>
-- `a028edc` **[sunset](https://github.com/het-P301204/sunset)** — Fix clipped rail tooltips, add a theme wave, drop the landing's timeline <sub>12h ago</sub>
+- `4bc0327` **[parallax](https://github.com/het-P301204/parallax)** — ci: pin the runner instead of tracking ubuntu-latest <sub>just now</sub>
+- `98eccd7` **[parallax](https://github.com/het-P301204/parallax)** — ci: let the CLI smoke test exit 2, which is what it is supposed to do <sub>21h ago</sub>
+- `f5e057f` **[parallax](https://github.com/het-P301204/parallax)** — ci: fix the storage assertion, which was checking the wrong thing <sub>21h ago</sub>
+- `792831c` **[parallax](https://github.com/het-P301204/parallax)** — PARALLAX 0.1.0 — risk register measurement auditor <sub>21h ago</sub>
+- `7570eba` **[deadweight](https://github.com/het-P301204/deadweight)** — Teach the deserialisation check to tell code from prose <sub>2d ago</sub>
 <!--ACTIVITY:END-->
 
 **The queue.** Anyone can add to it — the

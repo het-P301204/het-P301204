@@ -568,11 +568,11 @@ done.
 **Latest commits across every repository**
 
 <!--ACTIVITY:START-->
-- `1f26686` **[deadweight](https://github.com/het-P301204/deadweight)** — Make every CI assertion runnable before pushing <sub>15h ago</sub>
-- `4bc0327` **[parallax](https://github.com/het-P301204/parallax)** — ci: pin the runner instead of tracking ubuntu-latest <sub>15h ago</sub>
-- `98eccd7` **[parallax](https://github.com/het-P301204/parallax)** — ci: let the CLI smoke test exit 2, which is what it is supposed to do <sub>yesterday</sub>
-- `f5e057f` **[parallax](https://github.com/het-P301204/parallax)** — ci: fix the storage assertion, which was checking the wrong thing <sub>yesterday</sub>
-- `792831c` **[parallax](https://github.com/het-P301204/parallax)** — PARALLAX 0.1.0 — risk register measurement auditor <sub>yesterday</sub>
+- `1f26686` **[deadweight](https://github.com/het-P301204/deadweight)** — Make every CI assertion runnable before pushing <sub>yesterday</sub>
+- `4bc0327` **[parallax](https://github.com/het-P301204/parallax)** — ci: pin the runner instead of tracking ubuntu-latest <sub>yesterday</sub>
+- `98eccd7` **[parallax](https://github.com/het-P301204/parallax)** — ci: let the CLI smoke test exit 2, which is what it is supposed to do <sub>2d ago</sub>
+- `f5e057f` **[parallax](https://github.com/het-P301204/parallax)** — ci: fix the storage assertion, which was checking the wrong thing <sub>2d ago</sub>
+- `792831c` **[parallax](https://github.com/het-P301204/parallax)** — PARALLAX 0.1.0 — risk register measurement auditor <sub>2d ago</sub>
 <!--ACTIVITY:END-->
 
 **The queue.** Anyone can add to it — the

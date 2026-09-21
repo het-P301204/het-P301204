@@ -450,6 +450,14 @@
     },
     {
       "date": "21.09.2026",
+      "short": "throughline",
+      "repo": "throughline",
+      "domains": [
+        "detection"
+      ]
+    },
+    {
+      "date": "21.09.2026",
       "short": "",
       "domains": [],
       "open": true
@@ -458,15 +466,15 @@
   "stack": [
     {
       "name": "TypeScript",
-      "pct": 61.4
+      "pct": 65.2
     },
     {
       "name": "Python",
-      "pct": 31.5
+      "pct": 28.2
     },
     {
       "name": "HTML",
-      "pct": 2.8
+      "pct": 2.6
     },
     {
       "name": "CSS",
@@ -521,13 +529,17 @@
     {
       "repo": "parallax",
       "n": 191
+    },
+    {
+      "repo": "throughline",
+      "n": 150
     }
   ],
-  "testTotal": 2906,
-  "slots": 18,
+  "testTotal": 3056,
+  "slots": 19,
   "lastPush": {
-    "repo": "deadweight",
-    "date": "20.09.2026"
+    "repo": "throughline",
+    "date": "21.09.2026"
   },
   "synced": "2026-09-21",
   "window": 28,

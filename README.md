@@ -51,13 +51,13 @@ being abused. I am mostly interested in why things fail and what makes them
 hold.
 
 <!--TESTS:START-->
-**2,906 tests** across the lab — AegisLens 108, TrustEdge 601, Pedigree 198, NullFire 424, BlackOut 230, AfterLife 290, sunset 44, credscope 93, sleeper 230, tombstone 497, parallax 191. Counted from each repository's own README, not asserted here.
+**3,056 tests** across the lab — AegisLens 108, TrustEdge 601, Pedigree 198, NullFire 424, BlackOut 230, AfterLife 290, sunset 44, credscope 93, sleeper 230, tombstone 497, parallax 191, throughline 150. Counted from each repository's own README, not asserted here.
 <!--TESTS:END-->
 
 ## Index
 
 <!--SUMMARY:START-->
-16 repositories across 7 of 7 domains. Open a domain, then open a repository — the second level is where the evidence is. Repository names link straight to the code.
+17 repositories across 7 of 7 domains. Open a domain, then open a repository — the second level is where the evidence is. Repository names link straight to the code.
 <!--SUMMARY:END-->
 
 <!--INDEX:START-->
@@ -195,7 +195,7 @@ Consumer-side npm provenance verification and policy enforcement. Verifies each 
 </details>
 
 <details id="domain-detection">
-<summary><b>DETECTION</b> &nbsp;<sub>telemetry / signals / triage &nbsp;—&nbsp; 5 repositories</sub></summary>
+<summary><b>DETECTION</b> &nbsp;<sub>telemetry / signals / triage &nbsp;—&nbsp; 6 repositories</sub></summary>
 <a id="d-detection"></a>
 
 <details id="repo-pingmaster-detection">
@@ -266,6 +266,19 @@ Retention x erasure reconciliation for security telemetry. Finds where security 
 | **Evidence** | 497 tests, CI |
 | **Read first** | A field where the retention floor and the erasure obligation cannot both be met. |
 | **Also in** | [ASSURANCE](#user-content-r-tombstone) |
+
+</details>
+
+<details id="repo-throughline-detection">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/throughline">throughline</a></b></summary>
+<a id="r-throughline"></a>
+
+Can your telemetry actually connect the dots? An offline incident-response correlation-readiness analyzer: reads log-source schemas and reports which investigative pivots are possible, which break, exactly where, and which are genuinely undetermined.
+
+| | |
+| :-- | :-- |
+| **Stack** | `TypeScript` `JavaScript` `CSS` |
+| **Evidence** | 150 tests, CI |
 
 </details>
 
@@ -568,11 +581,11 @@ done.
 **Latest commits across every repository**
 
 <!--ACTIVITY:START-->
+- `b9c1d0a` **[throughline](https://github.com/het-P301204/throughline)** — Rewrite the README around the screenshots, and capture them <sub>4h ago</sub>
+- `e05c0e7` **[throughline](https://github.com/het-P301204/throughline)** — Harden the estate input surface against a hostile document <sub>4h ago</sub>
+- `53f7fcc` **[throughline](https://github.com/het-P301204/throughline)** — THROUGHLINE 0.1.0 — incident-response correlation-readiness analyzer <sub>4h ago</sub>
 - `1f26686` **[deadweight](https://github.com/het-P301204/deadweight)** — Make every CI assertion runnable before pushing <sub>yesterday</sub>
 - `4bc0327` **[parallax](https://github.com/het-P301204/parallax)** — ci: pin the runner instead of tracking ubuntu-latest <sub>yesterday</sub>
-- `98eccd7` **[parallax](https://github.com/het-P301204/parallax)** — ci: let the CLI smoke test exit 2, which is what it is supposed to do <sub>2d ago</sub>
-- `f5e057f` **[parallax](https://github.com/het-P301204/parallax)** — ci: fix the storage assertion, which was checking the wrong thing <sub>2d ago</sub>
-- `792831c` **[parallax](https://github.com/het-P301204/parallax)** — PARALLAX 0.1.0 — risk register measurement auditor <sub>2d ago</sub>
 <!--ACTIVITY:END-->
 
 **The queue.** Anyone can add to it — the

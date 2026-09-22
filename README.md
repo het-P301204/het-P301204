@@ -57,7 +57,7 @@ hold.
 ## Index
 
 <!--SUMMARY:START-->
-17 repositories across 7 of 7 domains. Open a domain, then open a repository — the second level is where the evidence is. Repository names link straight to the code.
+18 repositories across 7 of 7 domains. Open a domain, then open a repository — the second level is where the evidence is. Repository names link straight to the code.
 <!--SUMMARY:END-->
 
 <!--INDEX:START-->
@@ -195,7 +195,7 @@ Consumer-side npm provenance verification and policy enforcement. Verifies each 
 </details>
 
 <details id="domain-detection">
-<summary><b>DETECTION</b> &nbsp;<sub>telemetry / signals / triage &nbsp;—&nbsp; 6 repositories</sub></summary>
+<summary><b>DETECTION</b> &nbsp;<sub>telemetry / signals / triage &nbsp;—&nbsp; 7 repositories</sub></summary>
 <a id="d-detection"></a>
 
 <details id="repo-pingmaster-detection">
@@ -279,6 +279,18 @@ Can your telemetry actually connect the dots? An offline incident-response corre
 | :-- | :-- |
 | **Stack** | `TypeScript` `JavaScript` `CSS` |
 | **Evidence** | 150 tests, CI |
+
+</details>
+
+<details id="repo-tourniquet-detection">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/TOURNIQUET">TOURNIQUET</a></b></summary>
+<a id="r-tourniquet"></a>
+
+Remediation sequencing planner that models forensic evidence loss before destructive security changes.
+
+| | |
+| :-- | :-- |
+| **Stack** | `TypeScript` `CSS` `JavaScript` |
 
 </details>
 
@@ -581,11 +593,11 @@ done.
 **Latest commits across every repository**
 
 <!--ACTIVITY:START-->
-- `b9c1d0a` **[throughline](https://github.com/het-P301204/throughline)** — Rewrite the README around the screenshots, and capture them <sub>17h ago</sub>
-- `e05c0e7` **[throughline](https://github.com/het-P301204/throughline)** — Harden the estate input surface against a hostile document <sub>17h ago</sub>
-- `53f7fcc` **[throughline](https://github.com/het-P301204/throughline)** — THROUGHLINE 0.1.0 — incident-response correlation-readiness analyzer <sub>17h ago</sub>
-- `1f26686` **[deadweight](https://github.com/het-P301204/deadweight)** — Make every CI assertion runnable before pushing <sub>2d ago</sub>
-- `4bc0327` **[parallax](https://github.com/het-P301204/parallax)** — ci: pin the runner instead of tracking ubuntu-latest <sub>2d ago</sub>
+- `c56bf52` **[TOURNIQUET](https://github.com/het-P301204/TOURNIQUET)** — Split the problem diagram so the two halves read in order <sub>9h ago</sub>
+- `80b478c` **[TOURNIQUET](https://github.com/het-P301204/TOURNIQUET)** — Fix the Mermaid diagrams so GitHub renders them <sub>9h ago</sub>
+- `82a0817` **[TOURNIQUET](https://github.com/het-P301204/TOURNIQUET)** — Documentation, the security model, and screenshots of the real thing <sub>9h ago</sub>
+- `9bedbc3` **[TOURNIQUET](https://github.com/het-P301204/TOURNIQUET)** — The CLI, the fixtures, and the checks that hold the claims to account <sub>9h ago</sub>
+- `8c1fce3` **[TOURNIQUET](https://github.com/het-P301204/TOURNIQUET)** — The interface <sub>9h ago</sub>
 <!--ACTIVITY:END-->
 
 **The queue.** Anyone can add to it — the

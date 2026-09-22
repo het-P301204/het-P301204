@@ -458,6 +458,14 @@
     },
     {
       "date": "22.09.2026",
+      "short": "TOURNIQUET",
+      "repo": "TOURNIQUET",
+      "domains": [
+        "detection"
+      ]
+    },
+    {
+      "date": "22.09.2026",
       "short": "",
       "domains": [],
       "open": true
@@ -466,15 +474,15 @@
   "stack": [
     {
       "name": "TypeScript",
-      "pct": 65.2
+      "pct": 68.1
     },
     {
       "name": "Python",
-      "pct": 28.2
+      "pct": 25.5
     },
     {
       "name": "HTML",
-      "pct": 2.6
+      "pct": 2.4
     },
     {
       "name": "CSS",
@@ -536,10 +544,10 @@
     }
   ],
   "testTotal": 3056,
-  "slots": 19,
+  "slots": 20,
   "lastPush": {
-    "repo": "throughline",
-    "date": "21.09.2026"
+    "repo": "TOURNIQUET",
+    "date": "22.09.2026"
   },
   "synced": "2026-09-22",
   "window": 28,

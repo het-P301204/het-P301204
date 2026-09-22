@@ -581,11 +581,11 @@ done.
 **Latest commits across every repository**
 
 <!--ACTIVITY:START-->
-- `b9c1d0a` **[throughline](https://github.com/het-P301204/throughline)** — Rewrite the README around the screenshots, and capture them <sub>4h ago</sub>
-- `e05c0e7` **[throughline](https://github.com/het-P301204/throughline)** — Harden the estate input surface against a hostile document <sub>4h ago</sub>
-- `53f7fcc` **[throughline](https://github.com/het-P301204/throughline)** — THROUGHLINE 0.1.0 — incident-response correlation-readiness analyzer <sub>4h ago</sub>
-- `1f26686` **[deadweight](https://github.com/het-P301204/deadweight)** — Make every CI assertion runnable before pushing <sub>yesterday</sub>
-- `4bc0327` **[parallax](https://github.com/het-P301204/parallax)** — ci: pin the runner instead of tracking ubuntu-latest <sub>yesterday</sub>
+- `b9c1d0a` **[throughline](https://github.com/het-P301204/throughline)** — Rewrite the README around the screenshots, and capture them <sub>17h ago</sub>
+- `e05c0e7` **[throughline](https://github.com/het-P301204/throughline)** — Harden the estate input surface against a hostile document <sub>17h ago</sub>
+- `53f7fcc` **[throughline](https://github.com/het-P301204/throughline)** — THROUGHLINE 0.1.0 — incident-response correlation-readiness analyzer <sub>17h ago</sub>
+- `1f26686` **[deadweight](https://github.com/het-P301204/deadweight)** — Make every CI assertion runnable before pushing <sub>2d ago</sub>
+- `4bc0327` **[parallax](https://github.com/het-P301204/parallax)** — ci: pin the runner instead of tracking ubuntu-latest <sub>2d ago</sub>
 <!--ACTIVITY:END-->
 
 **The queue.** Anyone can add to it — the

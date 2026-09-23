@@ -593,11 +593,11 @@ done.
 **Latest commits across every repository**
 
 <!--ACTIVITY:START-->
-- `c56bf52` **[TOURNIQUET](https://github.com/het-P301204/TOURNIQUET)** — Split the problem diagram so the two halves read in order <sub>23h ago</sub>
-- `80b478c` **[TOURNIQUET](https://github.com/het-P301204/TOURNIQUET)** — Fix the Mermaid diagrams so GitHub renders them <sub>23h ago</sub>
-- `82a0817` **[TOURNIQUET](https://github.com/het-P301204/TOURNIQUET)** — Documentation, the security model, and screenshots of the real thing <sub>23h ago</sub>
-- `9bedbc3` **[TOURNIQUET](https://github.com/het-P301204/TOURNIQUET)** — The CLI, the fixtures, and the checks that hold the claims to account <sub>23h ago</sub>
-- `8c1fce3` **[TOURNIQUET](https://github.com/het-P301204/TOURNIQUET)** — The interface <sub>23h ago</sub>
+- `c56bf52` **[TOURNIQUET](https://github.com/het-P301204/TOURNIQUET)** — Split the problem diagram so the two halves read in order <sub>yesterday</sub>
+- `80b478c` **[TOURNIQUET](https://github.com/het-P301204/TOURNIQUET)** — Fix the Mermaid diagrams so GitHub renders them <sub>yesterday</sub>
+- `82a0817` **[TOURNIQUET](https://github.com/het-P301204/TOURNIQUET)** — Documentation, the security model, and screenshots of the real thing <sub>yesterday</sub>
+- `9bedbc3` **[TOURNIQUET](https://github.com/het-P301204/TOURNIQUET)** — The CLI, the fixtures, and the checks that hold the claims to account <sub>yesterday</sub>
+- `8c1fce3` **[TOURNIQUET](https://github.com/het-P301204/TOURNIQUET)** — The interface <sub>yesterday</sub>
 <!--ACTIVITY:END-->
 
 **The queue.** Anyone can add to it — the

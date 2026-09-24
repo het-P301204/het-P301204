@@ -466,6 +466,14 @@
     },
     {
       "date": "24.09.2026",
+      "short": "COLDSTART",
+      "repo": "COLDSTART",
+      "domains": [
+        "engineering"
+      ]
+    },
+    {
+      "date": "24.09.2026",
       "short": "",
       "domains": [],
       "open": true
@@ -474,15 +482,15 @@
   "stack": [
     {
       "name": "TypeScript",
-      "pct": 68.1
+      "pct": 69.7
     },
     {
       "name": "Python",
-      "pct": 25.5
+      "pct": 24
     },
     {
       "name": "HTML",
-      "pct": 2.4
+      "pct": 2.3
     },
     {
       "name": "CSS",
@@ -490,7 +498,7 @@
     },
     {
       "name": "JavaScript",
-      "pct": 1.4
+      "pct": 1.6
     }
   ],
   "tests": [
@@ -544,10 +552,10 @@
     }
   ],
   "testTotal": 3056,
-  "slots": 20,
+  "slots": 21,
   "lastPush": {
-    "repo": "TOURNIQUET",
-    "date": "22.09.2026"
+    "repo": "COLDSTART",
+    "date": "24.09.2026"
   },
   "synced": "2026-09-24",
   "window": 28,

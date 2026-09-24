@@ -57,7 +57,7 @@ hold.
 ## Index
 
 <!--SUMMARY:START-->
-18 repositories across 7 of 7 domains. Open a domain, then open a repository — the second level is where the evidence is. Repository names link straight to the code.
+19 repositories across 7 of 7 domains. Open a domain, then open a repository — the second level is where the evidence is. Repository names link straight to the code.
 <!--SUMMARY:END-->
 
 <!--INDEX:START-->
@@ -141,7 +141,7 @@ Risk register measurement auditor. Finds where a qualitative risk register's num
 </details>
 
 <details id="domain-engineering">
-<summary><b>ENGINEERING</b> &nbsp;<sub>tooling / automation / pipelines &nbsp;—&nbsp; 3 repositories</sub></summary>
+<summary><b>ENGINEERING</b> &nbsp;<sub>tooling / automation / pipelines &nbsp;—&nbsp; 4 repositories</sub></summary>
 <a id="d-engineering"></a>
 
 <details id="repo-aegislens-engineering">
@@ -187,6 +187,18 @@ Consumer-side npm provenance verification and policy enforcement. Verifies each 
 | **Evidence** | 198 tests, CI |
 | **Read first** | The dry-run report — what would break if you enforced the policy today. |
 | **Also in** | [APPSEC](#user-content-r-pedigree-appsec) |
+
+</details>
+
+<details id="repo-coldstart-engineering">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/COLDSTART">COLDSTART</a></b></summary>
+<a id="r-coldstart"></a>
+
+Recovery-plan feasibility checker: models disaster recovery as a dependency graph and proves whether a valid recovery order exists from the state the disaster leaves behind.
+
+| | |
+| :-- | :-- |
+| **Stack** | `TypeScript` `JavaScript` `CSS` |
 
 </details>
 
@@ -593,11 +605,11 @@ done.
 **Latest commits across every repository**
 
 <!--ACTIVITY:START-->
-- `c56bf52` **[TOURNIQUET](https://github.com/het-P301204/TOURNIQUET)** — Split the problem diagram so the two halves read in order <sub>yesterday</sub>
-- `80b478c` **[TOURNIQUET](https://github.com/het-P301204/TOURNIQUET)** — Fix the Mermaid diagrams so GitHub renders them <sub>yesterday</sub>
-- `82a0817` **[TOURNIQUET](https://github.com/het-P301204/TOURNIQUET)** — Documentation, the security model, and screenshots of the real thing <sub>yesterday</sub>
-- `9bedbc3` **[TOURNIQUET](https://github.com/het-P301204/TOURNIQUET)** — The CLI, the fixtures, and the checks that hold the claims to account <sub>yesterday</sub>
-- `8c1fce3` **[TOURNIQUET](https://github.com/het-P301204/TOURNIQUET)** — The interface <sub>yesterday</sub>
+- `b02f227` **[COLDSTART](https://github.com/het-P301204/COLDSTART)** — Documentation, the security model, screenshots and browser checks <sub>3h ago</sub>
+- `df49950` **[COLDSTART](https://github.com/het-P301204/COLDSTART)** — The interface: command center, cold-start graph and recovery frontier <sub>3h ago</sub>
+- `49740bb` **[COLDSTART](https://github.com/het-P301204/COLDSTART)** — The recovery feasibility engine, the demo estate and the CLI <sub>3h ago</sub>
+- `c56bf52` **[TOURNIQUET](https://github.com/het-P301204/TOURNIQUET)** — Split the problem diagram so the two halves read in order <sub>2d ago</sub>
+- `80b478c` **[TOURNIQUET](https://github.com/het-P301204/TOURNIQUET)** — Fix the Mermaid diagrams so GitHub renders them <sub>2d ago</sub>
 <!--ACTIVITY:END-->
 
 **The queue.** Anyone can add to it — the

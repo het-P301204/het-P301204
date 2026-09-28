@@ -617,10 +617,10 @@ done.
 **Latest commits across every repository**
 
 <!--ACTIVITY:START-->
-- `a414343` **[sigil](https://github.com/het-P301204/sigil)** — feat: initial release — SIGIL ADCS ESC Vulnerability Intelligence Platfo <sub>3h ago</sub>
-- `b02f227` **[COLDSTART](https://github.com/het-P301204/COLDSTART)** — Documentation, the security model, screenshots and browser checks <sub>3d ago</sub>
-- `df49950` **[COLDSTART](https://github.com/het-P301204/COLDSTART)** — The interface: command center, cold-start graph and recovery frontier <sub>3d ago</sub>
-- `49740bb` **[COLDSTART](https://github.com/het-P301204/COLDSTART)** — The recovery feasibility engine, the demo estate and the CLI <sub>3d ago</sub>
+- `a414343` **[sigil](https://github.com/het-P301204/sigil)** — feat: initial release — SIGIL ADCS ESC Vulnerability Intelligence Platfo <sub>14h ago</sub>
+- `b02f227` **[COLDSTART](https://github.com/het-P301204/COLDSTART)** — Documentation, the security model, screenshots and browser checks <sub>4d ago</sub>
+- `df49950` **[COLDSTART](https://github.com/het-P301204/COLDSTART)** — The interface: command center, cold-start graph and recovery frontier <sub>4d ago</sub>
+- `49740bb` **[COLDSTART](https://github.com/het-P301204/COLDSTART)** — The recovery feasibility engine, the demo estate and the CLI <sub>4d ago</sub>
 - `c56bf52` **[TOURNIQUET](https://github.com/het-P301204/TOURNIQUET)** — Split the problem diagram so the two halves read in order <sub>6d ago</sub>
 <!--ACTIVITY:END-->
 

@@ -473,7 +473,15 @@
       ]
     },
     {
-      "date": "27.09.2026",
+      "date": "28.09.2026",
+      "short": "sigil",
+      "repo": "sigil",
+      "domains": [
+        "offensive"
+      ]
+    },
+    {
+      "date": "28.09.2026",
       "short": "",
       "domains": [],
       "open": true
@@ -482,15 +490,15 @@
   "stack": [
     {
       "name": "TypeScript",
-      "pct": 69.7
+      "pct": 69.1
     },
     {
       "name": "Python",
-      "pct": 24
+      "pct": 24.6
     },
     {
       "name": "HTML",
-      "pct": 2.3
+      "pct": 2.2
     },
     {
       "name": "CSS",
@@ -552,12 +560,12 @@
     }
   ],
   "testTotal": 3056,
-  "slots": 21,
+  "slots": 22,
   "lastPush": {
-    "repo": "COLDSTART",
-    "date": "24.09.2026"
+    "repo": "sigil",
+    "date": "28.09.2026"
   },
-  "synced": "2026-09-27",
+  "synced": "2026-09-28",
   "window": 28,
   "mobilePerDomain": 3
 }

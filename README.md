@@ -57,7 +57,7 @@ hold.
 ## Index
 
 <!--SUMMARY:START-->
-19 repositories across 7 of 7 domains. Open a domain, then open a repository — the second level is where the evidence is. Repository names link straight to the code.
+20 repositories across 7 of 7 domains. Open a domain, then open a repository — the second level is where the evidence is. Repository names link straight to the code.
 <!--SUMMARY:END-->
 
 <!--INDEX:START-->
@@ -462,7 +462,7 @@ OAuth grant drift & detectability review. Offline, deterministic, evidence-bound
 </details>
 
 <details id="domain-offensive">
-<summary><b>OFFENSIVE</b> &nbsp;<sub>attack paths / control validation &nbsp;—&nbsp; 4 repositories</sub></summary>
+<summary><b>OFFENSIVE</b> &nbsp;<sub>attack paths / control validation &nbsp;—&nbsp; 5 repositories</sub></summary>
 <a id="d-offensive"></a>
 
 <details id="repo-blackout-offensive">
@@ -521,6 +521,18 @@ Non-Human Identity attack surface assessment — know what the credential can ac
 | **Evidence** | 93 tests |
 | **Read first** | The blast-radius scoring — a key is only as interesting as its reach. |
 | **Also in** | [CLOUD](#user-content-r-credscope) |
+
+</details>
+
+<details id="repo-sigil-offensive">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/sigil">sigil</a></b></summary>
+<a id="r-sigil"></a>
+
+Offline ADCS ESC1-ESC17 Vulnerability Intelligence Platform — BloodHound CE analysis, no data leaves your machine
+
+| | |
+| :-- | :-- |
+| **Stack** | `TypeScript` `Python` `JavaScript` |
 
 </details>
 
@@ -605,11 +617,11 @@ done.
 **Latest commits across every repository**
 
 <!--ACTIVITY:START-->
+- `a414343` **[sigil](https://github.com/het-P301204/sigil)** — feat: initial release — SIGIL ADCS ESC Vulnerability Intelligence Platfo <sub>3h ago</sub>
 - `b02f227` **[COLDSTART](https://github.com/het-P301204/COLDSTART)** — Documentation, the security model, screenshots and browser checks <sub>3d ago</sub>
 - `df49950` **[COLDSTART](https://github.com/het-P301204/COLDSTART)** — The interface: command center, cold-start graph and recovery frontier <sub>3d ago</sub>
 - `49740bb` **[COLDSTART](https://github.com/het-P301204/COLDSTART)** — The recovery feasibility engine, the demo estate and the CLI <sub>3d ago</sub>
-- `c56bf52` **[TOURNIQUET](https://github.com/het-P301204/TOURNIQUET)** — Split the problem diagram so the two halves read in order <sub>5d ago</sub>
-- `80b478c` **[TOURNIQUET](https://github.com/het-P301204/TOURNIQUET)** — Fix the Mermaid diagrams so GitHub renders them <sub>5d ago</sub>
+- `c56bf52` **[TOURNIQUET](https://github.com/het-P301204/TOURNIQUET)** — Split the problem diagram so the two halves read in order <sub>6d ago</sub>
 <!--ACTIVITY:END-->
 
 **The queue.** Anyone can add to it — the

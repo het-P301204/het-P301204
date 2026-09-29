@@ -51,13 +51,13 @@ being abused. I am mostly interested in why things fail and what makes them
 hold.
 
 <!--TESTS:START-->
-**3,056 tests** across the lab — AegisLens 108, TrustEdge 601, Pedigree 198, NullFire 424, BlackOut 230, AfterLife 290, sunset 44, credscope 93, sleeper 230, tombstone 497, parallax 191, throughline 150. Counted from each repository's own README, not asserted here.
+**3,579 tests** across the lab — AegisLens 108, TrustEdge 601, Pedigree 198, NullFire 424, BlackOut 230, AfterLife 290, sunset 44, credscope 93, sleeper 230, tombstone 497, parallax 191, throughline 150, ripple 523. Counted from each repository's own README, not asserted here.
 <!--TESTS:END-->
 
 ## Index
 
 <!--SUMMARY:START-->
-20 repositories across 7 of 7 domains. Open a domain, then open a repository — the second level is where the evidence is. Repository names link straight to the code.
+21 repositories across 7 of 7 domains. Open a domain, then open a repository — the second level is where the evidence is. Repository names link straight to the code.
 <!--SUMMARY:END-->
 
 <!--INDEX:START-->
@@ -311,7 +311,7 @@ Remediation sequencing planner that models forensic evidence loss before destruc
 </details>
 
 <details id="domain-appsec">
-<summary><b>APPSEC</b> &nbsp;<sub>secure sdlc / code review / supply chain &nbsp;—&nbsp; 6 repositories</sub></summary>
+<summary><b>APPSEC</b> &nbsp;<sub>secure sdlc / code review / supply chain &nbsp;—&nbsp; 7 repositories</sub></summary>
 <a id="d-appsec"></a>
 
 <details id="repo-pedigree-appsec">
@@ -400,6 +400,19 @@ AI model and skill supply-chain analyzer. Answers what happens when an AI artifa
 | **Evidence** | CI |
 | **Read first** | The pickle analysis — it answers the question without ever executing the artifact. |
 | **Also in** | [AI SECURITY](#user-content-r-deadweight-aisec) |
+
+</details>
+
+<details id="repo-ripple-appsec">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/ripple">ripple</a></b></summary>
+<a id="r-ripple"></a>
+
+Software supply-chain attack surface scanner: dependency confusion, typosquatting and package-risk signals. Read-only, offline by default.
+
+| | |
+| :-- | :-- |
+| **Stack** | `Python` `TypeScript` `JavaScript` |
+| **Evidence** | 523 tests |
 
 </details>
 
@@ -617,11 +630,11 @@ done.
 **Latest commits across every repository**
 
 <!--ACTIVITY:START-->
+- `0d1cebb` **[ripple](https://github.com/het-P301204/ripple)** — Initial release: RIPPLE supply-chain attack surface scanner <sub>2h ago</sub>
 - `a414343` **[sigil](https://github.com/het-P301204/sigil)** — feat: initial release — SIGIL ADCS ESC Vulnerability Intelligence Platfo <sub>yesterday</sub>
-- `b02f227` **[COLDSTART](https://github.com/het-P301204/COLDSTART)** — Documentation, the security model, screenshots and browser checks <sub>4d ago</sub>
-- `df49950` **[COLDSTART](https://github.com/het-P301204/COLDSTART)** — The interface: command center, cold-start graph and recovery frontier <sub>4d ago</sub>
-- `49740bb` **[COLDSTART](https://github.com/het-P301204/COLDSTART)** — The recovery feasibility engine, the demo estate and the CLI <sub>4d ago</sub>
-- `c56bf52` **[TOURNIQUET](https://github.com/het-P301204/TOURNIQUET)** — Split the problem diagram so the two halves read in order <sub>7d ago</sub>
+- `b02f227` **[COLDSTART](https://github.com/het-P301204/COLDSTART)** — Documentation, the security model, screenshots and browser checks <sub>5d ago</sub>
+- `df49950` **[COLDSTART](https://github.com/het-P301204/COLDSTART)** — The interface: command center, cold-start graph and recovery frontier <sub>5d ago</sub>
+- `49740bb` **[COLDSTART](https://github.com/het-P301204/COLDSTART)** — The recovery feasibility engine, the demo estate and the CLI <sub>5d ago</sub>
 <!--ACTIVITY:END-->
 
 **The queue.** Anyone can add to it — the

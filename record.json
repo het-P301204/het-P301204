@@ -482,6 +482,14 @@
     },
     {
       "date": "29.09.2026",
+      "short": "ripple",
+      "repo": "ripple",
+      "domains": [
+        "appsec"
+      ]
+    },
+    {
+      "date": "29.09.2026",
       "short": "",
       "domains": [],
       "open": true
@@ -490,23 +498,23 @@
   "stack": [
     {
       "name": "TypeScript",
-      "pct": 69.1
+      "pct": 65.9
     },
     {
       "name": "Python",
-      "pct": 24.6
+      "pct": 27.9
     },
     {
       "name": "HTML",
-      "pct": 2.2
-    },
-    {
-      "name": "CSS",
-      "pct": 1.6
+      "pct": 1.9
     },
     {
       "name": "JavaScript",
-      "pct": 1.6
+      "pct": 1.8
+    },
+    {
+      "name": "CSS",
+      "pct": 1.7
     }
   ],
   "tests": [
@@ -557,13 +565,17 @@
     {
       "repo": "throughline",
       "n": 150
+    },
+    {
+      "repo": "ripple",
+      "n": 523
     }
   ],
-  "testTotal": 3056,
-  "slots": 22,
+  "testTotal": 3579,
+  "slots": 23,
   "lastPush": {
-    "repo": "sigil",
-    "date": "28.09.2026"
+    "repo": "ripple",
+    "date": "29.09.2026"
   },
   "synced": "2026-09-29",
   "window": 28,

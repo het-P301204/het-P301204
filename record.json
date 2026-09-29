@@ -481,7 +481,7 @@
       ]
     },
     {
-      "date": "28.09.2026",
+      "date": "29.09.2026",
       "short": "",
       "domains": [],
       "open": true
@@ -565,7 +565,7 @@
     "repo": "sigil",
     "date": "28.09.2026"
   },
-  "synced": "2026-09-28",
+  "synced": "2026-09-29",
   "window": 28,
   "mobilePerDomain": 3
 }

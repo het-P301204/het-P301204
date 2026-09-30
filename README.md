@@ -51,18 +51,18 @@ being abused. I am mostly interested in why things fail and what makes them
 hold.
 
 <!--TESTS:START-->
-**3,579 tests** across the lab — AegisLens 108, TrustEdge 601, Pedigree 198, NullFire 424, BlackOut 230, AfterLife 290, sunset 44, credscope 93, sleeper 230, tombstone 497, parallax 191, throughline 150, ripple 523. Counted from each repository's own README, not asserted here.
+**3,749 tests** across the lab — AegisLens 108, TrustEdge 601, Pedigree 198, NullFire 424, BlackOut 230, AfterLife 290, sunset 44, credscope 93, sleeper 230, tombstone 497, parallax 191, throughline 150, ripple 523, NEXUS 170. Counted from each repository's own README, not asserted here.
 <!--TESTS:END-->
 
 ## Index
 
 <!--SUMMARY:START-->
-21 repositories across 7 of 7 domains. Open a domain, then open a repository — the second level is where the evidence is. Repository names link straight to the code.
+22 repositories across 7 of 7 domains. Open a domain, then open a repository — the second level is where the evidence is. Repository names link straight to the code.
 <!--SUMMARY:END-->
 
 <!--INDEX:START-->
 <details id="domain-assurance">
-<summary><b>ASSURANCE</b> &nbsp;<sub>iso 27001 / isms / controls / evidence &nbsp;—&nbsp; 5 repositories</sub></summary>
+<summary><b>ASSURANCE</b> &nbsp;<sub>iso 27001 / isms / controls / evidence &nbsp;—&nbsp; 6 repositories</sub></summary>
 <a id="d-assurance"></a>
 
 <details id="repo-securebridge-assurance">
@@ -133,6 +133,19 @@ Risk register measurement auditor. Finds where a qualitative risk register's num
 | **Stack** | `TypeScript` `JavaScript` `CSS` |
 | **Evidence** | 191 tests |
 | **Read first** | The triage — which few risks are actually worth quantifying. |
+
+</details>
+
+<details id="repo-nexus-assurance">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/NEXUS">NEXUS</a></b></summary>
+<a id="r-nexus"></a>
+
+EU Cyber Resilience Act Article 14 reportability and Clock of Record: evidence-backed reporting decisions, five separate timestamps, and a hash-chained audit ledger. Decision support, not legal advice.
+
+| | |
+| :-- | :-- |
+| **Stack** | `TypeScript` `JavaScript` `CSS` |
+| **Evidence** | 170 tests |
 
 </details>
 
@@ -630,11 +643,11 @@ done.
 **Latest commits across every repository**
 
 <!--ACTIVITY:START-->
-- `0d1cebb` **[ripple](https://github.com/het-P301204/ripple)** — Initial release: RIPPLE supply-chain attack surface scanner <sub>15h ago</sub>
+- `d2fe7e3` **[NEXUS](https://github.com/het-P301204/NEXUS)** — Docs, threat model and screenshots <sub>5h ago</sub>
+- `d0265fc` **[NEXUS](https://github.com/het-P301204/NEXUS)** — Web app <sub>5h ago</sub>
+- `4a46d0b` **[NEXUS](https://github.com/het-P301204/NEXUS)** — Engine, rule set, API and tests <sub>5h ago</sub>
+- `0d1cebb` **[ripple](https://github.com/het-P301204/ripple)** — Initial release: RIPPLE supply-chain attack surface scanner <sub>yesterday</sub>
 - `a414343` **[sigil](https://github.com/het-P301204/sigil)** — feat: initial release — SIGIL ADCS ESC Vulnerability Intelligence Platfo <sub>2d ago</sub>
-- `b02f227` **[COLDSTART](https://github.com/het-P301204/COLDSTART)** — Documentation, the security model, screenshots and browser checks <sub>5d ago</sub>
-- `df49950` **[COLDSTART](https://github.com/het-P301204/COLDSTART)** — The interface: command center, cold-start graph and recovery frontier <sub>5d ago</sub>
-- `49740bb` **[COLDSTART](https://github.com/het-P301204/COLDSTART)** — The recovery feasibility engine, the demo estate and the CLI <sub>5d ago</sub>
 <!--ACTIVITY:END-->
 
 **The queue.** Anyone can add to it — the

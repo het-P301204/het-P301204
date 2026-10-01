@@ -643,10 +643,10 @@ done.
 **Latest commits across every repository**
 
 <!--ACTIVITY:START-->
-- `d2fe7e3` **[NEXUS](https://github.com/het-P301204/NEXUS)** — Docs, threat model and screenshots <sub>19h ago</sub>
-- `d0265fc` **[NEXUS](https://github.com/het-P301204/NEXUS)** — Web app <sub>19h ago</sub>
-- `4a46d0b` **[NEXUS](https://github.com/het-P301204/NEXUS)** — Engine, rule set, API and tests <sub>19h ago</sub>
-- `0d1cebb` **[ripple](https://github.com/het-P301204/ripple)** — Initial release: RIPPLE supply-chain attack surface scanner <sub>yesterday</sub>
+- `d2fe7e3` **[NEXUS](https://github.com/het-P301204/NEXUS)** — Docs, threat model and screenshots <sub>yesterday</sub>
+- `d0265fc` **[NEXUS](https://github.com/het-P301204/NEXUS)** — Web app <sub>yesterday</sub>
+- `4a46d0b` **[NEXUS](https://github.com/het-P301204/NEXUS)** — Engine, rule set, API and tests <sub>yesterday</sub>
+- `0d1cebb` **[ripple](https://github.com/het-P301204/ripple)** — Initial release: RIPPLE supply-chain attack surface scanner <sub>2d ago</sub>
 - `a414343` **[sigil](https://github.com/het-P301204/sigil)** — feat: initial release — SIGIL ADCS ESC Vulnerability Intelligence Platfo <sub>3d ago</sub>
 <!--ACTIVITY:END-->
 

@@ -647,7 +647,7 @@ done.
 - `d0265fc` **[NEXUS](https://github.com/het-P301204/NEXUS)** — Web app <sub>yesterday</sub>
 - `4a46d0b` **[NEXUS](https://github.com/het-P301204/NEXUS)** — Engine, rule set, API and tests <sub>yesterday</sub>
 - `0d1cebb` **[ripple](https://github.com/het-P301204/ripple)** — Initial release: RIPPLE supply-chain attack surface scanner <sub>2d ago</sub>
-- `a414343` **[sigil](https://github.com/het-P301204/sigil)** — feat: initial release — SIGIL ADCS ESC Vulnerability Intelligence Platfo <sub>3d ago</sub>
+- `a414343` **[sigil](https://github.com/het-P301204/sigil)** — feat: initial release — SIGIL ADCS ESC Vulnerability Intelligence Platfo <sub>4d ago</sub>
 <!--ACTIVITY:END-->
 
 **The queue.** Anyone can add to it — the

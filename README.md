@@ -57,7 +57,7 @@ hold.
 ## Index
 
 <!--SUMMARY:START-->
-22 repositories across 7 of 7 domains. Open a domain, then open a repository — the second level is where the evidence is. Repository names link straight to the code.
+23 repositories across 7 of 7 domains. Open a domain, then open a repository — the second level is where the evidence is. Repository names link straight to the code.
 <!--SUMMARY:END-->
 
 <!--INDEX:START-->
@@ -567,7 +567,7 @@ Offline ADCS ESC1-ESC17 Vulnerability Intelligence Platform — BloodHound CE an
 </details>
 
 <details id="domain-aisec">
-<summary><b>AI SECURITY</b> &nbsp;<sub>model supply chain / agent capability &nbsp;—&nbsp; 2 repositories</sub></summary>
+<summary><b>AI SECURITY</b> &nbsp;<sub>model supply chain / agent capability &nbsp;—&nbsp; 3 repositories</sub></summary>
 <a id="d-aisec"></a>
 
 <details id="repo-handler-aisec">
@@ -597,6 +597,19 @@ AI model and skill supply-chain analyzer. Answers what happens when an AI artifa
 | **Evidence** | CI |
 | **Read first** | The pickle analysis — it answers the question without ever executing the artifact. |
 | **Also in** | [APPSEC](#user-content-r-deadweight) |
+
+</details>
+
+<details id="repo-regent-aisec">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/regent">regent</a></b></summary>
+<a id="r-regent"></a>
+
+Reconstructs the authority chain behind AI-agent actions and verifies that delegated authority never silently expands. Deterministic delegation-chain verifier: attribution, authority monotonicity, action-time authorization.
+
+| | |
+| :-- | :-- |
+| **Stack** | `TypeScript` `CSS` `JavaScript` |
+| **Evidence** | CI |
 
 </details>
 
@@ -643,11 +656,11 @@ done.
 **Latest commits across every repository**
 
 <!--ACTIVITY:START-->
-- `d2fe7e3` **[NEXUS](https://github.com/het-P301204/NEXUS)** — Docs, threat model and screenshots <sub>2d ago</sub>
-- `d0265fc` **[NEXUS](https://github.com/het-P301204/NEXUS)** — Web app <sub>2d ago</sub>
-- `4a46d0b` **[NEXUS](https://github.com/het-P301204/NEXUS)** — Engine, rule set, API and tests <sub>2d ago</sub>
-- `0d1cebb` **[ripple](https://github.com/het-P301204/ripple)** — Initial release: RIPPLE supply-chain attack surface scanner <sub>3d ago</sub>
-- `a414343` **[sigil](https://github.com/het-P301204/sigil)** — feat: initial release — SIGIL ADCS ESC Vulnerability Intelligence Platfo <sub>5d ago</sub>
+- `27a2521` **[regent](https://github.com/het-P301204/regent)** — README: finding types as a two-column table <sub>8h ago</sub>
+- `2511df3` **[regent](https://github.com/het-P301204/regent)** — Docs: record what CI now verifies (PostgreSQL, container, e2e, scans); C <sub>8h ago</sub>
+- `c965f14` **[regent](https://github.com/het-P301204/regent)** — Image: remove package managers from the runtime stage and patch OS packa <sub>8h ago</sub>
+- `93179d0` **[regent](https://github.com/het-P301204/regent)** — CI: valid Node base image tag; gitleaks allowlist for synthetic credenti <sub>8h ago</sub>
+- `54feff7` **[regent](https://github.com/het-P301204/regent)** — CI: fix Trivy action version, scan full history with gitleaks, API-only  <sub>8h ago</sub>
 <!--ACTIVITY:END-->
 
 **The queue.** Anyone can add to it — the

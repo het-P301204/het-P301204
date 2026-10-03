@@ -498,6 +498,14 @@
     },
     {
       "date": "03.10.2026",
+      "short": "regent",
+      "repo": "regent",
+      "domains": [
+        "aisec"
+      ]
+    },
+    {
+      "date": "03.10.2026",
       "short": "",
       "domains": [],
       "open": true
@@ -506,23 +514,23 @@
   "stack": [
     {
       "name": "TypeScript",
-      "pct": 70.6
+      "pct": 73.5
     },
     {
       "name": "Python",
-      "pct": 24
+      "pct": 21.6
     },
     {
       "name": "HTML",
-      "pct": 1.6
+      "pct": 1.5
     },
     {
       "name": "JavaScript",
-      "pct": 1.6
+      "pct": 1.4
     },
     {
       "name": "CSS",
-      "pct": 1.5
+      "pct": 1.4
     }
   ],
   "tests": [
@@ -584,10 +592,10 @@
     }
   ],
   "testTotal": 3749,
-  "slots": 24,
+  "slots": 25,
   "lastPush": {
-    "repo": "NEXUS",
-    "date": "30.09.2026"
+    "repo": "regent",
+    "date": "03.10.2026"
   },
   "synced": "2026-10-03",
   "window": 28,

@@ -45,75 +45,77 @@ svg{
 <text class="d ink" x="-4" y="142" font-size="82" letter-spacing="-3.7">HET PATEL</text>
 <text class="m grey" x="2" y="178" font-size="13.5">security engineering</text>
 <text class="m soft" x="2" y="200" font-size="13.5">cloud security / security architecture</text>
-<text class="m soft" x="1200" y="178" font-size="12" letter-spacing="1.6" text-anchor="end">22 REPOSITORIES / 7 OF 7 DOMAINS</text>
+<text class="m soft" x="1200" y="178" font-size="12" letter-spacing="1.6" text-anchor="end">23 REPOSITORIES / 7 OF 7 DOMAINS</text>
 <text class="m live" x="1200" y="200" font-size="12" letter-spacing="1.6" text-anchor="end">BUILDING NOW</text>
 <line class="r" x1="-18" y1="224" x2="1218" y2="224"/>
 
 <text class="m soft" x="0" y="258" font-size="10.5" letter-spacing="2.2">DOMAIN</text>
-<text class="m soft" x="1200" y="258" font-size="10.5" letter-spacing="2.2" text-anchor="end">NEWEST &#183; NEXUS &#183; ripple &#183; sigil &#183; COLDSTART</text>
+<text class="m soft" x="1200" y="258" font-size="10.5" letter-spacing="2.2" text-anchor="end">NEWEST &#183; regent &#183; NEXUS &#183; ripple &#183; sigil</text>
 
 <line class="grid" x1="250" y1="300" x2="1200" y2="300"/><line class="grid" x1="250" y1="344" x2="1200" y2="344"/><line class="grid" x1="250" y1="388" x2="1200" y2="388"/><line class="grid" x1="250" y1="432" x2="1200" y2="432"/><line class="grid" x1="250" y1="476" x2="1200" y2="476"/><line class="grid" x1="250" y1="520" x2="1200" y2="520"/><line class="grid" x1="250" y1="564" x2="1200" y2="564"/>
-<line class="ghost" x1="1179.3478260869565" y1="274" x2="1179.3478260869565" y2="590"/>
-<text class="m ink" x="204" y="304" font-size="12" letter-spacing="1.9" text-anchor="end">ASSURANCE</text><text class="m sig" x="234" y="304" font-size="12" text-anchor="end">6</text><text class="m ink" x="204" y="348" font-size="12" letter-spacing="1.9" text-anchor="end">ENGINEERING</text><text class="m sig" x="234" y="348" font-size="12" text-anchor="end">4</text><text class="m ink" x="204" y="392" font-size="12" letter-spacing="1.9" text-anchor="end">DETECTION</text><text class="m sig" x="234" y="392" font-size="12" text-anchor="end">7</text><text class="m ink" x="204" y="436" font-size="12" letter-spacing="1.9" text-anchor="end">APPSEC</text><text class="m sig" x="234" y="436" font-size="12" text-anchor="end">7</text><text class="m ink" x="204" y="480" font-size="12" letter-spacing="1.9" text-anchor="end">CLOUD</text><text class="m sig" x="234" y="480" font-size="12" text-anchor="end">3</text><text class="m ink" x="204" y="524" font-size="12" letter-spacing="1.9" text-anchor="end">OFFENSIVE</text><text class="m sig" x="234" y="524" font-size="12" text-anchor="end">5</text><text class="m ink" x="204" y="568" font-size="12" letter-spacing="1.9" text-anchor="end">AI SECURITY</text><text class="m sig" x="234" y="568" font-size="12" text-anchor="end">2</text>
+<line class="ghost" x1="1180.2083333333335" y1="274" x2="1180.2083333333335" y2="590"/>
+<text class="m ink" x="204" y="304" font-size="12" letter-spacing="1.9" text-anchor="end">ASSURANCE</text><text class="m sig" x="234" y="304" font-size="12" text-anchor="end">6</text><text class="m ink" x="204" y="348" font-size="12" letter-spacing="1.9" text-anchor="end">ENGINEERING</text><text class="m sig" x="234" y="348" font-size="12" text-anchor="end">4</text><text class="m ink" x="204" y="392" font-size="12" letter-spacing="1.9" text-anchor="end">DETECTION</text><text class="m sig" x="234" y="392" font-size="12" text-anchor="end">7</text><text class="m ink" x="204" y="436" font-size="12" letter-spacing="1.9" text-anchor="end">APPSEC</text><text class="m sig" x="234" y="436" font-size="12" text-anchor="end">7</text><text class="m ink" x="204" y="480" font-size="12" letter-spacing="1.9" text-anchor="end">CLOUD</text><text class="m sig" x="234" y="480" font-size="12" text-anchor="end">3</text><text class="m ink" x="204" y="524" font-size="12" letter-spacing="1.9" text-anchor="end">OFFENSIVE</text><text class="m sig" x="234" y="524" font-size="12" text-anchor="end">5</text><text class="m ink" x="204" y="568" font-size="12" letter-spacing="1.9" text-anchor="end">AI SECURITY</text><text class="m sig" x="234" y="568" font-size="12" text-anchor="end">3</text>
 <line class="axis" x1="250" y1="274" x2="250" y2="590"/>
 <line class="axis" x1="250" y1="590" x2="1200" y2="590"/>
-<text class="m soft" x="270.6521739130435" y="618" font-size="10.5" letter-spacing="1" text-anchor="middle">19.10.2025</text><text class="m soft" x="477.17391304347825" y="618" font-size="10.5" letter-spacing="1" text-anchor="middle">10.09.2026</text><text class="m soft" x="683.695652173913" y="618" font-size="10.5" letter-spacing="1" text-anchor="middle">13.09.2026</text><text class="m soft" x="890.2173913043478" y="618" font-size="10.5" letter-spacing="1" text-anchor="middle">19.09.2026</text><text class="m soft" x="1096.7391304347825" y="618" font-size="10.5" letter-spacing="1" text-anchor="middle">29.09.2026</text><text class="m live" x="1179.3478260869565" y="618" font-size="10.5" letter-spacing="1" text-anchor="middle">building now</text>
+<text class="m soft" x="269.7916666666667" y="618" font-size="10.5" letter-spacing="1" text-anchor="middle">19.10.2025</text><text class="m soft" x="467.70833333333337" y="618" font-size="10.5" letter-spacing="1" text-anchor="middle">10.09.2026</text><text class="m soft" x="665.625" y="618" font-size="10.5" letter-spacing="1" text-anchor="middle">13.09.2026</text><text class="m soft" x="863.5416666666667" y="618" font-size="10.5" letter-spacing="1" text-anchor="middle">19.09.2026</text><text class="m soft" x="1061.4583333333335" y="618" font-size="10.5" letter-spacing="1" text-anchor="middle">29.09.2026</text><text class="m live" x="1180.2083333333335" y="618" font-size="10.5" letter-spacing="1" text-anchor="middle">building now</text>
 <text class="m soft" x="190" y="618" font-size="10.5" letter-spacing="1.9" text-anchor="end">TIMELINE</text>
 
 <g class="u" style="animation-delay:0.40s">
-<line class="stem" x1="270.7" y1="396" x2="270.7" y2="590"/>
-<rect class="sig" x="263.7" y="381.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:0.46s">
-<line class="stem" x1="312.0" y1="308" x2="312.0" y2="590"/>
-<rect class="sig" x="305.0" y="293.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:0.52s">
-<line class="stem" x1="353.3" y1="352" x2="353.3" y2="590"/>
-<line class="span" x1="353.3" y1="300" x2="353.3" y2="344"/><rect class="sig" x="346.3" y="293.0" width="14.0" height="14.0"/><rect class="sig" x="346.3" y="337.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:0.58s">
-<line class="stem" x1="394.6" y1="484" x2="394.6" y2="590"/>
-<line class="span" x1="394.6" y1="344" x2="394.6" y2="476"/><rect class="sig" x="387.6" y="337.0" width="14.0" height="14.0"/><rect class="sig" x="387.6" y="469.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:0.64s">
-<line class="stem" x1="435.9" y1="440" x2="435.9" y2="590"/>
-<line class="span" x1="435.9" y1="344" x2="435.9" y2="432"/><rect class="sig" x="428.9" y="337.0" width="14.0" height="14.0"/><rect class="sig" x="428.9" y="425.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:0.70s">
-<line class="stem" x1="477.2" y1="396" x2="477.2" y2="590"/>
-<rect class="sig" x="470.2" y="381.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:0.76s">
-<line class="stem" x1="518.5" y1="528" x2="518.5" y2="590"/>
-<line class="span" x1="518.5" y1="388" x2="518.5" y2="520"/><rect class="sig" x="511.5" y="381.0" width="14.0" height="14.0"/><rect class="sig" x="511.5" y="425.0" width="14.0" height="14.0"/><rect class="sig" x="511.5" y="513.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:0.82s">
-<line class="stem" x1="559.8" y1="528" x2="559.8" y2="590"/>
-<line class="span" x1="559.8" y1="388" x2="559.8" y2="520"/><rect class="sig" x="552.8" y="381.0" width="14.0" height="14.0"/><rect class="sig" x="552.8" y="425.0" width="14.0" height="14.0"/><rect class="sig" x="552.8" y="513.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:0.88s">
-<line class="stem" x1="601.1" y1="528" x2="601.1" y2="590"/>
-<line class="span" x1="601.1" y1="432" x2="601.1" y2="520"/><rect class="sig" x="594.1" y="425.0" width="14.0" height="14.0"/><rect class="sig" x="594.1" y="513.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:0.94s">
-<line class="stem" x1="642.4" y1="308" x2="642.4" y2="590"/>
-<rect class="sig" x="635.4" y="293.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:1.00s">
-<line class="stem" x1="683.7" y1="572" x2="683.7" y2="590"/>
-<line class="span" x1="683.7" y1="432" x2="683.7" y2="564"/><rect class="sig" x="676.7" y="425.0" width="14.0" height="14.0"/><rect class="sig" x="676.7" y="557.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:1.06s">
-<line class="stem" x1="725.0" y1="528" x2="725.0" y2="590"/>
-<line class="span" x1="725.0" y1="476" x2="725.0" y2="520"/><rect class="sig" x="718.0" y="469.0" width="14.0" height="14.0"/><rect class="sig" x="718.0" y="513.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:1.12s">
-<line class="stem" x1="766.3" y1="484" x2="766.3" y2="590"/>
-<rect class="sig" x="759.3" y="469.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:1.18s">
-<line class="stem" x1="807.6" y1="396" x2="807.6" y2="590"/>
-<line class="span" x1="807.6" y1="300" x2="807.6" y2="388"/><rect class="sig" x="800.6" y="293.0" width="14.0" height="14.0"/><rect class="sig" x="800.6" y="381.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:1.24s">
-<line class="stem" x1="848.9" y1="572" x2="848.9" y2="590"/>
-<line class="span" x1="848.9" y1="432" x2="848.9" y2="564"/><rect class="sig" x="841.9" y="425.0" width="14.0" height="14.0"/><rect class="sig" x="841.9" y="557.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:1.24s">
-<line class="stem" x1="890.2" y1="308" x2="890.2" y2="590"/>
-<rect class="sig" x="883.2" y="293.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:1.24s">
-<line class="stem" x1="931.5" y1="396" x2="931.5" y2="590"/>
-<rect class="sig" x="924.5" y="381.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:1.24s">
-<line class="stem" x1="972.8" y1="396" x2="972.8" y2="590"/>
-<rect class="sig" x="965.8" y="381.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:1.24s">
-<line class="stem" x1="1014.1" y1="352" x2="1014.1" y2="590"/>
-<rect class="sig" x="1007.1" y="337.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:1.24s">
-<line class="stem" x1="1055.4" y1="528" x2="1055.4" y2="590"/>
-<rect class="sig" x="1048.4" y="513.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:1.24s">
-<line class="stem" x1="1096.7" y1="440" x2="1096.7" y2="590"/>
-<rect class="sig" x="1089.7" y="425.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:1.24s">
-<line class="stem" x1="1138.0" y1="308" x2="1138.0" y2="590"/>
-<rect class="sig" x="1131.0" y="293.0" width="14.0" height="14.0"/></g>
+<line class="stem" x1="269.8" y1="396" x2="269.8" y2="590"/>
+<rect class="sig" x="262.8" y="381.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:0.46s">
+<line class="stem" x1="309.4" y1="308" x2="309.4" y2="590"/>
+<rect class="sig" x="302.4" y="293.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:0.52s">
+<line class="stem" x1="349.0" y1="352" x2="349.0" y2="590"/>
+<line class="span" x1="349.0" y1="300" x2="349.0" y2="344"/><rect class="sig" x="342.0" y="293.0" width="14.0" height="14.0"/><rect class="sig" x="342.0" y="337.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:0.58s">
+<line class="stem" x1="388.5" y1="484" x2="388.5" y2="590"/>
+<line class="span" x1="388.5" y1="344" x2="388.5" y2="476"/><rect class="sig" x="381.5" y="337.0" width="14.0" height="14.0"/><rect class="sig" x="381.5" y="469.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:0.64s">
+<line class="stem" x1="428.1" y1="440" x2="428.1" y2="590"/>
+<line class="span" x1="428.1" y1="344" x2="428.1" y2="432"/><rect class="sig" x="421.1" y="337.0" width="14.0" height="14.0"/><rect class="sig" x="421.1" y="425.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:0.70s">
+<line class="stem" x1="467.7" y1="396" x2="467.7" y2="590"/>
+<rect class="sig" x="460.7" y="381.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:0.76s">
+<line class="stem" x1="507.3" y1="528" x2="507.3" y2="590"/>
+<line class="span" x1="507.3" y1="388" x2="507.3" y2="520"/><rect class="sig" x="500.3" y="381.0" width="14.0" height="14.0"/><rect class="sig" x="500.3" y="425.0" width="14.0" height="14.0"/><rect class="sig" x="500.3" y="513.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:0.82s">
+<line class="stem" x1="546.9" y1="528" x2="546.9" y2="590"/>
+<line class="span" x1="546.9" y1="388" x2="546.9" y2="520"/><rect class="sig" x="539.9" y="381.0" width="14.0" height="14.0"/><rect class="sig" x="539.9" y="425.0" width="14.0" height="14.0"/><rect class="sig" x="539.9" y="513.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:0.88s">
+<line class="stem" x1="586.5" y1="528" x2="586.5" y2="590"/>
+<line class="span" x1="586.5" y1="432" x2="586.5" y2="520"/><rect class="sig" x="579.5" y="425.0" width="14.0" height="14.0"/><rect class="sig" x="579.5" y="513.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:0.94s">
+<line class="stem" x1="626.0" y1="308" x2="626.0" y2="590"/>
+<rect class="sig" x="619.0" y="293.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:1.00s">
+<line class="stem" x1="665.6" y1="572" x2="665.6" y2="590"/>
+<line class="span" x1="665.6" y1="432" x2="665.6" y2="564"/><rect class="sig" x="658.6" y="425.0" width="14.0" height="14.0"/><rect class="sig" x="658.6" y="557.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:1.06s">
+<line class="stem" x1="705.2" y1="528" x2="705.2" y2="590"/>
+<line class="span" x1="705.2" y1="476" x2="705.2" y2="520"/><rect class="sig" x="698.2" y="469.0" width="14.0" height="14.0"/><rect class="sig" x="698.2" y="513.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:1.12s">
+<line class="stem" x1="744.8" y1="484" x2="744.8" y2="590"/>
+<rect class="sig" x="737.8" y="469.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:1.18s">
+<line class="stem" x1="784.4" y1="396" x2="784.4" y2="590"/>
+<line class="span" x1="784.4" y1="300" x2="784.4" y2="388"/><rect class="sig" x="777.4" y="293.0" width="14.0" height="14.0"/><rect class="sig" x="777.4" y="381.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:1.24s">
+<line class="stem" x1="824.0" y1="572" x2="824.0" y2="590"/>
+<line class="span" x1="824.0" y1="432" x2="824.0" y2="564"/><rect class="sig" x="817.0" y="425.0" width="14.0" height="14.0"/><rect class="sig" x="817.0" y="557.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:1.24s">
+<line class="stem" x1="863.5" y1="308" x2="863.5" y2="590"/>
+<rect class="sig" x="856.5" y="293.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:1.24s">
+<line class="stem" x1="903.1" y1="396" x2="903.1" y2="590"/>
+<rect class="sig" x="896.1" y="381.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:1.24s">
+<line class="stem" x1="942.7" y1="396" x2="942.7" y2="590"/>
+<rect class="sig" x="935.7" y="381.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:1.24s">
+<line class="stem" x1="982.3" y1="352" x2="982.3" y2="590"/>
+<rect class="sig" x="975.3" y="337.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:1.24s">
+<line class="stem" x1="1021.9" y1="528" x2="1021.9" y2="590"/>
+<rect class="sig" x="1014.9" y="513.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:1.24s">
+<line class="stem" x1="1061.5" y1="440" x2="1061.5" y2="590"/>
+<rect class="sig" x="1054.5" y="425.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:1.24s">
+<line class="stem" x1="1101.0" y1="308" x2="1101.0" y2="590"/>
+<rect class="sig" x="1094.0" y="293.0" width="14.0" height="14.0"/></g><g class="u" style="animation-delay:1.24s">
+<line class="stem" x1="1140.6" y1="572" x2="1140.6" y2="590"/>
+<rect class="sig" x="1133.6" y="557.0" width="14.0" height="14.0"/></g>
 
 <g class="u" style="animation-delay:1.6s">
-  <line class="pen" x1="1179.3478260869565" y1="274" x2="1179.3478260869565" y2="590" stroke-dasharray="3 5"/>
-  <rect class="live breathe" x="1174.3478260869565" y="269" width="10" height="10"/>
+  <line class="pen" x1="1180.2083333333335" y1="274" x2="1180.2083333333335" y2="590" stroke-dasharray="3 5"/>
+  <rect class="live breathe" x="1175.2083333333335" y="269" width="10" height="10"/>
 </g>
 
 <text class="m soft" x="0" y="656" font-size="10.5" letter-spacing="2.2">BUILT WITH</text>
-<text class="m soft" x="1200" y="656" font-size="10.5" letter-spacing="2.2" text-anchor="end">LAST PUSH / NEXUS / 30.09.2026</text>
-<rect class="sig" x="0.0" y="672" width="844.2" height="13" opacity="1.00"/><text class="m soft" x="423.6" y="706" font-size="10.5" letter-spacing="1.1" text-anchor="middle">TypeScript 70.6%</text><rect class="sig" x="847.2" y="672" width="285.0" height="13" opacity="0.83"/><text class="m soft" x="991.2" y="706" font-size="10.5" letter-spacing="1.1" text-anchor="middle">Python 24%</text><rect class="sig" x="1135.2" y="672" width="16.2" height="13" opacity="0.66"/><rect class="sig" x="1154.4" y="672" width="16.2" height="13" opacity="0.49"/><rect class="sig" x="1173.6" y="672" width="15.0" height="13" opacity="0.32"/>
+<text class="m soft" x="1200" y="656" font-size="10.5" letter-spacing="2.2" text-anchor="end">LAST PUSH / regent / 03.10.2026</text>
+<rect class="sig" x="0.0" y="672" width="879.0" height="13" opacity="1.00"/><text class="m soft" x="441.0" y="706" font-size="10.5" letter-spacing="1.1" text-anchor="middle">TypeScript 73.5%</text><rect class="sig" x="882.0" y="672" width="256.2" height="13" opacity="0.83"/><text class="m soft" x="1011.6" y="706" font-size="10.5" letter-spacing="1.1" text-anchor="middle">Python 21.6%</text><rect class="sig" x="1141.2" y="672" width="15.0" height="13" opacity="0.66"/><rect class="sig" x="1159.2" y="672" width="13.8" height="13" opacity="0.49"/><rect class="sig" x="1176.0" y="672" width="13.8" height="13" opacity="0.32"/>
 <line class="r" x1="-18" y1="740" x2="1218" y2="740"/>
 <text class="m soft" x="0" y="762" font-size="11" letter-spacing="2.2">SYNCED FROM THE GITHUB API / 2026-10-03</text>
 <text class="m sig" x="1200" y="762" font-size="11" letter-spacing="2.2" text-anchor="end">OPEN A DOMAIN BELOW</text>

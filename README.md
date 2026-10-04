@@ -51,13 +51,13 @@ being abused. I am mostly interested in why things fail and what makes them
 hold.
 
 <!--TESTS:START-->
-**3,749 tests** across the lab — AegisLens 108, TrustEdge 601, Pedigree 198, NullFire 424, BlackOut 230, AfterLife 290, sunset 44, credscope 93, sleeper 230, tombstone 497, parallax 191, throughline 150, ripple 523, NEXUS 170. Counted from each repository's own README, not asserted here.
+**4,302 tests** across the lab — AegisLens 108, TrustEdge 601, Pedigree 198, NullFire 424, BlackOut 230, AfterLife 290, sunset 44, credscope 93, sleeper 230, tombstone 497, parallax 191, throughline 150, ripple 523, NEXUS 170, interlock 553. Counted from each repository's own README, not asserted here.
 <!--TESTS:END-->
 
 ## Index
 
 <!--SUMMARY:START-->
-23 repositories across 7 of 7 domains. Open a domain, then open a repository — the second level is where the evidence is. Repository names link straight to the code.
+24 repositories across 7 of 7 domains. Open a domain, then open a repository — the second level is where the evidence is. Repository names link straight to the code.
 <!--SUMMARY:END-->
 
 <!--INDEX:START-->
@@ -324,7 +324,7 @@ Remediation sequencing planner that models forensic evidence loss before destruc
 </details>
 
 <details id="domain-appsec">
-<summary><b>APPSEC</b> &nbsp;<sub>secure sdlc / code review / supply chain &nbsp;—&nbsp; 7 repositories</sub></summary>
+<summary><b>APPSEC</b> &nbsp;<sub>secure sdlc / code review / supply chain &nbsp;—&nbsp; 8 repositories</sub></summary>
 <a id="d-appsec"></a>
 
 <details id="repo-pedigree-appsec">
@@ -426,6 +426,19 @@ Software supply-chain attack surface scanner: dependency confusion, typosquattin
 | :-- | :-- |
 | **Stack** | `Python` `TypeScript` `JavaScript` |
 | **Evidence** | 523 tests |
+
+</details>
+
+<details id="repo-interlock-appsec">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/interlock">interlock</a></b></summary>
+<a id="r-interlock"></a>
+
+INTERLOCK — PLC Safety Logic Integrity & Impact Analyzer. Turns PLC project changes (Rockwell L5X) into safety-impact evidence: symbolic scan, firing-condition analysis, AOI blast radius, alarm-path suppression, evidence-backed review set.
+
+| | |
+| :-- | :-- |
+| **Stack** | `TypeScript` `CSS` `JavaScript` |
+| **Evidence** | 553 tests |
 
 </details>
 
@@ -656,11 +669,11 @@ done.
 **Latest commits across every repository**
 
 <!--ACTIVITY:START-->
-- `27a2521` **[regent](https://github.com/het-P301204/regent)** — README: finding types as a two-column table <sub>8h ago</sub>
-- `2511df3` **[regent](https://github.com/het-P301204/regent)** — Docs: record what CI now verifies (PostgreSQL, container, e2e, scans); C <sub>8h ago</sub>
-- `c965f14` **[regent](https://github.com/het-P301204/regent)** — Image: remove package managers from the runtime stage and patch OS packa <sub>8h ago</sub>
-- `93179d0` **[regent](https://github.com/het-P301204/regent)** — CI: valid Node base image tag; gitleaks allowlist for synthetic credenti <sub>8h ago</sub>
-- `54feff7` **[regent](https://github.com/het-P301204/regent)** — CI: fix Trivy action version, scan full history with gitleaks, API-only  <sub>8h ago</sub>
+- `51482d2` **[interlock](https://github.com/het-P301204/interlock)** — fix: address CodeQL findings <sub>just now</sub>
+- `2185383` **[interlock](https://github.com/het-P301204/interlock)** — test: add end-to-end and accessibility suite <sub>just now</sub>
+- `10d8e39` **[interlock](https://github.com/het-P301204/interlock)** — fix: attribute a module to a finding only when the change touched it <sub>just now</sub>
+- `0e9bcc7` **[interlock](https://github.com/het-P301204/interlock)** — fix(security): enforce auth before reading bodies and harden deployment  <sub>1h ago</sub>
+- `0bf3cf6` **[interlock](https://github.com/het-P301204/interlock)** — feat: add interactive reuse graph, safety map with declarations editor,  <sub>1h ago</sub>
 <!--ACTIVITY:END-->
 
 **The queue.** Anyone can add to it — the

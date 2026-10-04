@@ -505,7 +505,15 @@
       ]
     },
     {
-      "date": "03.10.2026",
+      "date": "04.10.2026",
+      "short": "interlock",
+      "repo": "interlock",
+      "domains": [
+        "appsec"
+      ]
+    },
+    {
+      "date": "04.10.2026",
       "short": "",
       "domains": [],
       "open": true
@@ -514,23 +522,23 @@
   "stack": [
     {
       "name": "TypeScript",
-      "pct": 73.5
+      "pct": 76.2
     },
     {
       "name": "Python",
-      "pct": 21.6
+      "pct": 19.2
     },
     {
       "name": "HTML",
-      "pct": 1.5
+      "pct": 1.3
     },
     {
       "name": "JavaScript",
-      "pct": 1.4
+      "pct": 1.3
     },
     {
       "name": "CSS",
-      "pct": 1.4
+      "pct": 1.3
     }
   ],
   "tests": [
@@ -589,15 +597,19 @@
     {
       "repo": "NEXUS",
       "n": 170
+    },
+    {
+      "repo": "interlock",
+      "n": 553
     }
   ],
-  "testTotal": 3749,
-  "slots": 25,
+  "testTotal": 4302,
+  "slots": 26,
   "lastPush": {
-    "repo": "regent",
-    "date": "03.10.2026"
+    "repo": "interlock",
+    "date": "04.10.2026"
   },
-  "synced": "2026-10-03",
+  "synced": "2026-10-04",
   "window": 28,
   "mobilePerDomain": 3
 }

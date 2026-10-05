@@ -513,7 +513,7 @@
       ]
     },
     {
-      "date": "04.10.2026",
+      "date": "05.10.2026",
       "short": "",
       "domains": [],
       "open": true
@@ -609,7 +609,7 @@
     "repo": "interlock",
     "date": "04.10.2026"
   },
-  "synced": "2026-10-04",
+  "synced": "2026-10-05",
   "window": 28,
   "mobilePerDomain": 3
 }

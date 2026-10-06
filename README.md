@@ -51,13 +51,13 @@ being abused. I am mostly interested in why things fail and what makes them
 hold.
 
 <!--TESTS:START-->
-**4,302 tests** across the lab — AegisLens 108, TrustEdge 601, Pedigree 198, NullFire 424, BlackOut 230, AfterLife 290, sunset 44, credscope 93, sleeper 230, tombstone 497, parallax 191, throughline 150, ripple 523, NEXUS 170, interlock 553. Counted from each repository's own README, not asserted here.
+**4,931 tests** across the lab — AegisLens 108, TrustEdge 601, Pedigree 198, NullFire 424, BlackOut 230, AfterLife 290, sunset 44, credscope 93, sleeper 230, tombstone 497, parallax 191, throughline 150, ripple 523, NEXUS 170, interlock 553, touchstone 629. Counted from each repository's own README, not asserted here.
 <!--TESTS:END-->
 
 ## Index
 
 <!--SUMMARY:START-->
-24 repositories across 7 of 7 domains. Open a domain, then open a repository — the second level is where the evidence is. Repository names link straight to the code.
+25 repositories across 7 of 7 domains. Open a domain, then open a repository — the second level is where the evidence is. Repository names link straight to the code.
 <!--SUMMARY:END-->
 
 <!--INDEX:START-->
@@ -501,7 +501,7 @@ OAuth grant drift & detectability review. Offline, deterministic, evidence-bound
 </details>
 
 <details id="domain-offensive">
-<summary><b>OFFENSIVE</b> &nbsp;<sub>attack paths / control validation &nbsp;—&nbsp; 5 repositories</sub></summary>
+<summary><b>OFFENSIVE</b> &nbsp;<sub>attack paths / control validation &nbsp;—&nbsp; 6 repositories</sub></summary>
 <a id="d-offensive"></a>
 
 <details id="repo-blackout-offensive">
@@ -572,6 +572,19 @@ Offline ADCS ESC1-ESC17 Vulnerability Intelligence Platform — BloodHound CE an
 | | |
 | :-- | :-- |
 | **Stack** | `TypeScript` `Python` `JavaScript` |
+
+</details>
+
+<details id="repo-touchstone-offensive">
+<summary>&nbsp;<b><a href="https://github.com/het-P301204/touchstone">touchstone</a></b></summary>
+<a id="r-touchstone"></a>
+
+Independent evidence scorecard for CISA Secure by Design Pledge commitments: what public evidence can measure, what it cannot, and a reproducible run behind every number.
+
+| | |
+| :-- | :-- |
+| **Stack** | `TypeScript` `HTML` `JavaScript` |
+| **Evidence** | 629 tests |
 
 </details>
 
@@ -669,11 +682,11 @@ done.
 **Latest commits across every repository**
 
 <!--ACTIVITY:START-->
-- `51482d2` **[interlock](https://github.com/het-P301204/interlock)** — fix: address CodeQL findings <sub>2d ago</sub>
-- `2185383` **[interlock](https://github.com/het-P301204/interlock)** — test: add end-to-end and accessibility suite <sub>2d ago</sub>
-- `10d8e39` **[interlock](https://github.com/het-P301204/interlock)** — fix: attribute a module to a finding only when the change touched it <sub>2d ago</sub>
-- `0e9bcc7` **[interlock](https://github.com/het-P301204/interlock)** — fix(security): enforce auth before reading bodies and harden deployment  <sub>2d ago</sub>
-- `0bf3cf6` **[interlock](https://github.com/het-P301204/interlock)** — feat: add interactive reuse graph, safety map with declarations editor,  <sub>2d ago</sub>
+- `467381a` **[touchstone](https://github.com/het-P301204/touchstone)** — fix: address CodeQL findings <sub>8h ago</sub>
+- `c43d6d9` **[touchstone](https://github.com/het-P301204/touchstone)** — docs: add README with screenshots of the production build <sub>8h ago</sub>
+- `0e1d234` **[touchstone](https://github.com/het-P301204/touchstone)** — docs: add methodology, architecture, threat model, data sources and poli <sub>8h ago</sub>
+- `b0ddc1c` **[touchstone](https://github.com/het-P301204/touchstone)** — fix: describe the timeliness rules in the published formula text <sub>8h ago</sub>
+- `0be2ccc` **[touchstone](https://github.com/het-P301204/touchstone)** — test: add end-to-end journeys and fix the accessibility issues they foun <sub>8h ago</sub>
 <!--ACTIVITY:END-->
 
 **The queue.** Anyone can add to it — the

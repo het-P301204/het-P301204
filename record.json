@@ -514,6 +514,14 @@
     },
     {
       "date": "06.10.2026",
+      "short": "touchstone",
+      "repo": "touchstone",
+      "domains": [
+        "offensive"
+      ]
+    },
+    {
+      "date": "06.10.2026",
       "short": "",
       "domains": [],
       "open": true
@@ -522,23 +530,23 @@
   "stack": [
     {
       "name": "TypeScript",
-      "pct": 76.2
+      "pct": 77.2
     },
     {
       "name": "Python",
-      "pct": 19.2
+      "pct": 17.2
     },
     {
       "name": "HTML",
-      "pct": 1.3
+      "pct": 2.6
     },
     {
       "name": "JavaScript",
-      "pct": 1.3
+      "pct": 1.2
     },
     {
       "name": "CSS",
-      "pct": 1.3
+      "pct": 1.2
     }
   ],
   "tests": [
@@ -601,13 +609,17 @@
     {
       "repo": "interlock",
       "n": 553
+    },
+    {
+      "repo": "touchstone",
+      "n": 629
     }
   ],
-  "testTotal": 4302,
-  "slots": 26,
+  "testTotal": 4931,
+  "slots": 27,
   "lastPush": {
-    "repo": "interlock",
-    "date": "04.10.2026"
+    "repo": "touchstone",
+    "date": "06.10.2026"
   },
   "synced": "2026-10-06",
   "window": 28,

@@ -521,7 +521,7 @@
       ]
     },
     {
-      "date": "10.10.2026",
+      "date": "11.10.2026",
       "short": "",
       "domains": [],
       "open": true
@@ -618,10 +618,10 @@
   "testTotal": 4931,
   "slots": 27,
   "lastPush": {
-    "repo": "regent",
-    "date": "10.10.2026"
+    "repo": "interlock",
+    "date": "11.10.2026"
   },
-  "synced": "2026-10-10",
+  "synced": "2026-10-11",
   "window": 28,
   "mobilePerDomain": 3
 }

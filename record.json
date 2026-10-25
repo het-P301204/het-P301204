@@ -521,7 +521,7 @@
       ]
     },
     {
-      "date": "24.10.2026",
+      "date": "25.10.2026",
       "short": "",
       "domains": [],
       "open": true
@@ -621,7 +621,7 @@
     "repo": "regent",
     "date": "24.10.2026"
   },
-  "synced": "2026-10-24",
+  "synced": "2026-10-25",
   "window": 28,
   "mobilePerDomain": 3
 }

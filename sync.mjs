@@ -74,6 +74,7 @@ for (const r of all) {
   repos.push({
     name: r.name, short: shortFor(r.name), slug: slug(shortFor(r.name)),
     desc: (r.description || '').trim(), domains: doms, topics: r.topics || [],
+    homepage: (r.homepage || '').trim(),
     created: r.created_at, pushed: r.pushed_at,
     langs: Object.keys(langs).slice(0, 3), langBytes: langs,
     tests: tm ? +tm[1].replace(/[,_]/g, '') : null,
@@ -135,6 +136,9 @@ const url = n => `https://github.com/${USER}/${n}`;
 const repoBlock = (r, dom) => {
   const n = notes[r.name] || {};
   const rows = [];
+  // A homepage that is just the repository again (github.com/...) is not a demo.
+  const live = /^https:\/\/(?!(www\.)?github\.com\/)/i.test(r.homepage) ? r.homepage : null;
+  if (live) rows.push(['Live demo', `[${live.replace(/^https:\/\//, '').replace(/\/$/, '')}](${live})`]);
   if (r.langs.length) rows.push(['Stack', r.langs.map(l => `\`${l}\``).join(' ')]);
   const ev = [r.tests ? `${r.tests} tests` : null, r.ci ? 'CI' : null].filter(Boolean).join(', ');
   if (ev) rows.push(['Evidence', ev]);

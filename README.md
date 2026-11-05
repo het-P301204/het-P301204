@@ -73,6 +73,7 @@ An interactive, evidence-driven ISO 27001 Integrated ISMS portfolio for SecureBr
 
 | | |
 | :-- | :-- |
+| **Live demo** | [het-p301204.github.io/SecureBridge-ISMS-360](https://het-p301204.github.io/SecureBridge-ISMS-360/) |
 | **Read first** | The risk register and the control-to-evidence mapping. |
 
 </details>
@@ -85,6 +86,7 @@ AegisLens is an educational and defensive security assessment workbench using sy
 
 | | |
 | :-- | :-- |
+| **Live demo** | [het-p301204.github.io/AegisLens-security-workbench](https://het-p301204.github.io/AegisLens-security-workbench/) |
 | **Stack** | `TypeScript` `Python` `CSS` |
 | **Evidence** | 108 tests, CI |
 | **Read first** | `backend/tests` — if you want to know whether I can actually build. |
@@ -130,6 +132,7 @@ Risk register measurement auditor. Finds where a qualitative risk register's num
 
 | | |
 | :-- | :-- |
+| **Live demo** | [het-p301204.github.io/parallax](https://het-p301204.github.io/parallax/) |
 | **Stack** | `TypeScript` `JavaScript` `CSS` |
 | **Evidence** | 191 tests |
 | **Read first** | The triage — which few risks are actually worth quantifying. |
@@ -144,6 +147,7 @@ EU Cyber Resilience Act Article 14 reportability and Clock of Record: evidence-b
 
 | | |
 | :-- | :-- |
+| **Live demo** | [het-p301204.github.io/NEXUS](https://het-p301204.github.io/NEXUS/) |
 | **Stack** | `TypeScript` `JavaScript` `CSS` |
 | **Evidence** | 170 tests |
 
@@ -165,6 +169,7 @@ AegisLens is an educational and defensive security assessment workbench using sy
 
 | | |
 | :-- | :-- |
+| **Live demo** | [het-p301204.github.io/AegisLens-security-workbench](https://het-p301204.github.io/AegisLens-security-workbench/) |
 | **Stack** | `TypeScript` `Python` `CSS` |
 | **Evidence** | 108 tests, CI |
 | **Read first** | `backend/tests` — if you want to know whether I can actually build. |
@@ -437,6 +442,7 @@ INTERLOCK — PLC Safety Logic Integrity & Impact Analyzer. Turns PLC project ch
 
 | | |
 | :-- | :-- |
+| **Live demo** | [het-p301204.github.io/interlock](https://het-p301204.github.io/interlock/) |
 | **Stack** | `TypeScript` `CSS` `JavaScript` |
 | **Evidence** | 553 tests |
 
@@ -583,6 +589,7 @@ Independent evidence scorecard for CISA Secure by Design Pledge commitments: wha
 
 | | |
 | :-- | :-- |
+| **Live demo** | [het-p301204.github.io/touchstone](https://het-p301204.github.io/touchstone/) |
 | **Stack** | `TypeScript` `HTML` `JavaScript` |
 | **Evidence** | 629 tests |
 
@@ -682,11 +689,11 @@ done.
 **Latest commits across every repository**
 
 <!--ACTIVITY:START-->
-- `467381a` **[touchstone](https://github.com/het-P301204/touchstone)** — fix: address CodeQL findings <sub>29d ago</sub>
-- `c43d6d9` **[touchstone](https://github.com/het-P301204/touchstone)** — docs: add README with screenshots of the production build <sub>29d ago</sub>
-- `0e1d234` **[touchstone](https://github.com/het-P301204/touchstone)** — docs: add methodology, architecture, threat model, data sources and poli <sub>29d ago</sub>
-- `b0ddc1c` **[touchstone](https://github.com/het-P301204/touchstone)** — fix: describe the timeliness rules in the published formula text <sub>29d ago</sub>
-- `0be2ccc` **[touchstone](https://github.com/het-P301204/touchstone)** — test: add end-to-end journeys and fix the accessibility issues they foun <sub>29d ago</sub>
+- `0bf5fe0` **[NEXUS](https://github.com/het-P301204/NEXUS)** — Static read-only demo on GitHub Pages <sub>just now</sub>
+- `d8a681e` **[AegisLens](https://github.com/het-P301204/AegisLens-security-workbench)** — Add a read-only static demo published to GitHub Pages <sub>just now</sub>
+- `20ad126` **[SecureBridge](https://github.com/het-P301204/SecureBridge-ISMS-360)** — Publish the Integrated ISMS Command Center to GitHub Pages <sub>just now</sub>
+- `f0fc3b7` **[parallax](https://github.com/het-P301204/parallax)** — ci: publish the browser app to GitHub Pages and link it from the README <sub>just now</sub>
+- `467381a` **[touchstone](https://github.com/het-P301204/touchstone)** — fix: address CodeQL findings <sub>30d ago</sub>
 <!--ACTIVITY:END-->
 
 **The queue.** Anyone can add to it — the

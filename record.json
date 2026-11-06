@@ -521,7 +521,7 @@
       ]
     },
     {
-      "date": "05.11.2026",
+      "date": "06.11.2026",
       "short": "",
       "domains": [],
       "open": true
@@ -621,7 +621,7 @@
     "repo": "NEXUS",
     "date": "05.11.2026"
   },
-  "synced": "2026-11-05",
+  "synced": "2026-11-06",
   "window": 28,
   "mobilePerDomain": 3
 }

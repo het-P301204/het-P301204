@@ -689,11 +689,11 @@ done.
 **Latest commits across every repository**
 
 <!--ACTIVITY:START-->
-- `0bf5fe0` **[NEXUS](https://github.com/het-P301204/NEXUS)** — Static read-only demo on GitHub Pages <sub>4d ago</sub>
-- `d8a681e` **[AegisLens](https://github.com/het-P301204/AegisLens-security-workbench)** — Add a read-only static demo published to GitHub Pages <sub>4d ago</sub>
-- `20ad126` **[SecureBridge](https://github.com/het-P301204/SecureBridge-ISMS-360)** — Publish the Integrated ISMS Command Center to GitHub Pages <sub>4d ago</sub>
-- `f0fc3b7` **[parallax](https://github.com/het-P301204/parallax)** — ci: publish the browser app to GitHub Pages and link it from the README <sub>4d ago</sub>
-- `467381a` **[touchstone](https://github.com/het-P301204/touchstone)** — fix: address CodeQL findings <sub>34d ago</sub>
+- `0bf5fe0` **[NEXUS](https://github.com/het-P301204/NEXUS)** — Static read-only demo on GitHub Pages <sub>5d ago</sub>
+- `d8a681e` **[AegisLens](https://github.com/het-P301204/AegisLens-security-workbench)** — Add a read-only static demo published to GitHub Pages <sub>5d ago</sub>
+- `20ad126` **[SecureBridge](https://github.com/het-P301204/SecureBridge-ISMS-360)** — Publish the Integrated ISMS Command Center to GitHub Pages <sub>5d ago</sub>
+- `f0fc3b7` **[parallax](https://github.com/het-P301204/parallax)** — ci: publish the browser app to GitHub Pages and link it from the README <sub>5d ago</sub>
+- `467381a` **[touchstone](https://github.com/het-P301204/touchstone)** — fix: address CodeQL findings <sub>35d ago</sub>
 <!--ACTIVITY:END-->
 
 **The queue.** Anyone can add to it — the

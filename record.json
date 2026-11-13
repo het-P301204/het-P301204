@@ -521,7 +521,7 @@
       ]
     },
     {
-      "date": "12.11.2026",
+      "date": "13.11.2026",
       "short": "",
       "domains": [],
       "open": true
@@ -621,7 +621,7 @@
     "repo": "touchstone",
     "date": "10.11.2026"
   },
-  "synced": "2026-11-12",
+  "synced": "2026-11-13",
   "window": 28,
   "mobilePerDomain": 3
 }
